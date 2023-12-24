@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>widget</class>
- <widget class="QWidget" name="widget">
+ <class>PostmanForm</class>
+ <widget class="QWidget" name="PostmanForm">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>590</width>
-    <height>412</height>
+    <width>761</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>快递员界面</string>
+   <string>快递员主界面</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>551</width>
-     <height>301</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBoxAddressBook">
+     <property name="styleSheet">
+      <string notr="true">
             QTableWidget {
                 font: 14px &quot;幼圆&quot;;
                 background-color: #cdefff;
@@ -59,6 +53,7 @@
                 color: white;
                 font-weight: bold;
                 font-size: 16px;
+                 padding: 2px;
             }
 
             QTableWidget::item {
@@ -69,109 +64,124 @@
                 width: 300px; /* Adjust the width as needed */
             }
         </string>
-   </property>
-   <property name="title">
-    <string>快递信息</string>
-   </property>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>521</width>
-      <height>261</height>
-     </rect>
-    </property>
-    <property name="showGrid">
-     <bool>true</bool>
-    </property>
-    <property name="sortingEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="cornerButtonEnabled">
-     <bool>true</bool>
-    </property>
-    <attribute name="verticalHeaderVisible">
-     <bool>false</bool>
-    </attribute>
-    <row>
-     <property name="text">
-      <string/>
      </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
+     <property name="title">
+      <string>快递信息</string>
      </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
+     <layout class="QHBoxLayout" name="horizontalLayoutAddressBook">
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string/>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>序号</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>订单编号</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>完整路线</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>省份</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>地级市</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>详细地址</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>目前状态</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
+     <property name="sizeType">
+      <enum>QSizePolicy::Preferred</enum>
      </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
      </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string/>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>序号</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>订单编号</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>完整路线</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>详细地址</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>目前状态</string>
-     </property>
-    </column>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>330</y>
-     <width>551</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayoutButtons">
+     <item>
+      <widget class="QGroupBox" name="groupBoxActions">
+       <property name="styleSheet">
+        <string notr="true">
             QPushButton {
                 padding: 8px 16px;
                 font-size: 15px;
@@ -191,50 +201,60 @@
                 background-color: #3e8e41;
             }
         </string>
-   </property>
-   <property name="title">
-    <string>用户操作</string>
-   </property>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>209</x>
-      <y>23</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>添加取件码</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>23</y>
-      <width>110</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>退出登录</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>23</y>
-      <width>100</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>查询订单</string>
-    </property>
-   </widget>
-  </widget>
+       </property>
+       <property name="title">
+        <string>用户操作</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayoutActions">
+        <item>
+         <widget class="QPushButton" name="searchBtn">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>查询订单</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addCodeBtn">
+          <property name="text">
+           <string>添加取件码</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="quitBtn">
+          <property name="text">
+           <string>退出登录</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayoutAddButton"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Preferred</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

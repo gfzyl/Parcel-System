@@ -65,6 +65,7 @@ class Ui_AddressBookForm(object):
 "                font-weight: b"
                         "old;\n"
 "                font-size: 16px;\n"
+"                 padding: 2px;\n"
 "            }\n"
 "\n"
 "            QTableWidget::item {\n"
