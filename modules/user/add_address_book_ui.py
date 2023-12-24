@@ -23,7 +23,7 @@ class Ui_AddressBookForm(object):
     def setupUi(self, AddressBookForm):
         if not AddressBookForm.objectName():
             AddressBookForm.setObjectName(u"AddressBookForm")
-        AddressBookForm.resize(650, 350)
+        AddressBookForm.resize(626, 329)
         self.verticalLayout = QVBoxLayout(AddressBookForm)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.groupBoxAddressBook = QGroupBox(AddressBookForm)

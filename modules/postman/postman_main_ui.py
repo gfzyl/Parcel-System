@@ -23,7 +23,7 @@ class Ui_PostmanForm(object):
     def setupUi(self, PostmanForm):
         if not PostmanForm.objectName():
             PostmanForm.setObjectName(u"PostmanForm")
-        PostmanForm.resize(780, 442)
+        PostmanForm.resize(761, 442)
         self.verticalLayout = QVBoxLayout(PostmanForm)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.groupBoxAddressBook = QGroupBox(PostmanForm)
