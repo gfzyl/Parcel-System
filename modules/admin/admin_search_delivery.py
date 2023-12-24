@@ -6,7 +6,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 # 导入我们生成的界面
-from admin_search_delivery_ui import Ui_admin_manage_delivery
+from admin_search_delivery_ui import Ui_admin_search_delivery
 
 from qt_material import apply_stylesheet
 
@@ -15,7 +15,7 @@ class MyWidget(QWidget):
     def __init__(self):
         super().__init__()
         # 设置界面为我们生成的界面
-        self.ui = Ui_admin_manage_delivery()
+        self.ui = Ui_admin_search_delivery()
         self.ui.setupUi(self)
 
 # 程序入口
