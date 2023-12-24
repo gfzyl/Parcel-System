@@ -29,7 +29,6 @@ if __name__ == "__main__":
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
     window.setWindowIcon(appIcon);
 
-    window.setWindowOpacity(0.9); 
     window.show()
     
     # 结束QApplication

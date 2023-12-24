@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>599</width>
-    <height>413</height>
+    <width>590</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +21,54 @@
      <width>551</width>
      <height>301</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+            QTableWidget {
+                font: 14px &quot;幼圆&quot;;
+                background-color: #cdefff;
+            }
+
+            QTableWidget::item {
+                font: 14px &quot;幼圆&quot;;
+            }
+
+            QHeaderView {
+                font: bold 16px &quot;幼圆&quot;;
+            }
+
+            QLabel {
+                color: #333;
+                font: 14px &quot;幼圆&quot;;
+                font-weight: bold;
+            }
+
+            QLineEdit {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            QTableWidget::item:selected {
+                background-color: #a6a6a6;
+            }
+
+            QTableWidget QHeaderView::section {
+                background-color: #65a3ff;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            QTableWidget::item {
+                padding: 10px;
+            }
+
+            QTableWidget::item[列名=&quot;详细地址&quot;] {
+                width: 300px; /* Adjust the width as needed */
+            }
+        </string>
    </property>
    <property name="title">
     <string>快递信息</string>
@@ -122,16 +170,38 @@
      <height>71</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+            QPushButton {
+                padding: 8px 16px;
+                font-size: 15px;
+                font-weight: bold;
+                border: 1px solid #4CAF50;
+                border-radius: 4px;
+                color: #fff;
+                background-color: #4CAF50;
+            }
+
+            QPushButton:hover {
+                background-color: #45a049;
+                border: 1px solid #45a049;
+            }
+
+            QPushButton:pressed {
+                background-color: #3e8e41;
+            }
+        </string>
+   </property>
    <property name="title">
     <string>用户操作</string>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>30</y>
-      <width>100</width>
-      <height>24</height>
+      <x>209</x>
+      <y>23</y>
+      <width>131</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -142,9 +212,9 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>30</y>
+      <y>23</y>
       <width>110</width>
-      <height>24</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -155,9 +225,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>30</y>
+      <y>23</y>
       <width>100</width>
-      <height>24</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">

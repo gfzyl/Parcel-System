@@ -22,10 +22,57 @@ class Ui_widget(object):
     def setupUi(self, widget):
         if not widget.objectName():
             widget.setObjectName(u"widget")
-        widget.resize(599, 413)
+        widget.resize(590, 412)
         self.groupBox = QGroupBox(widget)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(20, 20, 551, 301))
+        self.groupBox.setStyleSheet(u"\n"
+"            QTableWidget {\n"
+"                font: 14px \"\u5e7c\u5706\";\n"
+"                background-color: #cdefff;\n"
+"            }\n"
+"\n"
+"            QTableWidget::item {\n"
+"                font: 14px \"\u5e7c\u5706\";\n"
+"            }\n"
+"\n"
+"            QHeaderView {\n"
+"                font: bold 16px \"\u5e7c\u5706\";\n"
+"            }\n"
+"\n"
+"            QLabel {\n"
+"                color: #333;\n"
+"                font: 14px \"\u5e7c\u5706\";\n"
+"                font-weight: bold;\n"
+"            }\n"
+"\n"
+"            QLineEdit {\n"
+"                padding: 8px;\n"
+"                font-size: 14px;\n"
+"                border: 1px solid #ccc;\n"
+"                border-radius: 4px;\n"
+"            }\n"
+"\n"
+"            QTableWidget::item:selected {\n"
+"                background-color: #a6a6a6;\n"
+"            }\n"
+"\n"
+"            QTableWidget QHeaderView::section {\n"
+"                background-color: #65a3ff;\n"
+"                color: white;\n"
+"                font-weight: b"
+                        "old;\n"
+"                font-size: 16px;\n"
+"            }\n"
+"\n"
+"            QTableWidget::item {\n"
+"                padding: 10px;\n"
+"            }\n"
+"\n"
+"            QTableWidget::item[\u5217\u540d=\"\u8be6\u7ec6\u5730\u5740\"] {\n"
+"                width: 300px; /* Adjust the width as needed */\n"
+"            }\n"
+"        ")
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
@@ -66,15 +113,35 @@ class Ui_widget(object):
         self.groupBox_2 = QGroupBox(widget)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.groupBox_2.setGeometry(QRect(20, 330, 551, 71))
+        self.groupBox_2.setStyleSheet(u"\n"
+"            QPushButton {\n"
+"                padding: 8px 16px;\n"
+"                font-size: 15px;\n"
+"                font-weight: bold;\n"
+"                border: 1px solid #4CAF50;\n"
+"                border-radius: 4px;\n"
+"                color: #fff;\n"
+"                background-color: #4CAF50;\n"
+"            }\n"
+"\n"
+"            QPushButton:hover {\n"
+"                background-color: #45a049;\n"
+"                border: 1px solid #45a049;\n"
+"            }\n"
+"\n"
+"            QPushButton:pressed {\n"
+"                background-color: #3e8e41;\n"
+"            }\n"
+"        ")
         self.pushButton = QPushButton(self.groupBox_2)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(220, 30, 100, 24))
+        self.pushButton.setGeometry(QRect(209, 23, 131, 31))
         self.pushButton_3 = QPushButton(self.groupBox_2)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setGeometry(QRect(400, 30, 110, 24))
+        self.pushButton_3.setGeometry(QRect(400, 23, 110, 31))
         self.pushButton_2 = QPushButton(self.groupBox_2)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(30, 30, 100, 24))
+        self.pushButton_2.setGeometry(QRect(30, 23, 100, 31))
 
         self.retranslateUi(widget)
 
