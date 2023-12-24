@@ -5,7 +5,7 @@ class Sql:
         self.server = '127.0.0.1'
         self.user = 'sa'
         self.password = 'gfyl999'
-        self.database = ''
+        self.database = 'parcel'
         self.conn = None
         self.cursor = None
 
