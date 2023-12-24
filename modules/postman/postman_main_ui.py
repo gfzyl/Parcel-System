@@ -19,14 +19,14 @@ from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QHeaderView
     QPushButton, QSizePolicy, QSpacerItem, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
 
-class Ui_PostmanForm(object):
-    def setupUi(self, PostmanForm):
-        if not PostmanForm.objectName():
-            PostmanForm.setObjectName(u"PostmanForm")
-        PostmanForm.resize(761, 442)
-        self.verticalLayout = QVBoxLayout(PostmanForm)
+class Ui_postman_main(object):
+    def setupUi(self, postman_main):
+        if not postman_main.objectName():
+            postman_main.setObjectName(u"postman_main")
+        postman_main.resize(761, 442)
+        self.verticalLayout = QVBoxLayout(postman_main)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.groupBoxAddressBook = QGroupBox(PostmanForm)
+        self.groupBoxAddressBook = QGroupBox(postman_main)
         self.groupBoxAddressBook.setObjectName(u"groupBoxAddressBook")
         self.groupBoxAddressBook.setStyleSheet(u"\n"
 "            QTableWidget {\n"
@@ -129,7 +129,7 @@ class Ui_PostmanForm(object):
 
         self.verticalLayoutButtons = QVBoxLayout()
         self.verticalLayoutButtons.setObjectName(u"verticalLayoutButtons")
-        self.groupBoxActions = QGroupBox(PostmanForm)
+        self.groupBoxActions = QGroupBox(postman_main)
         self.groupBoxActions.setObjectName(u"groupBoxActions")
         self.groupBoxActions.setStyleSheet(u"\n"
 "            QPushButton {\n"
@@ -185,31 +185,31 @@ class Ui_PostmanForm(object):
         self.verticalLayout.addItem(self.verticalSpacer_2)
 
 
-        self.retranslateUi(PostmanForm)
+        self.retranslateUi(postman_main)
 
-        QMetaObject.connectSlotsByName(PostmanForm)
+        QMetaObject.connectSlotsByName(postman_main)
     # setupUi
 
-    def retranslateUi(self, PostmanForm):
-        PostmanForm.setWindowTitle(QCoreApplication.translate("PostmanForm", u"\u5feb\u9012\u5458\u4e3b\u754c\u9762", None))
-        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("PostmanForm", u"\u5feb\u9012\u4fe1\u606f", None))
+    def retranslateUi(self, postman_main):
+        postman_main.setWindowTitle(QCoreApplication.translate("postman_main", u"\u5feb\u9012\u5458\u4e3b\u754c\u9762", None))
+        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("postman_main", u"\u5feb\u9012\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("PostmanForm", u"\u5e8f\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("postman_main", u"\u5e8f\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("PostmanForm", u"\u8ba2\u5355\u7f16\u53f7", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("postman_main", u"\u8ba2\u5355\u7f16\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("PostmanForm", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_main", u"\u5b8c\u6574\u8def\u7ebf", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("PostmanForm", u"\u7701\u4efd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_main", u"\u7701\u4efd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("PostmanForm", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_main", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("PostmanForm", u"\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_main", u"\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("PostmanForm", u"\u76ee\u524d\u72b6\u6001", None));
-        self.groupBoxActions.setTitle(QCoreApplication.translate("PostmanForm", u"\u7528\u6237\u64cd\u4f5c", None))
-        self.searchBtn.setText(QCoreApplication.translate("PostmanForm", u"\u67e5\u8be2\u8ba2\u5355", None))
-        self.addCodeBtn.setText(QCoreApplication.translate("PostmanForm", u"\u6dfb\u52a0\u53d6\u4ef6\u7801", None))
-        self.quitBtn.setText(QCoreApplication.translate("PostmanForm", u"\u9000\u51fa\u767b\u5f55", None))
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_main", u"\u76ee\u524d\u72b6\u6001", None));
+        self.groupBoxActions.setTitle(QCoreApplication.translate("postman_main", u"\u7528\u6237\u64cd\u4f5c", None))
+        self.searchBtn.setText(QCoreApplication.translate("postman_main", u"\u67e5\u8be2\u8ba2\u5355", None))
+        self.addCodeBtn.setText(QCoreApplication.translate("postman_main", u"\u6dfb\u52a0\u53d6\u4ef6\u7801", None))
+        self.quitBtn.setText(QCoreApplication.translate("postman_main", u"\u9000\u51fa\u767b\u5f55", None))
     # retranslateUi
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ProfileForm</class>
- <widget class="QWidget" name="ProfileForm">
+ <class>user_modify_info</class>
+ <widget class="QWidget" name="user_modify_info">
   <property name="geometry">
    <rect>
     <x>0</x>

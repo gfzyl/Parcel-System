@@ -19,14 +19,14 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QGridLayout, QGroupBox,
     QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
-class Ui_AddressBookForm(object):
-    def setupUi(self, AddressBookForm):
-        if not AddressBookForm.objectName():
-            AddressBookForm.setObjectName(u"AddressBookForm")
-        AddressBookForm.resize(626, 329)
-        self.verticalLayout = QVBoxLayout(AddressBookForm)
+class Ui_add_address_book(object):
+    def setupUi(self, add_address_book):
+        if not add_address_book.objectName():
+            add_address_book.setObjectName(u"add_address_book")
+        add_address_book.resize(626, 329)
+        self.verticalLayout = QVBoxLayout(add_address_book)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.groupBoxAddressBook = QGroupBox(AddressBookForm)
+        self.groupBoxAddressBook = QGroupBox(add_address_book)
         self.groupBoxAddressBook.setObjectName(u"groupBoxAddressBook")
         self.groupBoxAddressBook.setStyleSheet(u"\n"
 "            QLabel {\n"
@@ -172,19 +172,19 @@ class Ui_AddressBookForm(object):
         self.verticalLayout.addWidget(self.groupBoxAddressBook)
 
 
-        self.retranslateUi(AddressBookForm)
+        self.retranslateUi(add_address_book)
 
-        QMetaObject.connectSlotsByName(AddressBookForm)
+        QMetaObject.connectSlotsByName(add_address_book)
     # setupUi
 
-    def retranslateUi(self, AddressBookForm):
-        AddressBookForm.setWindowTitle(QCoreApplication.translate("AddressBookForm", u"\u5730\u5740\u7c3f", None))
-        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("AddressBookForm", u"\u6dfb\u52a0\u5730\u5740\u7c3f", None))
-        self.labelProvince.setText(QCoreApplication.translate("AddressBookForm", u"\u7701\u4efd\uff1a", None))
-        self.labelCity.setText(QCoreApplication.translate("AddressBookForm", u"\u5730\u7ea7\u5e02\uff1a", None))
-        self.btnAdd.setText(QCoreApplication.translate("AddressBookForm", u"\u786e\u8ba4\u6dfb\u52a0", None))
-        self.labelName.setText(QCoreApplication.translate("AddressBookForm", u"\u59d3\u540d\uff1a", None))
-        self.labelPhone.setText(QCoreApplication.translate("AddressBookForm", u"\u7535\u8bdd\uff1a", None))
-        self.labelAddress.setText(QCoreApplication.translate("AddressBookForm", u"\u8be6\u7ec6\u5730\u5740\uff1a", None))
+    def retranslateUi(self, add_address_book):
+        add_address_book.setWindowTitle(QCoreApplication.translate("add_address_book", u"\u5730\u5740\u7c3f", None))
+        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("add_address_book", u"\u6dfb\u52a0\u5730\u5740\u7c3f", None))
+        self.labelProvince.setText(QCoreApplication.translate("add_address_book", u"\u7701\u4efd\uff1a", None))
+        self.labelCity.setText(QCoreApplication.translate("add_address_book", u"\u5730\u7ea7\u5e02\uff1a", None))
+        self.btnAdd.setText(QCoreApplication.translate("add_address_book", u"\u786e\u8ba4\u6dfb\u52a0", None))
+        self.labelName.setText(QCoreApplication.translate("add_address_book", u"\u59d3\u540d\uff1a", None))
+        self.labelPhone.setText(QCoreApplication.translate("add_address_book", u"\u7535\u8bdd\uff1a", None))
+        self.labelAddress.setText(QCoreApplication.translate("add_address_book", u"\u8be6\u7ec6\u5730\u5740\uff1a", None))
     # retranslateUi
 

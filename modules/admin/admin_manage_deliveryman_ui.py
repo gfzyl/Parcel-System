@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QTableWidget, QTableWidgetItem, QWidget)
 
-class Ui_ProfileForm(object):
-    def setupUi(self, ProfileForm):
-        if not ProfileForm.objectName():
-            ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(881, 631)
-        ProfileForm.setStyleSheet(u"\n"
+class Ui_admin_manage_deliveryman(object):
+    def setupUi(self, admin_manage_deliveryman):
+        if not admin_manage_deliveryman.objectName():
+            admin_manage_deliveryman.setObjectName(u"admin_manage_deliveryman")
+        admin_manage_deliveryman.resize(881, 631)
+        admin_manage_deliveryman.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
 "                    font: 14px \"\u5e7c\u5706\";\n"
@@ -103,7 +103,7 @@ class Ui_ProfileForm(object):
 "                    min-height: 20px;\n"
 "                }\n"
 "            ")
-        self.groupBox = QGroupBox(ProfileForm)
+        self.groupBox = QGroupBox(admin_manage_deliveryman)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 861, 611))
         self.tableWidget = QTableWidget(self.groupBox)
@@ -279,65 +279,65 @@ class Ui_ProfileForm(object):
         self.horizontalLayout_4.addWidget(self.pushButton_3)
 
 
-        self.retranslateUi(ProfileForm)
+        self.retranslateUi(admin_manage_deliveryman)
 
-        QMetaObject.connectSlotsByName(ProfileForm)
+        QMetaObject.connectSlotsByName(admin_manage_deliveryman)
     # setupUi
 
-    def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u7ba1\u7406\u914d\u9001\u5458\u4fe1\u606f", None))
-        self.groupBox.setTitle(QCoreApplication.translate("ProfileForm", u"\u914d\u9001\u5458\u4fe1\u606f", None))
+    def retranslateUi(self, admin_manage_deliveryman):
+        admin_manage_deliveryman.setWindowTitle(QCoreApplication.translate("admin_manage_deliveryman", u"\u7ba1\u7406\u914d\u9001\u5458\u4fe1\u606f", None))
+        self.groupBox.setTitle(QCoreApplication.translate("admin_manage_deliveryman", u"\u914d\u9001\u5458\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("ProfileForm", u"\u5bc6\u7801", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5bc6\u7801", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("ProfileForm", u"\u59d3\u540d", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u59d3\u540d", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u7535\u8bdd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("ProfileForm", u"\u5e74\u9f84", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5e74\u9f84", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b91", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b91", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b92", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b92", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(2)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(3)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(4)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(5)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(6)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(7)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(8)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(9)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(10)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(11)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(12)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        self.label.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7\uff1a", None))
-        self.label_3.setText(QCoreApplication.translate("ProfileForm", u"\u5bc6\u7801\uff1a", None))
-        self.label_4.setText(QCoreApplication.translate("ProfileForm", u"\u59d3\u540d\uff1a", None))
-        self.label_5.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd\uff1a", None))
-        self.label_6.setText(QCoreApplication.translate("ProfileForm", u"\u5e74\u9f84\uff1a", None))
-        self.label_7.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b91\uff1a", None))
-        self.label_8.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b92\uff1a", None))
-        self.label_9.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b91\uff1a", None))
-        self.pushButton_4.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2", None))
-        self.pushButton.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa", None))
-        self.pushButton_2.setText(QCoreApplication.translate("ProfileForm", u"\u4fee\u6539", None))
-        self.pushButton_3.setText(QCoreApplication.translate("ProfileForm", u"\u5220\u9664", None))
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
+        self.label.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u53f7\uff1a", None))
+        self.label_3.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5bc6\u7801\uff1a", None))
+        self.label_4.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u59d3\u540d\uff1a", None))
+        self.label_5.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u7535\u8bdd\uff1a", None))
+        self.label_6.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5e74\u9f84\uff1a", None))
+        self.label_7.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b91\uff1a", None))
+        self.label_8.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b92\uff1a", None))
+        self.label_9.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b91\uff1a", None))
+        self.pushButton_4.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u67e5\u8be2", None))
+        self.pushButton.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa", None))
+        self.pushButton_2.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u4fee\u6539", None))
+        self.pushButton_3.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5220\u9664", None))
     # retranslateUi
 

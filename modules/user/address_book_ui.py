@@ -19,14 +19,14 @@ from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QHeaderView
     QPushButton, QSizePolicy, QSpacerItem, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
 
-class Ui_AddressBookForm(object):
-    def setupUi(self, AddressBookForm):
-        if not AddressBookForm.objectName():
-            AddressBookForm.setObjectName(u"AddressBookForm")
-        AddressBookForm.resize(668, 442)
-        self.verticalLayout = QVBoxLayout(AddressBookForm)
+class Ui_address_book(object):
+    def setupUi(self, address_book):
+        if not address_book.objectName():
+            address_book.setObjectName(u"address_book")
+        address_book.resize(668, 442)
+        self.verticalLayout = QVBoxLayout(address_book)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.groupBoxAddressBook = QGroupBox(AddressBookForm)
+        self.groupBoxAddressBook = QGroupBox(address_book)
         self.groupBoxAddressBook.setObjectName(u"groupBoxAddressBook")
         self.groupBoxAddressBook.setStyleSheet(u"\n"
 "            QTableWidget {\n"
@@ -127,7 +127,7 @@ class Ui_AddressBookForm(object):
 
         self.verticalLayoutButtons = QVBoxLayout()
         self.verticalLayoutButtons.setObjectName(u"verticalLayoutButtons")
-        self.groupBoxActions = QGroupBox(AddressBookForm)
+        self.groupBoxActions = QGroupBox(address_book)
         self.groupBoxActions.setObjectName(u"groupBoxActions")
         self.groupBoxActions.setStyleSheet(u"\n"
 "            QPushButton {\n"
@@ -183,29 +183,29 @@ class Ui_AddressBookForm(object):
         self.verticalLayout.addItem(self.verticalSpacer_2)
 
 
-        self.retranslateUi(AddressBookForm)
+        self.retranslateUi(address_book)
 
-        QMetaObject.connectSlotsByName(AddressBookForm)
+        QMetaObject.connectSlotsByName(address_book)
     # setupUi
 
-    def retranslateUi(self, AddressBookForm):
-        AddressBookForm.setWindowTitle(QCoreApplication.translate("AddressBookForm", u"\u5730\u5740\u7c3f", None))
-        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("AddressBookForm", u"\u5730\u5740\u7c3f\u5217\u8868", None))
+    def retranslateUi(self, address_book):
+        address_book.setWindowTitle(QCoreApplication.translate("address_book", u"\u5730\u5740\u7c3f", None))
+        self.groupBoxAddressBook.setTitle(QCoreApplication.translate("address_book", u"\u5730\u5740\u7c3f\u5217\u8868", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("AddressBookForm", u"\u5e8f\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("address_book", u"\u5e8f\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("AddressBookForm", u"\u59d3\u540d", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("address_book", u"\u59d3\u540d", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("AddressBookForm", u"\u7535\u8bdd", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("address_book", u"\u7535\u8bdd", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("AddressBookForm", u"\u7701\u4efd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("address_book", u"\u7701\u4efd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("AddressBookForm", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("address_book", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("AddressBookForm", u"\u8be6\u7ec6\u5730\u5740", None));
-        self.groupBoxActions.setTitle(QCoreApplication.translate("AddressBookForm", u"\u7528\u6237\u64cd\u4f5c", None))
-        self.btnAdd.setText(QCoreApplication.translate("AddressBookForm", u"\u6dfb\u52a0\u5730\u5740\u7c3f\u4fe1\u606f", None))
-        self.btnModify.setText(QCoreApplication.translate("AddressBookForm", u"\u4fee\u6539", None))
-        self.btnDelete.setText(QCoreApplication.translate("AddressBookForm", u"\u5220\u9664", None))
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("address_book", u"\u8be6\u7ec6\u5730\u5740", None));
+        self.groupBoxActions.setTitle(QCoreApplication.translate("address_book", u"\u7528\u6237\u64cd\u4f5c", None))
+        self.btnAdd.setText(QCoreApplication.translate("address_book", u"\u6dfb\u52a0\u5730\u5740\u7c3f\u4fe1\u606f", None))
+        self.btnModify.setText(QCoreApplication.translate("address_book", u"\u4fee\u6539", None))
+        self.btnDelete.setText(QCoreApplication.translate("address_book", u"\u5220\u9664", None))
     # retranslateUi
 

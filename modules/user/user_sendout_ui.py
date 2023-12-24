@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QGridLayout, QGroupBox,
     QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(527, 600)
-        self.groupBox = QGroupBox(Form)
+class Ui_user_sendout(object):
+    def setupUi(self, user_sendout):
+        if not user_sendout.objectName():
+            user_sendout.setObjectName(u"user_sendout")
+        user_sendout.resize(527, 600)
+        self.groupBox = QGroupBox(user_sendout)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 501, 221))
         self.groupBox.setStyleSheet(u"\n"
@@ -134,7 +134,7 @@ class Ui_Form(object):
 
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.groupBox_2 = QGroupBox(Form)
+        self.groupBox_2 = QGroupBox(user_sendout)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.groupBox_2.setGeometry(QRect(10, 230, 501, 231))
         self.groupBox_2.setStyleSheet(u"\n"
@@ -243,7 +243,7 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addLayout(self.gridLayout_2)
 
-        self.layoutWidget_3 = QWidget(Form)
+        self.layoutWidget_3 = QWidget(user_sendout)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
         self.layoutWidget_3.setGeometry(QRect(30, 470, 431, 41))
         self.horizontalLayout_7 = QHBoxLayout(self.layoutWidget_3)
@@ -271,7 +271,7 @@ class Ui_Form(object):
 
         self.horizontalLayout_7.addWidget(self.lineEdit_7)
 
-        self.layoutWidget1 = QWidget(Form)
+        self.layoutWidget1 = QWidget(user_sendout)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
         self.layoutWidget1.setGeometry(QRect(10, 540, 495, 39))
         self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget1)
@@ -332,49 +332,49 @@ class Ui_Form(object):
         self.horizontalLayout_8.addItem(self.horizontalSpacer_3)
 
 
-        self.retranslateUi(Form)
+        self.retranslateUi(user_sendout)
 
-        QMetaObject.connectSlotsByName(Form)
+        QMetaObject.connectSlotsByName(user_sendout)
     # setupUi
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"\u7528\u6237\u5bc4\u4ef6", None))
-        self.groupBox.setTitle(QCoreApplication.translate("Form", u"\u5bc4\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label.setText(QCoreApplication.translate("Form", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
-        self.label_4.setText(QCoreApplication.translate("Form", u"\u7701", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Form", u"\u6d4b\u8bd51", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Form", u"2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("Form", u"3", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("Form", u"4", None))
+    def retranslateUi(self, user_sendout):
+        user_sendout.setWindowTitle(QCoreApplication.translate("user_sendout", u"\u7528\u6237\u5bc4\u4ef6", None))
+        self.groupBox.setTitle(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
+        self.label.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_2.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_4.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
 
-        self.label_5.setText(QCoreApplication.translate("Form", u"\u5e02", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("Form", u"\u6d4b\u8bd51", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("Form", u"2", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("Form", u"3", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("Form", u"4", None))
+        self.label_5.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
+        self.comboBox_2.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
+        self.comboBox_2.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
+        self.comboBox_2.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
+        self.comboBox_2.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
 
-        self.label_6.setText(QCoreApplication.translate("Form", u"\u8be6\u7ec6\u5730\u5740", None))
-        self.label_in_address_book.setText(QCoreApplication.translate("Form", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("Form", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
-        self.label_7.setText(QCoreApplication.translate("Form", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
-        self.label_8.setText(QCoreApplication.translate("Form", u"\u7701", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("Form", u"\u6d4b\u8bd51", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("Form", u"2", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("Form", u"3", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("Form", u"4", None))
+        self.label_6.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
+        self.label_in_address_book.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
+        self.label_3.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_7.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_8.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
+        self.comboBox_3.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
+        self.comboBox_3.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
+        self.comboBox_3.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
+        self.comboBox_3.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
 
-        self.label_9.setText(QCoreApplication.translate("Form", u"\u5e02", None))
-        self.comboBox_4.setItemText(0, QCoreApplication.translate("Form", u"\u6d4b\u8bd51", None))
-        self.comboBox_4.setItemText(1, QCoreApplication.translate("Form", u"2", None))
-        self.comboBox_4.setItemText(2, QCoreApplication.translate("Form", u"3", None))
-        self.comboBox_4.setItemText(3, QCoreApplication.translate("Form", u"4", None))
+        self.label_9.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
+        self.comboBox_4.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
+        self.comboBox_4.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
+        self.comboBox_4.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
+        self.comboBox_4.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
 
-        self.label_10.setText(QCoreApplication.translate("Form", u"\u8be6\u7ec6\u5730\u5740", None))
-        self.label_in_address_book1.setText(QCoreApplication.translate("Form", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
-        self.label_11.setText(QCoreApplication.translate("Form", u"\u5907\u6ce8:", None))
-        self.submitBtn.setText(QCoreApplication.translate("Form", u"\u63d0\u4ea4\u8ba2\u5355", None))
-        self.returnBtn.setText(QCoreApplication.translate("Form", u"\u8fd4\u56de\u4e3b\u754c\u9762", None))
+        self.label_10.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
+        self.label_in_address_book1.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
+        self.label_11.setText(QCoreApplication.translate("user_sendout", u"\u5907\u6ce8:", None))
+        self.submitBtn.setText(QCoreApplication.translate("user_sendout", u"\u63d0\u4ea4\u8ba2\u5355", None))
+        self.returnBtn.setText(QCoreApplication.translate("user_sendout", u"\u8fd4\u56de\u4e3b\u754c\u9762", None))
     # retranslateUi
 

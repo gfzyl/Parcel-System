@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QHeaderView
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QTableWidget, QTableWidgetItem, QWidget)
 
-class Ui_DeliveryForm(object):
-    def setupUi(self, DeliveryForm):
-        if not DeliveryForm.objectName():
-            DeliveryForm.setObjectName(u"DeliveryForm")
-        DeliveryForm.resize(783, 585)
-        DeliveryForm.setStyleSheet(u"\n"
+class Ui_postman_search_delivery(object):
+    def setupUi(self, postman_search_delivery):
+        if not postman_search_delivery.objectName():
+            postman_search_delivery.setObjectName(u"postman_search_delivery")
+        postman_search_delivery.resize(783, 585)
+        postman_search_delivery.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
 "                    font: 14px \"\u5e7c\u5706\";\n"
@@ -103,7 +103,7 @@ class Ui_DeliveryForm(object):
 "                    min-height: 20px;\n"
 "                }\n"
 "            ")
-        self.groupBox = QGroupBox(DeliveryForm)
+        self.groupBox = QGroupBox(postman_search_delivery)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 761, 551))
         self.tableWidget = QTableWidget(self.groupBox)
@@ -179,57 +179,57 @@ class Ui_DeliveryForm(object):
         self.returnBtn.setObjectName(u"returnBtn")
         self.returnBtn.setGeometry(QRect(630, 20, 111, 37))
 
-        self.retranslateUi(DeliveryForm)
+        self.retranslateUi(postman_search_delivery)
 
-        QMetaObject.connectSlotsByName(DeliveryForm)
+        QMetaObject.connectSlotsByName(postman_search_delivery)
     # setupUi
 
-    def retranslateUi(self, DeliveryForm):
-        DeliveryForm.setWindowTitle(QCoreApplication.translate("DeliveryForm", u"\u67e5\u8be2\u5feb\u9012\u4fe1\u606f", None))
-        self.groupBox.setTitle(QCoreApplication.translate("DeliveryForm", u"\u5feb\u9012\u4fe1\u606f", None))
+    def retranslateUi(self, postman_search_delivery):
+        postman_search_delivery.setWindowTitle(QCoreApplication.translate("postman_search_delivery", u"\u67e5\u8be2\u5feb\u9012\u4fe1\u606f", None))
+        self.groupBox.setTitle(QCoreApplication.translate("postman_search_delivery", u"\u5feb\u9012\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("DeliveryForm", u"\u5e8f\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("postman_search_delivery", u"\u5e8f\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("DeliveryForm", u"\u5feb\u9012\u5355\u53f7", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("postman_search_delivery", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("DeliveryForm", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_search_delivery", u"\u5b8c\u6574\u8def\u7ebf", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("DeliveryForm", u"\u7701\u4efd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_search_delivery", u"\u7701\u4efd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u5217", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u5217", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("DeliveryForm", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_search_delivery", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("DeliveryForm", u"\u76ee\u524d\u72b6\u6001", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_search_delivery", u"\u76ee\u524d\u72b6\u6001", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(2)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(3)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(4)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(5)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(6)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(7)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(8)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(9)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(10)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(11)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(12)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("DeliveryForm", u"\u65b0\u5efa\u884c", None));
-        self.parcelIdLabel.setText(QCoreApplication.translate("DeliveryForm", u"\u5feb\u9012\u5355\u53f7", None))
-        self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("DeliveryForm", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
-        self.queryBtn.setText(QCoreApplication.translate("DeliveryForm", u"\u67e5\u8be2", None))
-        self.returnBtn.setText(QCoreApplication.translate("DeliveryForm", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
+        self.parcelIdLabel.setText(QCoreApplication.translate("postman_search_delivery", u"\u5feb\u9012\u5355\u53f7", None))
+        self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("postman_search_delivery", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
+        self.queryBtn.setText(QCoreApplication.translate("postman_search_delivery", u"\u67e5\u8be2", None))
+        self.returnBtn.setText(QCoreApplication.translate("postman_search_delivery", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 

@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QDialog, QHBoxLayout, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QSpacerItem,
     QVBoxLayout, QWidget)
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.resize(383, 208)
-        self.verticalLayout = QVBoxLayout(Dialog)
+class Ui_postman_code(object):
+    def setupUi(self, postman_code):
+        if not postman_code.objectName():
+            postman_code.setObjectName(u"postman_code")
+        postman_code.resize(383, 208)
+        self.verticalLayout = QVBoxLayout(postman_code)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -36,7 +36,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_6)
 
-        self.label = QLabel(Dialog)
+        self.label = QLabel(postman_code)
         self.label.setObjectName(u"label")
         self.label.setStyleSheet(u"\n"
 "                                    color: #333;\n"
@@ -46,7 +46,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout_2.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(Dialog)
+        self.lineEdit = QLineEdit(postman_code)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setStyleSheet(u"\n"
 "                                    padding: 8px;\n"
@@ -78,7 +78,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer_4)
 
-        self.buttonConfirm = QPushButton(Dialog)
+        self.buttonConfirm = QPushButton(postman_code)
         self.buttonConfirm.setObjectName(u"buttonConfirm")
         self.buttonConfirm.setStyleSheet(u"\n"
 "           QPushButton {\n"
@@ -104,7 +104,7 @@ class Ui_Dialog(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.buttonCancle = QPushButton(Dialog)
+        self.buttonCancle = QPushButton(postman_code)
         self.buttonCancle.setObjectName(u"buttonCancle")
         self.buttonCancle.setStyleSheet(u"\n"
 "           QPushButton {\n"
@@ -138,16 +138,16 @@ class Ui_Dialog(object):
         self.verticalLayout.addItem(self.verticalSpacer)
 
 
-        self.retranslateUi(Dialog)
+        self.retranslateUi(postman_code)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(postman_code)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"\u5f55\u5165\u53d6\u4ef6\u7801", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"\u53d6\u4ef6\u7801\uff1a", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("Dialog", u"\u8bf7\u8f93\u5165\u53d6\u4ef6\u7801 ", None))
-        self.buttonConfirm.setText(QCoreApplication.translate("Dialog", u"\u786e\u8ba4\u6dfb\u52a0", None))
-        self.buttonCancle.setText(QCoreApplication.translate("Dialog", u"\u53d6\u6d88\u6dfb\u52a0", None))
+    def retranslateUi(self, postman_code):
+        postman_code.setWindowTitle(QCoreApplication.translate("postman_code", u"\u5f55\u5165\u53d6\u4ef6\u7801", None))
+        self.label.setText(QCoreApplication.translate("postman_code", u"\u53d6\u4ef6\u7801\uff1a", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("postman_code", u"\u8bf7\u8f93\u5165\u53d6\u4ef6\u7801 ", None))
+        self.buttonConfirm.setText(QCoreApplication.translate("postman_code", u"\u786e\u8ba4\u6dfb\u52a0", None))
+        self.buttonCancle.setText(QCoreApplication.translate("postman_code", u"\u53d6\u6d88\u6dfb\u52a0", None))
     # retranslateUi
 

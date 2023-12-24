@@ -18,12 +18,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGroupBox, QPushButton, QSizePolicy,
     QVBoxLayout, QWidget)
 
-class Ui_ProfileForm(object):
-    def setupUi(self, ProfileForm):
-        if not ProfileForm.objectName():
-            ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(565, 306)
-        ProfileForm.setStyleSheet(u"\n"
+class Ui_admin_main(object):
+    def setupUi(self, admin_main):
+        if not admin_main.objectName():
+            admin_main.setObjectName(u"admin_main")
+        admin_main.resize(565, 306)
+        admin_main.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
 "                font:14px \"\u5e7c\u5706\";\n"
@@ -60,9 +60,9 @@ class Ui_ProfileForm(object):
 ""
                         "\n"
 "        ")
-        self.verticalLayout = QVBoxLayout(ProfileForm)
+        self.verticalLayout = QVBoxLayout(admin_main)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.tabWidget = QGroupBox(ProfileForm)
+        self.tabWidget = QGroupBox(admin_main)
         self.tabWidget.setObjectName(u"tabWidget")
         self.btn_query_courier_info_2 = QPushButton(self.tabWidget)
         self.btn_query_courier_info_2.setObjectName(u"btn_query_courier_info_2")
@@ -86,19 +86,19 @@ class Ui_ProfileForm(object):
         self.verticalLayout.addWidget(self.tabWidget)
 
 
-        self.retranslateUi(ProfileForm)
+        self.retranslateUi(admin_main)
 
-        QMetaObject.connectSlotsByName(ProfileForm)
+        QMetaObject.connectSlotsByName(admin_main)
     # setupUi
 
-    def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u7ba1\u7406\u5458\u754c\u9762", None))
-        self.tabWidget.setTitle(QCoreApplication.translate("ProfileForm", u"\u7ba1\u7406\u5458\u4e3b\u754c\u9762", None))
-        self.btn_query_courier_info_2.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2\u5feb\u9012\u5458\u4fe1\u606f", None))
-        self.btn_view_all_couriers_2.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u770b\u6240\u6709\u5feb\u9012\u5458", None))
-        self.btn_logout.setText(QCoreApplication.translate("ProfileForm", u"\u9000\u51fa\u767b\u5f55", None))
-        self.btn_query_delivery_info.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2\u5feb\u9012\u4fe1\u606f", None))
-        self.btn_view_all_couriers.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u770b\u6240\u6709\u914d\u9001\u5458", None))
-        self.btn_query_courier_info.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2\u914d\u9001\u5458\u4fe1\u606f", None))
+    def retranslateUi(self, admin_main):
+        admin_main.setWindowTitle(QCoreApplication.translate("admin_main", u"\u7ba1\u7406\u5458\u754c\u9762", None))
+        self.tabWidget.setTitle(QCoreApplication.translate("admin_main", u"\u7ba1\u7406\u5458\u4e3b\u754c\u9762", None))
+        self.btn_query_courier_info_2.setText(QCoreApplication.translate("admin_main", u"\u67e5\u8be2\u5feb\u9012\u5458\u4fe1\u606f", None))
+        self.btn_view_all_couriers_2.setText(QCoreApplication.translate("admin_main", u"\u67e5\u770b\u6240\u6709\u5feb\u9012\u5458", None))
+        self.btn_logout.setText(QCoreApplication.translate("admin_main", u"\u9000\u51fa\u767b\u5f55", None))
+        self.btn_query_delivery_info.setText(QCoreApplication.translate("admin_main", u"\u67e5\u8be2\u5feb\u9012\u4fe1\u606f", None))
+        self.btn_view_all_couriers.setText(QCoreApplication.translate("admin_main", u"\u67e5\u770b\u6240\u6709\u914d\u9001\u5458", None))
+        self.btn_query_courier_info.setText(QCoreApplication.translate("admin_main", u"\u67e5\u8be2\u914d\u9001\u5458\u4fe1\u606f", None))
     # retranslateUi
 

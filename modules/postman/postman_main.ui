@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PostmanForm</class>
- <widget class="QWidget" name="PostmanForm">
+ <class>postman_main</class>
+ <widget class="QWidget" name="postman_main">
   <property name="geometry">
    <rect>
     <x>0</x>

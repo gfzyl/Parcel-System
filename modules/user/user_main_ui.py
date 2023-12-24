@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QGridLayout, QGroupBox, QLabel,
     QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
     QWidget)
 
-class Ui_ProfileForm(object):
-    def setupUi(self, ProfileForm):
-        if not ProfileForm.objectName():
-            ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(633, 341)
-        ProfileForm.setStyleSheet(u"\n"
+class Ui_user_main(object):
+    def setupUi(self, user_main):
+        if not user_main.objectName():
+            user_main.setObjectName(u"user_main")
+        user_main.resize(633, 341)
+        user_main.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
 "                font:14px \"\u5e7c\u5706\";\n"
@@ -61,9 +61,9 @@ class Ui_ProfileForm(object):
 ""
                         "\n"
 "        ")
-        self.verticalLayout = QVBoxLayout(ProfileForm)
+        self.verticalLayout = QVBoxLayout(user_main)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.tabWidget = QGroupBox(ProfileForm)
+        self.tabWidget = QGroupBox(user_main)
         self.tabWidget.setObjectName(u"tabWidget")
         self.gridLayout = QGridLayout(self.tabWidget)
         self.gridLayout.setObjectName(u"gridLayout")
@@ -134,24 +134,24 @@ class Ui_ProfileForm(object):
         self.verticalLayout.addWidget(self.tabWidget)
 
 
-        self.retranslateUi(ProfileForm)
+        self.retranslateUi(user_main)
 
-        QMetaObject.connectSlotsByName(ProfileForm)
+        QMetaObject.connectSlotsByName(user_main)
     # setupUi
 
-    def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u7528\u6237\u4e3b\u754c\u9762", None))
-        self.tabWidget.setTitle(QCoreApplication.translate("ProfileForm", u"\u7528\u6237\u4e3b\u754c\u9762", None))
-        self.sendBtn.setText(QCoreApplication.translate("ProfileForm", u"\u6211\u8981\u5bc4\u5feb\u9012", None))
-        self.queryBtn.setText(QCoreApplication.translate("ProfileForm", u"\u6211\u8981\u67e5\u5feb\u9012", None))
-        self.modifyInfoBtn.setText(QCoreApplication.translate("ProfileForm", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
+    def retranslateUi(self, user_main):
+        user_main.setWindowTitle(QCoreApplication.translate("user_main", u"\u7528\u6237\u4e3b\u754c\u9762", None))
+        self.tabWidget.setTitle(QCoreApplication.translate("user_main", u"\u7528\u6237\u4e3b\u754c\u9762", None))
+        self.sendBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u8981\u5bc4\u5feb\u9012", None))
+        self.queryBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u8981\u67e5\u5feb\u9012", None))
+        self.modifyInfoBtn.setText(QCoreApplication.translate("user_main", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
         self.label_4.setText("")
-        self.logoutBtn.setText(QCoreApplication.translate("ProfileForm", u"\u9000\u51fa\u767b\u5f55", None))
+        self.logoutBtn.setText(QCoreApplication.translate("user_main", u"\u9000\u51fa\u767b\u5f55", None))
         self.label_3.setText("")
-        self.myReceiveBtn.setText(QCoreApplication.translate("ProfileForm", u"\u6211\u6536\u7684", None))
+        self.myReceiveBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u6536\u7684", None))
         self.label_2.setText("")
         self.label_5.setText("")
         self.label.setText("")
-        self.mySendBtn.setText(QCoreApplication.translate("ProfileForm", u"\u6211\u5bc4\u7684", None))
+        self.mySendBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u5bc4\u7684", None))
     # retranslateUi
 

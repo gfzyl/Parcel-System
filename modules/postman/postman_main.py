@@ -6,7 +6,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 # 导入我们生成的界面
-from postman_main_ui import Ui_PostmanForm
+from postman_main_ui import Ui_postman_main
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
@@ -14,7 +14,7 @@ class MyWidget(QWidget):
     def __init__(self):
         super().__init__()
         # 设置界面为我们生成的界面
-        self.ui = Ui_PostmanForm()
+        self.ui = Ui_postman_main()
         self.ui.setupUi(self)
 
 # 程序入口

@@ -19,16 +19,16 @@ from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
     QWidget)
 
-class Ui_Register(object):
-    def setupUi(self, RegisterForm):
-        if not RegisterForm.objectName():
-            RegisterForm.setObjectName(u"RegisterForm")
-        RegisterForm.resize(623, 442)
-        self.verticalLayout = QVBoxLayout(RegisterForm)
+class Ui_register(object):
+    def setupUi(self, register):
+        if not register.objectName():
+            register.setObjectName(u"register")
+        register.resize(623, 442)
+        self.verticalLayout = QVBoxLayout(register)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label = QLabel(RegisterForm)
+        self.label = QLabel(register)
         self.label.setObjectName(u"label")
         self.label.setStyleSheet(u"\n"
 "            QLabel#label {\n"
@@ -40,7 +40,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
 
-        self.phoneInput = QLineEdit(RegisterForm)
+        self.phoneInput = QLineEdit(register)
         self.phoneInput.setObjectName(u"phoneInput")
         self.phoneInput.setStyleSheet(u"\n"
 "            QLineEdit {\n"
@@ -53,7 +53,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.phoneInput, 1, 1, 1, 1)
 
-        self.phtonLabel = QLabel(RegisterForm)
+        self.phtonLabel = QLabel(register)
         self.phtonLabel.setObjectName(u"phtonLabel")
         self.phtonLabel.setStyleSheet(u"\n"
 "            QLabel {\n"
@@ -64,7 +64,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.phtonLabel, 1, 0, 1, 1)
 
-        self.pwdInput = QLineEdit(RegisterForm)
+        self.pwdInput = QLineEdit(register)
         self.pwdInput.setObjectName(u"pwdInput")
         self.pwdInput.setStyleSheet(u"\n"
 "            QLineEdit {\n"
@@ -78,7 +78,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.pwdInput, 2, 1, 1, 1)
 
-        self.pwdLabel = QLabel(RegisterForm)
+        self.pwdLabel = QLabel(register)
         self.pwdLabel.setObjectName(u"pwdLabel")
         self.pwdLabel.setStyleSheet(u"\n"
 "            QLabel {\n"
@@ -89,7 +89,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.pwdLabel, 2, 0, 1, 1)
 
-        self.confirmPwdLabel = QLabel(RegisterForm)
+        self.confirmPwdLabel = QLabel(register)
         self.confirmPwdLabel.setObjectName(u"confirmPwdLabel")
         self.confirmPwdLabel.setStyleSheet(u"\n"
 "            QLabel {\n"
@@ -100,7 +100,7 @@ class Ui_Register(object):
 
         self.gridLayout.addWidget(self.confirmPwdLabel, 3, 0, 1, 1)
 
-        self.confirmPwdInput = QLineEdit(RegisterForm)
+        self.confirmPwdInput = QLineEdit(register)
         self.confirmPwdInput.setObjectName(u"confirmPwdInput")
         self.confirmPwdInput.setStyleSheet(u"\n"
 "            QLineEdit {\n"
@@ -121,7 +121,7 @@ class Ui_Register(object):
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
-        self.registerBtn = QPushButton(RegisterForm)
+        self.registerBtn = QPushButton(register)
         self.registerBtn.setObjectName(u"registerBtn")
         self.registerBtn.setStyleSheet(u"\n"
 "        QPushButton {\n"
@@ -148,17 +148,17 @@ class Ui_Register(object):
         self.verticalLayout.addItem(self.verticalSpacer_2)
 
 
-        self.retranslateUi(RegisterForm)
+        self.retranslateUi(register)
 
-        QMetaObject.connectSlotsByName(RegisterForm)
+        QMetaObject.connectSlotsByName(register)
     # setupUi
 
-    def retranslateUi(self, RegisterForm):
-        RegisterForm.setWindowTitle(QCoreApplication.translate("Register", u"\u767b\u5165\u7cfb\u7edf", None))
-        self.label.setText(QCoreApplication.translate("Register", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
-        self.phtonLabel.setText(QCoreApplication.translate("Register", u"\u624b\u673a\u53f7", None))
-        self.pwdLabel.setText(QCoreApplication.translate("Register", u"\u5bc6\u7801:", None))
-        self.confirmPwdLabel.setText(QCoreApplication.translate("Register", u"\u786e\u8ba4\u5bc6\u7801\uff1a", None))
-        self.registerBtn.setText(QCoreApplication.translate("Register", u"\u786e\u8ba4\u6ce8\u518c", None))
+    def retranslateUi(self, register):
+        register.setWindowTitle(QCoreApplication.translate("register", u"\u767b\u5165\u7cfb\u7edf", None))
+        self.label.setText(QCoreApplication.translate("register", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
+        self.phtonLabel.setText(QCoreApplication.translate("register", u"\u624b\u673a\u53f7", None))
+        self.pwdLabel.setText(QCoreApplication.translate("register", u"\u5bc6\u7801:", None))
+        self.confirmPwdLabel.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u5bc6\u7801\uff1a", None))
+        self.registerBtn.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u6ce8\u518c", None))
     # retranslateUi
 

@@ -18,16 +18,16 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
-class Ui_LoginForm(object):
-    def setupUi(self, LoginForm):
-        if not LoginForm.objectName():
-            LoginForm.setObjectName(u"LoginForm")
-        LoginForm.resize(603, 334)
-        self.verticalLayout = QVBoxLayout(LoginForm)
+class Ui_login(object):
+    def setupUi(self, login):
+        if not login.objectName():
+            login.setObjectName(u"login")
+        login.resize(603, 334)
+        self.verticalLayout = QVBoxLayout(login)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label_2 = QLabel(LoginForm)
+        self.label_2 = QLabel(login)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setStyleSheet(u"QLabel {\n"
 "	font: 12pt \"\u5e7c\u5706\";\n"
@@ -36,7 +36,7 @@ class Ui_LoginForm(object):
 
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
 
-        self.label = QLabel(LoginForm)
+        self.label = QLabel(login)
         self.label.setObjectName(u"label")
         self.label.setStyleSheet(u"QLabel#label {\n"
 "	font: 22pt \"\u5e7c\u5706\";\n"
@@ -47,7 +47,7 @@ class Ui_LoginForm(object):
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
 
-        self.lineEdit_account = QLineEdit(LoginForm)
+        self.lineEdit_account = QLineEdit(login)
         self.lineEdit_account.setObjectName(u"lineEdit_account")
         self.lineEdit_account.setStyleSheet(u"QLineEdit {\n"
 "    padding: 8px;\n"
@@ -58,7 +58,7 @@ class Ui_LoginForm(object):
 
         self.gridLayout.addWidget(self.lineEdit_account, 1, 1, 1, 1)
 
-        self.label_3 = QLabel(LoginForm)
+        self.label_3 = QLabel(login)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setStyleSheet(u"QLabel {\n"
 "	font: 12pt \"\u5e7c\u5706\";\n"
@@ -67,7 +67,7 @@ class Ui_LoginForm(object):
 
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
 
-        self.lineEdit_password = QLineEdit(LoginForm)
+        self.lineEdit_password = QLineEdit(login)
         self.lineEdit_password.setObjectName(u"lineEdit_password")
         self.lineEdit_password.setStyleSheet(u"QLineEdit {\n"
 "    padding: 8px;\n"
@@ -82,7 +82,7 @@ class Ui_LoginForm(object):
 
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.pushButton_login = QPushButton(LoginForm)
+        self.pushButton_login = QPushButton(login)
         self.pushButton_login.setObjectName(u"pushButton_login")
         self.pushButton_login.setStyleSheet(u"QPushButton {\n"
 "    padding: 8px 16px;\n"
@@ -102,7 +102,7 @@ class Ui_LoginForm(object):
 
         self.verticalLayout.addWidget(self.pushButton_login)
 
-        self.pushButton_register = QPushButton(LoginForm)
+        self.pushButton_register = QPushButton(login)
         self.pushButton_register.setObjectName(u"pushButton_register")
         self.pushButton_register.setStyleSheet(u"QPushButton {\n"
 "    padding: 8px 16px;\n"
@@ -122,7 +122,7 @@ class Ui_LoginForm(object):
 
         self.verticalLayout.addWidget(self.pushButton_register)
 
-        self.pushButton = QPushButton(LoginForm)
+        self.pushButton = QPushButton(login)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setStyleSheet(u"/* \u8bbe\u7f6e\u6309\u94ae\u6837\u5f0f */\n"
 "QPushButton {\n"
@@ -157,18 +157,18 @@ class Ui_LoginForm(object):
         self.verticalLayout.addWidget(self.pushButton)
 
 
-        self.retranslateUi(LoginForm)
+        self.retranslateUi(login)
 
-        QMetaObject.connectSlotsByName(LoginForm)
+        QMetaObject.connectSlotsByName(login)
     # setupUi
 
-    def retranslateUi(self, LoginForm):
-        LoginForm.setWindowTitle(QCoreApplication.translate("LoginForm", u"\u767b\u5165\u7cfb\u7edf", None))
-        self.label_2.setText(QCoreApplication.translate("LoginForm", u"\u8d26\u53f7:", None))
-        self.label.setText(QCoreApplication.translate("LoginForm", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
-        self.label_3.setText(QCoreApplication.translate("LoginForm", u"\u5bc6\u7801:", None))
-        self.pushButton_login.setText(QCoreApplication.translate("LoginForm", u"\u767b\u5f55", None))
-        self.pushButton_register.setText(QCoreApplication.translate("LoginForm", u"\u6ce8\u518c", None))
-        self.pushButton.setText(QCoreApplication.translate("LoginForm", u"\u6e38\u5ba2\u8bbf\u95ee", None))
+    def retranslateUi(self, login):
+        login.setWindowTitle(QCoreApplication.translate("login", u"\u767b\u5165\u7cfb\u7edf", None))
+        self.label_2.setText(QCoreApplication.translate("login", u"\u8d26\u53f7:", None))
+        self.label.setText(QCoreApplication.translate("login", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
+        self.label_3.setText(QCoreApplication.translate("login", u"\u5bc6\u7801:", None))
+        self.pushButton_login.setText(QCoreApplication.translate("login", u"\u767b\u5f55", None))
+        self.pushButton_register.setText(QCoreApplication.translate("login", u"\u6ce8\u518c", None))
+        self.pushButton.setText(QCoreApplication.translate("login", u"\u6e38\u5ba2\u8bbf\u95ee", None))
     # retranslateUi
 

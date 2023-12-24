@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QGridLayout, QGroupBox, QHBoxLayout
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QSpacerItem, QVBoxLayout, QWidget)
 
-class Ui_ProfileForm(object):
-    def setupUi(self, ProfileForm):
-        if not ProfileForm.objectName():
-            ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(646, 415)
-        ProfileForm.setStyleSheet(u"\n"
+class Ui_user_modify_info(object):
+    def setupUi(self, user_modify_info):
+        if not user_modify_info.objectName():
+            user_modify_info.setObjectName(u"user_modify_info")
+        user_modify_info.resize(646, 415)
+        user_modify_info.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
 "                font:14px \"\u5e7c\u5706\";\n"
@@ -61,9 +61,9 @@ class Ui_ProfileForm(object):
 ""
                         "\n"
 "        ")
-        self.verticalLayout = QVBoxLayout(ProfileForm)
+        self.verticalLayout = QVBoxLayout(user_modify_info)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.tabWidget = QGroupBox(ProfileForm)
+        self.tabWidget = QGroupBox(user_modify_info)
         self.tabWidget.setObjectName(u"tabWidget")
         self.gridLayout_2 = QGridLayout(self.tabWidget)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
@@ -162,20 +162,20 @@ class Ui_ProfileForm(object):
         self.verticalLayout.addWidget(self.tabWidget)
 
 
-        self.retranslateUi(ProfileForm)
+        self.retranslateUi(user_modify_info)
 
-        QMetaObject.connectSlotsByName(ProfileForm)
+        QMetaObject.connectSlotsByName(user_modify_info)
     # setupUi
 
-    def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
-        self.tabWidget.setTitle(QCoreApplication.translate("ProfileForm", u"\u4e2a\u4eba\u4fe1\u606f", None))
-        self.pushButton.setText(QCoreApplication.translate("ProfileForm", u"\u70b9\u51fb\u67e5\u770b\u5730\u5740\u7c3f\u4fe1\u606f", None))
-        self.btn_change_password.setText(QCoreApplication.translate("ProfileForm", u"\u4fee\u6539\u5bc6\u7801", None))
-        self.label_new_password.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5bc6\u7801:", None))
-        self.label_old_password.setText(QCoreApplication.translate("ProfileForm", u"\u65e7\u5bc6\u7801:", None))
-        self.btn_change_phone.setText(QCoreApplication.translate("ProfileForm", u"\u4fee\u6539\u624b\u673a\u53f7", None))
-        self.label_new_phone.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u624b\u673a\u53f7:", None))
-        self.label.setText(QCoreApplication.translate("ProfileForm", u"\u65e7\u624b\u673a\u53f7:", None))
+    def retranslateUi(self, user_modify_info):
+        user_modify_info.setWindowTitle(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
+        self.tabWidget.setTitle(QCoreApplication.translate("user_modify_info", u"\u4e2a\u4eba\u4fe1\u606f", None))
+        self.pushButton.setText(QCoreApplication.translate("user_modify_info", u"\u70b9\u51fb\u67e5\u770b\u5730\u5740\u7c3f\u4fe1\u606f", None))
+        self.btn_change_password.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u5bc6\u7801", None))
+        self.label_new_password.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u5bc6\u7801:", None))
+        self.label_old_password.setText(QCoreApplication.translate("user_modify_info", u"\u65e7\u5bc6\u7801:", None))
+        self.btn_change_phone.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u624b\u673a\u53f7", None))
+        self.label_new_phone.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u624b\u673a\u53f7:", None))
+        self.label.setText(QCoreApplication.translate("user_modify_info", u"\u65e7\u624b\u673a\u53f7:", None))
     # retranslateUi
 

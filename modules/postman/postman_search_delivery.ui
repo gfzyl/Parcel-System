@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>DeliveryForm</class>
- <widget class="QWidget" name="DeliveryForm">
+ <class>postman_search_delivery</class>
+ <widget class="QWidget" name="postman_search_delivery">
   <property name="geometry">
    <rect>
     <x>0</x>

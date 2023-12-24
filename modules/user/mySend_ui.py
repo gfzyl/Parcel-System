@@ -18,12 +18,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGroupBox, QHeaderView, QPushButton,
     QSizePolicy, QTableWidget, QTableWidgetItem, QWidget)
 
-class Ui_ProfileForm(object):
-    def setupUi(self, ProfileForm):
-        if not ProfileForm.objectName():
-            ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(591, 535)
-        ProfileForm.setStyleSheet(u"\n"
+class Ui_mySend(object):
+    def setupUi(self, mySend):
+        if not mySend.objectName():
+            mySend.setObjectName(u"mySend")
+        mySend.resize(591, 535)
+        mySend.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
 "                    font: 14px \"\u5e7c\u5706\";\n"
@@ -102,7 +102,7 @@ class Ui_ProfileForm(object):
 "                    min-height: 20px;\n"
 "                }\n"
 "            ")
-        self.groupBox = QGroupBox(ProfileForm)
+        self.groupBox = QGroupBox(mySend)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 561, 511))
         self.tableWidget = QTableWidget(self.groupBox)
@@ -155,48 +155,48 @@ class Ui_ProfileForm(object):
         self.returnBtn.setObjectName(u"returnBtn")
         self.returnBtn.setGeometry(QRect(430, 20, 111, 37))
 
-        self.retranslateUi(ProfileForm)
+        self.retranslateUi(mySend)
 
-        QMetaObject.connectSlotsByName(ProfileForm)
+        QMetaObject.connectSlotsByName(mySend)
     # setupUi
 
-    def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u6211\u5bc4\u7684", None))
-        self.groupBox.setTitle(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u4fe1\u606f", None))
+    def retranslateUi(self, mySend):
+        mySend.setWindowTitle(QCoreApplication.translate("mySend", u"\u6211\u5bc4\u7684", None))
+        self.groupBox.setTitle(QCoreApplication.translate("mySend", u"\u5feb\u9012\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5355\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("mySend", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("ProfileForm", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("mySend", u"\u5b8c\u6574\u8def\u7ebf", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("ProfileForm", u"\u5f53\u524d\u4f4d\u7f6e", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("mySend", u"\u5f53\u524d\u4f4d\u7f6e", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("ProfileForm", u"\u5f53\u524d\u72b6\u6001", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("mySend", u"\u5f53\u524d\u72b6\u6001", None));
         ___qtablewidgetitem4 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(2)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(3)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(4)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(5)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(6)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(7)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(8)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(9)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(10)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(11)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(12)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        self.returnBtn.setText(QCoreApplication.translate("ProfileForm", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("mySend", u"\u65b0\u5efa\u884c", None));
+        self.returnBtn.setText(QCoreApplication.translate("mySend", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 
