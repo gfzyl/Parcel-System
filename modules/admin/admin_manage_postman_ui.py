@@ -107,8 +107,8 @@ class Ui_ProfileForm(object):
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 761, 621))
         self.tableWidget = QTableWidget(self.groupBox)
-        if (self.tableWidget.columnCount() < 7):
-            self.tableWidget.setColumnCount(7)
+        if (self.tableWidget.columnCount() < 6):
+            self.tableWidget.setColumnCount(6)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -121,38 +121,36 @@ class Ui_ProfileForm(object):
         self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         if (self.tableWidget.rowCount() < 13):
             self.tableWidget.setRowCount(13)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem7)
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem8)
+        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem9)
+        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem10)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem11)
+        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem12)
+        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem13)
+        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem14)
+        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem15)
+        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem16)
+        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem17)
+        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem18)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem19)
+        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem18)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 40, 721, 341))
+        self.tableWidget.setGeometry(QRect(70, 40, 621, 341))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
@@ -169,16 +167,6 @@ class Ui_ProfileForm(object):
         self.input1_lineedit.setObjectName(u"input1_lineedit")
 
         self.horizontalLayout.addWidget(self.input1_lineedit)
-
-        self.label_2 = QLabel(self.layoutWidget)
-        self.label_2.setObjectName(u"label_2")
-
-        self.horizontalLayout.addWidget(self.label_2)
-
-        self.input2_lineedit = QLineEdit(self.layoutWidget)
-        self.input2_lineedit.setObjectName(u"input2_lineedit")
-
-        self.horizontalLayout.addWidget(self.input2_lineedit)
 
         self.label_3 = QLabel(self.layoutWidget)
         self.label_3.setObjectName(u"label_3")
@@ -290,45 +278,42 @@ class Ui_ProfileForm(object):
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("ProfileForm", u"\u8d26\u53f7", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("ProfileForm", u"\u5bc6\u7801", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("ProfileForm", u"\u5bc6\u7801", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("ProfileForm", u"\u59d3\u540d", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("ProfileForm", u"\u59d3\u540d", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("ProfileForm", u"\u5e74\u9f84", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("ProfileForm", u"\u5e74\u9f84", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b9", None));
-        ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u4f5c\u70b9", None));
+        ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(1)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(2)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(3)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(5)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(5)
+        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(6)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(6)
+        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(7)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(7)
+        ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(8)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(8)
+        ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(9)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(10)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(10)
+        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(11)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(11)
+        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(12)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
         self.label.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7\uff1a", None))
-        self.label_2.setText(QCoreApplication.translate("ProfileForm", u"\u8d26\u53f7\uff1a", None))
         self.label_3.setText(QCoreApplication.translate("ProfileForm", u"\u5bc6\u7801\uff1a", None))
         self.label_4.setText(QCoreApplication.translate("ProfileForm", u"\u59d3\u540d\uff1a", None))
         self.label_5.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd\uff1a", None))

@@ -107,9 +107,9 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>70</x>
       <y>40</y>
-      <width>721</width>
+      <width>621</width>
       <height>341</height>
      </rect>
     </property>
@@ -188,11 +188,6 @@
     </column>
     <column>
      <property name="text">
-      <string>账号</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>密码</string>
      </property>
     </column>
@@ -236,16 +231,6 @@
      </item>
      <item>
       <widget class="QLineEdit" name="input1_lineedit"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>账号：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="input2_lineedit"/>
      </item>
      <item>
       <widget class="QLabel" name="label_3">
