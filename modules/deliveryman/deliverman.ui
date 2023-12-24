@@ -1,163 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>DelivermanForm</class>
+ <widget class="QWidget" name="DelivermanForm">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>566</width>
-    <height>484</height>
+    <width>547</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>派送员</string>
   </property>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>10</x>
      <y>10</y>
-     <width>75</width>
-     <height>24</height>
+     <width>521</width>
+     <height>481</height>
     </rect>
    </property>
-   <property name="text">
-    <string>退出登录</string>
+   <property name="styleSheet">
+    <string notr="true">
+            QLabel {
+                color: #333;
+                font: 14px &quot;幼圆&quot;;
+                font-weight: bold;
+            }
+
+            QLineEdit {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            QComboBox {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            QPushButton {
+                padding: 8px 16px;
+                font-size: 15px;
+                font-weight: bold;
+                border: 1px solid #4CAF50;
+                border-radius: 4px;
+                color: #fff;
+                background-color: #4CAF50;
+            }
+
+            QPushButton:hover {
+                background-color: #45a049;
+                border: 1px solid #45a049;
+            }
+
+            QPushButton:pressed {
+                background-color: #3e8e41;
+            }
+            QTableWidget::item:selected {
+                background-color: #a6a6a6;
+            }
+
+            QTableWidget QHeaderView::section {
+                background-color: #65a3ff;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                 padding: 2px;
+            }
+
+            QTableWidget::item {
+                padding: 10px;
+            }
+            QTableWidget {
+                font: 14px &quot;幼圆&quot;;
+                background-color: #cdefff;
+            }
+
+            QTableWidget::item {
+                font: 14px &quot;幼圆&quot;;
+            }
+
+            QHeaderView {
+                font: bold 16px &quot;幼圆&quot;;
+            }
+        </string>
    </property>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>50</y>
-     <width>421</width>
-     <height>281</height>
-    </rect>
+   <property name="title">
+    <string>快递信息</string>
    </property>
-   <attribute name="verticalHeaderVisible">
-    <bool>false</bool>
-   </attribute>
-   <row>
-    <property name="text">
-     <string>新建行</string>
+   <widget class="QPushButton" name="quitBtn">
+    <property name="geometry">
+     <rect>
+      <x>404</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
     </property>
-   </row>
-   <row>
     <property name="text">
-     <string>新建行</string>
+     <string>退出登录</string>
     </property>
-   </row>
-   <row>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>421</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>新建行</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>快递单号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>完整线路</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>当前状态</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>预计送达时间</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>421</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>当前位置：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>选择最新到达位置：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>途经城市1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>途经城市2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>途经城市3</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="confirmBtn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>430</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
     <property name="text">
-     <string>新建行</string>
+     <string>确认更改</string>
     </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <row>
-    <property name="text">
-     <string>新建行</string>
-    </property>
-   </row>
-   <column>
-    <property name="text">
-     <string>快递单号</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>完整线路</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>当前状态</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>预计送达时间</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>380</y>
-     <width>81</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>途经城市1</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>途经城市2</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>途经城市3</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>380</y>
-     <width>71</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>当前位置</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QListWidget" name="listWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>380</y>
-     <width>81</width>
-     <height>31</height>
-    </rect>
-   </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

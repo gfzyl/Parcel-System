@@ -97,6 +97,7 @@ class Ui_ProfileForm(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.new_password_lineedit = QLineEdit(self.tabWidget)
         self.new_password_lineedit.setObjectName(u"new_password_lineedit")
+        self.new_password_lineedit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
         self.gridLayout.addWidget(self.new_password_lineedit, 1, 1, 1, 1)
 
@@ -117,6 +118,7 @@ class Ui_ProfileForm(object):
 
         self.old_password_lineedit = QLineEdit(self.tabWidget)
         self.old_password_lineedit.setObjectName(u"old_password_lineedit")
+        self.old_password_lineedit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
         self.gridLayout.addWidget(self.old_password_lineedit, 0, 1, 1, 1)
 
