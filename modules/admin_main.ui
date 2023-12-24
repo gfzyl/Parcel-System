@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfileForm</class>
+ <widget class="QWidget" name="ProfileForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>306</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>管理员界面</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+            QLabel {
+                color: #333;
+                font:14px &quot;幼圆&quot;;
+                font-weight: bold;
+            }
+
+            QLineEdit {
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            QPushButton {
+                padding: 8px 16px;
+                font-size: 15px;
+                font-weight: bold;
+                border: 1px solid #4CAF50;
+                border-radius: 4px;
+                color: #fff;
+                background-color: #4CAF50;
+            }
+
+            #btn_update,
+            #btn_change_password,
+            #btn_change_phone {
+                font-size: 13px;
+            }
+
+            QPushButton:hover {
+                background-color: #45a049;
+                border: 1px solid #45a049;
+            }
+
+        </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="tabWidget">
+     <property name="title">
+      <string>管理员主界面</string>
+     </property>
+     <widget class="QPushButton" name="btn_query_courier_info_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>120</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询快递员信息</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_all_couriers_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看所有快递员</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_logout">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>10</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>退出登录</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_query_delivery_info">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>180</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询快递信息</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_view_all_couriers">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看所有配送员</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_query_courier_info">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询配送员信息</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

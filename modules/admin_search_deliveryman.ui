@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfileForm</class>
+ <widget class="QWidget" name="ProfileForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>662</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>查询配送员信息</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+                QLabel {
+                    color: #333;
+                    font: 14px &quot;幼圆&quot;;
+                    font-weight: bold;
+                }
+
+                QLineEdit,
+                QComboBox  {
+                    padding: 8px;
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+
+                QTableWidget {
+                    font: 14px &quot;幼圆&quot;;
+                    background-color: #cdefff;
+                }
+
+                QTableWidget::item {
+                    font: 14px &quot;幼圆&quot;;
+                }
+
+                QHeaderView {
+                    font: bold 16px &quot;幼圆&quot;;
+                }
+                
+                QTableWidget::item:selected {
+                    background-color: #a6a6a6;
+                }
+
+                QTableWidget QHeaderView::section {
+                    background-color: #65a3ff;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding: 4px;
+                }
+
+                QTableWidget::item {
+                    padding: 10px;
+                }
+
+                QPushButton {
+                    padding: 8px 16px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    border: 1px solid #4CAF50;
+                    border-radius: 4px;
+                    color: #fff;
+                    background-color: #4CAF50;
+                }
+
+                 QPushButton:hover {
+                    background-color: #45a049;
+                    border: 1px solid #45a049;
+                }
+
+                QTextEdit {
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+
+                QScrollBar:vertical {
+                    border: 1px solid #ccc;
+                    background: #f0f0f0;
+                    width: 10px;
+                    margin: 0px 0px 0px 0px;
+                }
+
+                QScrollBar::handle:vertical {
+                    background: #4CAF50;
+                    min-height: 20px;
+                }
+            </string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>621</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>工号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>姓名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>电话</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>年龄</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>工作点1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>工作点2</string>
+    </property>
+   </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>601</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>工号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="input1_lineedit">
+      <property name="placeholderText">
+       <string>选择按工号查询</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>电话号码：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="input2_lineedit">
+      <property name="placeholderText">
+       <string>选择按电话号码查询</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_query">
+      <property name="text">
+       <string>查询</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>641</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>配送员信息</string>
+   </property>
+  </widget>
+  <zorder>groupBox</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>layoutWidget</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
