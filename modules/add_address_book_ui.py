@@ -23,7 +23,7 @@ class Ui_AddressBookForm(object):
     def setupUi(self, AddressBookForm):
         if not AddressBookForm.objectName():
             AddressBookForm.setObjectName(u"AddressBookForm")
-        AddressBookForm.resize(555, 300)
+        AddressBookForm.resize(650, 350)
         self.verticalLayout = QVBoxLayout(AddressBookForm)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.groupBoxAddressBook = QGroupBox(AddressBookForm)
@@ -112,7 +112,7 @@ class Ui_AddressBookForm(object):
 
         self.gridLayout.addLayout(self.horizontalLayoutAddButton, 6, 1, 1, 1)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
         self.gridLayout.addItem(self.verticalSpacer_3, 1, 1, 1, 1)
 
@@ -141,7 +141,7 @@ class Ui_AddressBookForm(object):
 
         self.gridLayout.addLayout(self.horizontalLayoutAdd, 0, 1, 1, 1)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
         self.gridLayout.addItem(self.verticalSpacer_2, 3, 1, 1, 1)
 
