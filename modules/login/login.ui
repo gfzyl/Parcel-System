@@ -45,7 +45,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_account">
+      <widget class="QLineEdit" name="accountInput">
        <property name="styleSheet">
         <string notr="true">QLineEdit {
     padding: 8px;
@@ -70,7 +70,7 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_password">
+      <widget class="QLineEdit" name="pwdInput">
        <property name="styleSheet">
         <string notr="true">QLineEdit {
     padding: 8px;
@@ -87,7 +87,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_login">
+    <widget class="QPushButton" name="loginBtn">
      <property name="styleSheet">
       <string notr="true">QPushButton {
     padding: 8px 16px;
@@ -111,7 +111,7 @@ QPushButton:hover {
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_register">
+    <widget class="QPushButton" name="registerBtn">
      <property name="styleSheet">
       <string notr="true">QPushButton {
     padding: 8px 16px;
@@ -135,7 +135,7 @@ QPushButton:hover {
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="guestBtn">
      <property name="styleSheet">
       <string notr="true">/* 设置按钮样式 */
 QPushButton {

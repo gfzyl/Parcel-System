@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QSpacerItem, QVBoxLayout, QWidget)
 
-class Ui_Guest_main(object):
-    def setupUi(self, Guest_main):
-        if not Guest_main.objectName():
-            Guest_main.setObjectName(u"Guest_main")
-        Guest_main.resize(519, 515)
-        self.groupBox = QGroupBox(Guest_main)
+class Ui_guest_main(object):
+    def setupUi(self, guest_main):
+        if not guest_main.objectName():
+            guest_main.setObjectName(u"guest_main")
+        guest_main.resize(519, 515)
+        self.groupBox = QGroupBox(guest_main)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 501, 171))
         self.groupBox.setStyleSheet(u"\n"
@@ -124,7 +124,7 @@ class Ui_Guest_main(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout_3)
 
-        self.groupBox_2 = QGroupBox(Guest_main)
+        self.groupBox_2 = QGroupBox(guest_main)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.groupBox_2.setGeometry(QRect(10, 190, 501, 191))
         self.groupBox_2.setStyleSheet(u"\n"
@@ -223,7 +223,7 @@ class Ui_Guest_main(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
 
-        self.layoutWidget_3 = QWidget(Guest_main)
+        self.layoutWidget_3 = QWidget(guest_main)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
         self.layoutWidget_3.setGeometry(QRect(30, 390, 431, 41))
         self.horizontalLayout_7 = QHBoxLayout(self.layoutWidget_3)
@@ -251,7 +251,7 @@ class Ui_Guest_main(object):
 
         self.horizontalLayout_7.addWidget(self.lineEdit_7)
 
-        self.layoutWidget1 = QWidget(Guest_main)
+        self.layoutWidget1 = QWidget(guest_main)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
         self.layoutWidget1.setGeometry(QRect(10, 450, 480, 39))
         self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget1)
@@ -337,48 +337,48 @@ class Ui_Guest_main(object):
         self.horizontalLayout_8.addItem(self.horizontalSpacer_3)
 
 
-        self.retranslateUi(Guest_main)
+        self.retranslateUi(guest_main)
 
-        QMetaObject.connectSlotsByName(Guest_main)
+        QMetaObject.connectSlotsByName(guest_main)
     # setupUi
 
-    def retranslateUi(self, Guest_main):
-        Guest_main.setWindowTitle(QCoreApplication.translate("Guest_main", u"\u6e38\u5ba2\u8fdb\u5165", None))
-        self.groupBox.setTitle(QCoreApplication.translate("Guest_main", u"\u5bc4\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label.setText(QCoreApplication.translate("Guest_main", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
-        self.label_2.setText(QCoreApplication.translate("Guest_main", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
-        self.label_4.setText(QCoreApplication.translate("Guest_main", u"\u7701", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Guest_main", u"2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("Guest_main", u"3", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("Guest_main", u"4", None))
+    def retranslateUi(self, guest_main):
+        guest_main.setWindowTitle(QCoreApplication.translate("guest_main", u"\u6e38\u5ba2\u8fdb\u5165", None))
+        self.groupBox.setTitle(QCoreApplication.translate("guest_main", u"\u5bc4\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
+        self.label.setText(QCoreApplication.translate("guest_main", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_2.setText(QCoreApplication.translate("guest_main", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_4.setText(QCoreApplication.translate("guest_main", u"\u7701", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
 
-        self.label_5.setText(QCoreApplication.translate("Guest_main", u"\u5e02", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("Guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("Guest_main", u"2", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("Guest_main", u"3", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("Guest_main", u"4", None))
+        self.label_5.setText(QCoreApplication.translate("guest_main", u"\u5e02", None))
+        self.comboBox_2.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
+        self.comboBox_2.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
+        self.comboBox_2.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
+        self.comboBox_2.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
 
-        self.label_6.setText(QCoreApplication.translate("Guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("Guest_main", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label_3.setText(QCoreApplication.translate("Guest_main", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
-        self.label_7.setText(QCoreApplication.translate("Guest_main", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
-        self.label_8.setText(QCoreApplication.translate("Guest_main", u"\u7701", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("Guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("Guest_main", u"2", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("Guest_main", u"3", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("Guest_main", u"4", None))
+        self.label_6.setText(QCoreApplication.translate("guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
+        self.label_3.setText(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_7.setText(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_8.setText(QCoreApplication.translate("guest_main", u"\u7701", None))
+        self.comboBox_3.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
+        self.comboBox_3.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
+        self.comboBox_3.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
+        self.comboBox_3.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
 
-        self.label_9.setText(QCoreApplication.translate("Guest_main", u"\u5e02", None))
-        self.comboBox_4.setItemText(0, QCoreApplication.translate("Guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_4.setItemText(1, QCoreApplication.translate("Guest_main", u"2", None))
-        self.comboBox_4.setItemText(2, QCoreApplication.translate("Guest_main", u"3", None))
-        self.comboBox_4.setItemText(3, QCoreApplication.translate("Guest_main", u"4", None))
+        self.label_9.setText(QCoreApplication.translate("guest_main", u"\u5e02", None))
+        self.comboBox_4.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
+        self.comboBox_4.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
+        self.comboBox_4.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
+        self.comboBox_4.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
 
-        self.label_10.setText(QCoreApplication.translate("Guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
-        self.label_11.setText(QCoreApplication.translate("Guest_main", u"\u5907\u6ce8:", None))
-        self.searchBtn.setText(QCoreApplication.translate("Guest_main", u"\u67e5\u8be2\u8ba2\u5355", None))
-        self.submitBtn.setText(QCoreApplication.translate("Guest_main", u"\u63d0\u4ea4\u8ba2\u5355", None))
-        self.quitBtn.setText(QCoreApplication.translate("Guest_main", u"\u8fd4\u56de\u767b\u5f55", None))
+        self.label_10.setText(QCoreApplication.translate("guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
+        self.label_11.setText(QCoreApplication.translate("guest_main", u"\u5907\u6ce8:", None))
+        self.searchBtn.setText(QCoreApplication.translate("guest_main", u"\u67e5\u8be2\u8ba2\u5355", None))
+        self.submitBtn.setText(QCoreApplication.translate("guest_main", u"\u63d0\u4ea4\u8ba2\u5355", None))
+        self.quitBtn.setText(QCoreApplication.translate("guest_main", u"\u8fd4\u56de\u767b\u5f55", None))
     # retranslateUi
 

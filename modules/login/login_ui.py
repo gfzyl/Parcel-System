@@ -47,16 +47,16 @@ class Ui_login(object):
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
 
-        self.lineEdit_account = QLineEdit(login)
-        self.lineEdit_account.setObjectName(u"lineEdit_account")
-        self.lineEdit_account.setStyleSheet(u"QLineEdit {\n"
+        self.accountInput = QLineEdit(login)
+        self.accountInput.setObjectName(u"accountInput")
+        self.accountInput.setStyleSheet(u"QLineEdit {\n"
 "    padding: 8px;\n"
 "    font-size: 14px;\n"
 "    border: 1px solid #ccc;\n"
 "    border-radius: 4px;\n"
 "}")
 
-        self.gridLayout.addWidget(self.lineEdit_account, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.accountInput, 1, 1, 1, 1)
 
         self.label_3 = QLabel(login)
         self.label_3.setObjectName(u"label_3")
@@ -67,24 +67,24 @@ class Ui_login(object):
 
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
 
-        self.lineEdit_password = QLineEdit(login)
-        self.lineEdit_password.setObjectName(u"lineEdit_password")
-        self.lineEdit_password.setStyleSheet(u"QLineEdit {\n"
+        self.pwdInput = QLineEdit(login)
+        self.pwdInput.setObjectName(u"pwdInput")
+        self.pwdInput.setStyleSheet(u"QLineEdit {\n"
 "    padding: 8px;\n"
 "    font-size: 14px;\n"
 "    border: 1px solid #ccc;\n"
 "    border-radius: 4px;\n"
 "}")
-        self.lineEdit_password.setEchoMode(QLineEdit.Password)
+        self.pwdInput.setEchoMode(QLineEdit.Password)
 
-        self.gridLayout.addWidget(self.lineEdit_password, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.pwdInput, 2, 1, 1, 1)
 
 
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.pushButton_login = QPushButton(login)
-        self.pushButton_login.setObjectName(u"pushButton_login")
-        self.pushButton_login.setStyleSheet(u"QPushButton {\n"
+        self.loginBtn = QPushButton(login)
+        self.loginBtn.setObjectName(u"loginBtn")
+        self.loginBtn.setStyleSheet(u"QPushButton {\n"
 "    padding: 8px 16px;\n"
 "	font: 15px \"\u5e7c\u5706\";\n"
 "    font-weight: bold;\n"
@@ -100,11 +100,11 @@ class Ui_login(object):
 "    border: 1px solid #45a049;\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pushButton_login)
+        self.verticalLayout.addWidget(self.loginBtn)
 
-        self.pushButton_register = QPushButton(login)
-        self.pushButton_register.setObjectName(u"pushButton_register")
-        self.pushButton_register.setStyleSheet(u"QPushButton {\n"
+        self.registerBtn = QPushButton(login)
+        self.registerBtn.setObjectName(u"registerBtn")
+        self.registerBtn.setStyleSheet(u"QPushButton {\n"
 "    padding: 8px 16px;\n"
 "	font: 15px \"\u5e7c\u5706\";\n"
 "    font-weight: bold;\n"
@@ -120,11 +120,11 @@ class Ui_login(object):
 "    border: 1px solid #45a049;\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pushButton_register)
+        self.verticalLayout.addWidget(self.registerBtn)
 
-        self.pushButton = QPushButton(login)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setStyleSheet(u"/* \u8bbe\u7f6e\u6309\u94ae\u6837\u5f0f */\n"
+        self.guestBtn = QPushButton(login)
+        self.guestBtn.setObjectName(u"guestBtn")
+        self.guestBtn.setStyleSheet(u"/* \u8bbe\u7f6e\u6309\u94ae\u6837\u5f0f */\n"
 "QPushButton {\n"
 "    padding: 8px 16px;\n"
 "	font: 15px \"\u5e7c\u5706\";\n"
@@ -154,7 +154,7 @@ class Ui_login(object):
 "    border: 1px solid #bbb;\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.guestBtn)
 
 
         self.retranslateUi(login)
@@ -167,8 +167,8 @@ class Ui_login(object):
         self.label_2.setText(QCoreApplication.translate("login", u"\u8d26\u53f7:", None))
         self.label.setText(QCoreApplication.translate("login", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
         self.label_3.setText(QCoreApplication.translate("login", u"\u5bc6\u7801:", None))
-        self.pushButton_login.setText(QCoreApplication.translate("login", u"\u767b\u5f55", None))
-        self.pushButton_register.setText(QCoreApplication.translate("login", u"\u6ce8\u518c", None))
-        self.pushButton.setText(QCoreApplication.translate("login", u"\u6e38\u5ba2\u8bbf\u95ee", None))
+        self.loginBtn.setText(QCoreApplication.translate("login", u"\u767b\u5f55", None))
+        self.registerBtn.setText(QCoreApplication.translate("login", u"\u6ce8\u518c", None))
+        self.guestBtn.setText(QCoreApplication.translate("login", u"\u6e38\u5ba2\u8bbf\u95ee", None))
     # retranslateUi
 

@@ -45,6 +45,8 @@ class MyWindow(QWidget,Ui_admin_main):
         self.delivery_search_window.show()
 
     def goto_login(self):
+        # 选择退出登录的时候该界面该隐藏
+        self.hide()
         self.login_window.show()
 
 
