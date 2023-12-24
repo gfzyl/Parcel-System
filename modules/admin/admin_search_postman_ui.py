@@ -23,7 +23,7 @@ class Ui_ProfileForm(object):
     def setupUi(self, ProfileForm):
         if not ProfileForm.objectName():
             ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(570, 448)
+        ProfileForm.resize(570, 496)
         ProfileForm.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -103,7 +103,10 @@ class Ui_ProfileForm(object):
 "                    min-height: 20px;\n"
 "                }\n"
 "            ")
-        self.tableWidget = QTableWidget(ProfileForm)
+        self.groupBox = QGroupBox(ProfileForm)
+        self.groupBox.setObjectName(u"groupBox")
+        self.groupBox.setGeometry(QRect(10, 10, 551, 471))
+        self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
@@ -145,11 +148,11 @@ class Ui_ProfileForm(object):
         __qtablewidgetitem17 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem17)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 80, 521, 341))
+        self.tableWidget.setGeometry(QRect(10, 100, 521, 341))
         self.tableWidget.verticalHeader().setVisible(False)
-        self.layoutWidget = QWidget(ProfileForm)
+        self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(30, 30, 511, 40))
+        self.layoutWidget.setGeometry(QRect(20, 40, 511, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -178,12 +181,6 @@ class Ui_ProfileForm(object):
 
         self.horizontalLayout.addWidget(self.btn_query)
 
-        self.groupBox = QGroupBox(ProfileForm)
-        self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 551, 441))
-        self.groupBox.raise_()
-        self.tableWidget.raise_()
-        self.layoutWidget.raise_()
 
         self.retranslateUi(ProfileForm)
 
@@ -192,6 +189,7 @@ class Ui_ProfileForm(object):
 
     def retranslateUi(self, ProfileForm):
         ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2\u5feb\u9012\u5458\u4fe1\u606f", None))
+        self.groupBox.setTitle(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5458\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -229,8 +227,9 @@ class Ui_ProfileForm(object):
         ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
         self.label.setText(QCoreApplication.translate("ProfileForm", u"\u5de5\u53f7\uff1a", None))
+        self.input1_lineedit.setPlaceholderText(QCoreApplication.translate("ProfileForm", u"\u6309\u5de5\u53f7\u67e5\u8be2", None))
         self.label_2.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
+        self.input2_lineedit.setPlaceholderText(QCoreApplication.translate("ProfileForm", u"\u6309\u7535\u8bdd\u53f7\u7801\u67e5\u8be2", None))
         self.btn_query.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2", None))
-        self.groupBox.setTitle(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5458\u4fe1\u606f", None))
     # retranslateUi
 
