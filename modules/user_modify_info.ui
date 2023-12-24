@@ -87,6 +87,9 @@
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
         <property name="sizeHint" stdset="0">
          <size>
           <width>40</width>
@@ -123,29 +126,41 @@
       </item>
       <item row="1" column="1">
        <layout class="QGridLayout" name="gridLayout">
-        <item row="5" column="1">
-         <widget class="QLineEdit" name="new_phone_lineedit"/>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="phone_lineedit"/>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="new_password_lineedit"/>
-        </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="btn_update">
+        <item row="4" column="0">
+         <widget class="QLabel" name="label">
           <property name="text">
-           <string>修改</string>
+           <string>旧手机号:</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="old_password_lineedit"/>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="btn_change_phone">
+          <property name="text">
+           <string>修改手机号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_new_phone">
+          <property name="text">
+           <string>新手机号:</string>
+          </property>
+         </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label_name">
           <property name="text">
            <string>姓名:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="btn_change_password">
+          <property name="text">
+           <string>修改密码</string>
           </property>
          </widget>
         </item>
@@ -156,10 +171,13 @@
           </property>
          </widget>
         </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="label">
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="old_password_lineedit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="btn_update">
           <property name="text">
-           <string>旧手机号:</string>
+           <string>修改</string>
           </property>
          </widget>
         </item>
@@ -170,29 +188,8 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="2">
-         <widget class="QPushButton" name="btn_change_phone">
-          <property name="text">
-           <string>修改手机号</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLineEdit" name="lineEdit"/>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="label_new_phone">
-          <property name="text">
-           <string>新手机号:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="2">
-         <widget class="QPushButton" name="btn_change_password">
-          <property name="text">
-           <string>修改密码</string>
-          </property>
-         </widget>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="new_phone_lineedit"/>
         </item>
         <item row="0" column="1">
          <widget class="QLineEdit" name="name_lineedit">
@@ -204,6 +201,9 @@
           </property>
          </widget>
         </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="new_password_lineedit"/>
+        </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label_new_password">
           <property name="text">
@@ -211,12 +211,18 @@
           </property>
          </widget>
         </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="phone_lineedit"/>
+        </item>
        </layout>
       </item>
       <item row="1" column="2">
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
