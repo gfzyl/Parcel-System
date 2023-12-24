@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>519</width>
-    <height>515</height>
+    <width>527</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>游客进入</string>
+   <string>用户寄件</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>10</y>
      <width>501</width>
-     <height>171</height>
+     <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -48,8 +48,8 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>431</width>
-      <height>134</height>
+      <width>454</width>
+      <height>178</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -156,16 +156,26 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
           <string>详细地址</string>
          </property>
         </widget>
        </item>
-       <item>
+       <item row="0" column="1">
         <widget class="QLineEdit" name="lineEdit_3"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_in_address_book">
+         <property name="text">
+          <string>在地址簿中选择</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox_address_book"/>
        </item>
       </layout>
      </item>
@@ -176,9 +186,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>190</y>
+     <y>230</y>
      <width>501</width>
-     <height>191</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -206,8 +216,8 @@
      <rect>
       <x>20</x>
       <y>40</y>
-      <width>431</width>
-      <height>134</height>
+      <width>454</width>
+      <height>178</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -314,16 +324,26 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
-       <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_6"/>
+       </item>
+       <item row="0" column="0">
         <widget class="QLabel" name="label_10">
          <property name="text">
           <string>详细地址</string>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_in_address_book">
+         <property name="text">
+          <string>在地址簿中选择</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox_address_book"/>
        </item>
       </layout>
      </item>
@@ -334,7 +354,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>390</y>
+     <y>470</y>
      <width>431</width>
      <height>41</height>
     </rect>
@@ -373,55 +393,14 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>450</y>
-     <width>480</width>
+     <y>540</y>
+     <width>495</width>
      <height>39</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_8">
     <item>
      <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Minimum</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QPushButton" name="searchBtn">
-      <property name="styleSheet">
-       <string notr="true">
-             QPushButton {
-                padding: 8px 16px;
-                font-size: 15px;
-                font-weight: bold;
-                border: 1px solid #4CAF50;
-                border-radius: 4px;
-                color: #fff;
-                background-color: #4CAF50;
-            }
-
-            QPushButton:hover {
-                background-color: #45a049;
-                border: 1px solid #45a049;
-            }
-        </string>
-      </property>
-      <property name="text">
-       <string>查询订单</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <spacer name="horizontalSpacer">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -478,7 +457,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="quitBtn">
+     <widget class="QPushButton" name="returnBtn">
       <property name="styleSheet">
        <string notr="true">
              QPushButton {
@@ -498,7 +477,7 @@
         </string>
       </property>
       <property name="text">
-       <string>返回登录</string>
+       <string>返回主界面</string>
       </property>
      </widget>
     </item>

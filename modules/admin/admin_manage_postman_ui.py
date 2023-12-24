@@ -23,7 +23,7 @@ class Ui_ProfileForm(object):
     def setupUi(self, ProfileForm):
         if not ProfileForm.objectName():
             ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(782, 631)
+        ProfileForm.resize(786, 647)
         ProfileForm.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -105,7 +105,7 @@ class Ui_ProfileForm(object):
 "            ")
         self.groupBox = QGroupBox(ProfileForm)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 761, 611))
+        self.groupBox.setGeometry(QRect(10, 10, 761, 621))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 7):
             self.tableWidget.setColumnCount(7)
@@ -152,11 +152,11 @@ class Ui_ProfileForm(object):
         __qtablewidgetitem19 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem19)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 20, 721, 341))
+        self.tableWidget.setGeometry(QRect(20, 40, 721, 341))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 370, 711, 40))
+        self.layoutWidget.setGeometry(QRect(20, 400, 711, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -192,7 +192,7 @@ class Ui_ProfileForm(object):
 
         self.layoutWidget_2 = QWidget(self.groupBox)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(20, 420, 711, 40))
+        self.layoutWidget_2.setGeometry(QRect(20, 450, 711, 40))
         self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -228,7 +228,7 @@ class Ui_ProfileForm(object):
 
         self.layoutWidget_3 = QWidget(self.groupBox)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
-        self.layoutWidget_3.setGeometry(QRect(20, 470, 251, 40))
+        self.layoutWidget_3.setGeometry(QRect(20, 500, 251, 40))
         self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -244,7 +244,7 @@ class Ui_ProfileForm(object):
 
         self.layoutWidget1 = QWidget(self.groupBox)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(20, 540, 531, 39))
+        self.layoutWidget1.setGeometry(QRect(20, 560, 531, 40))
         self.horizontalLayout_4 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)

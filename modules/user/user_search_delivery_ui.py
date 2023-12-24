@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'admin_search_delivery.ui'
+## Form generated from reading UI file 'user_search_delivery.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.1
 ##
@@ -15,15 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QTableWidget, QTableWidgetItem, QWidget)
+from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_ProfileForm(object):
     def setupUi(self, ProfileForm):
         if not ProfileForm.objectName():
             ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(1118, 672)
+        ProfileForm.resize(1118, 585)
         ProfileForm.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -105,7 +105,7 @@ class Ui_ProfileForm(object):
 "            ")
         self.groupBox = QGroupBox(ProfileForm)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 1101, 651))
+        self.groupBox.setGeometry(QRect(10, 10, 1091, 551))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 17):
             self.tableWidget.setColumnCount(17)
@@ -172,91 +172,32 @@ class Ui_ProfileForm(object):
         __qtablewidgetitem29 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem29)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 40, 1061, 441))
+        self.tableWidget.setGeometry(QRect(20, 120, 1061, 421))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 500, 601, 40))
+        self.layoutWidget.setGeometry(QRect(480, 70, 601, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.layoutWidget)
-        self.label.setObjectName(u"label")
+        self.parcelIdLabel = QLabel(self.layoutWidget)
+        self.parcelIdLabel.setObjectName(u"parcelIdLabel")
 
-        self.horizontalLayout.addWidget(self.label)
+        self.horizontalLayout.addWidget(self.parcelIdLabel)
 
-        self.input1_lineedit = QLineEdit(self.layoutWidget)
-        self.input1_lineedit.setObjectName(u"input1_lineedit")
+        self.parcelIdInput = QLineEdit(self.layoutWidget)
+        self.parcelIdInput.setObjectName(u"parcelIdInput")
 
-        self.horizontalLayout.addWidget(self.input1_lineedit)
+        self.horizontalLayout.addWidget(self.parcelIdInput)
 
-        self.label_2 = QLabel(self.layoutWidget)
-        self.label_2.setObjectName(u"label_2")
+        self.queryBtn = QPushButton(self.layoutWidget)
+        self.queryBtn.setObjectName(u"queryBtn")
 
-        self.horizontalLayout.addWidget(self.label_2)
+        self.horizontalLayout.addWidget(self.queryBtn)
 
-        self.input2_lineedit = QLineEdit(self.layoutWidget)
-        self.input2_lineedit.setObjectName(u"input2_lineedit")
-
-        self.horizontalLayout.addWidget(self.input2_lineedit)
-
-        self.layoutWidget_2 = QWidget(self.groupBox)
-        self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(10, 550, 621, 40))
-        self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget_2)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label_3 = QLabel(self.layoutWidget_2)
-        self.label_3.setObjectName(u"label_3")
-
-        self.horizontalLayout_2.addWidget(self.label_3)
-
-        self.input1_lineedit_2 = QLineEdit(self.layoutWidget_2)
-        self.input1_lineedit_2.setObjectName(u"input1_lineedit_2")
-
-        self.horizontalLayout_2.addWidget(self.input1_lineedit_2)
-
-        self.label_4 = QLabel(self.layoutWidget_2)
-        self.label_4.setObjectName(u"label_4")
-
-        self.horizontalLayout_2.addWidget(self.label_4)
-
-        self.input2_lineedit_2 = QLineEdit(self.layoutWidget_2)
-        self.input2_lineedit_2.setObjectName(u"input2_lineedit_2")
-
-        self.horizontalLayout_2.addWidget(self.input2_lineedit_2)
-
-        self.layoutWidget1 = QWidget(self.groupBox)
-        self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(10, 600, 431, 41))
-        self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget1)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.label_5 = QLabel(self.layoutWidget1)
-        self.label_5.setObjectName(u"label_5")
-
-        self.horizontalLayout_3.addWidget(self.label_5)
-
-        self.comboBox = QComboBox(self.layoutWidget1)
-        self.comboBox.setObjectName(u"comboBox")
-
-        self.horizontalLayout_3.addWidget(self.comboBox)
-
-        self.label_6 = QLabel(self.layoutWidget1)
-        self.label_6.setObjectName(u"label_6")
-
-        self.horizontalLayout_3.addWidget(self.label_6)
-
-        self.comboBox_2 = QComboBox(self.layoutWidget1)
-        self.comboBox_2.setObjectName(u"comboBox_2")
-
-        self.horizontalLayout_3.addWidget(self.comboBox_2)
-
-        self.btn_query_3 = QPushButton(self.layoutWidget1)
-        self.btn_query_3.setObjectName(u"btn_query_3")
-
-        self.horizontalLayout_3.addWidget(self.btn_query_3)
-
+        self.returnBtn = QPushButton(self.groupBox)
+        self.returnBtn.setObjectName(u"returnBtn")
+        self.returnBtn.setGeometry(QRect(970, 20, 111, 37))
 
         self.retranslateUi(ProfileForm)
 
@@ -326,12 +267,9 @@ class Ui_ProfileForm(object):
         ___qtablewidgetitem28.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem29 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem29.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
-        self.label.setText(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u7f16\u53f7\uff1a", None))
-        self.label_2.setText(QCoreApplication.translate("ProfileForm", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
-        self.label_3.setText(QCoreApplication.translate("ProfileForm", u"\u914d\u9001\u5458\u5de5\u53f7\uff1a", None))
-        self.label_4.setText(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5458\u5de5\u53f7\uff1a", None))
-        self.label_5.setText(QCoreApplication.translate("ProfileForm", u"\u5bc4\u51fa\u5e02\uff1a", None))
-        self.label_6.setText(QCoreApplication.translate("ProfileForm", u"\u6536\u4ef6\u5e02\uff1a", None))
-        self.btn_query_3.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2", None))
+        self.parcelIdLabel.setText(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5355\u53f7", None))
+        self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("ProfileForm", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
+        self.queryBtn.setText(QCoreApplication.translate("ProfileForm", u"\u67e5\u8be2", None))
+        self.returnBtn.setText(QCoreApplication.translate("ProfileForm", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 
