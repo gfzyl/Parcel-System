@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mySend.ui'
+## Form generated from reading UI file 'myReceive.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.1
 ##
@@ -22,7 +22,7 @@ class Ui_ProfileForm(object):
     def setupUi(self, ProfileForm):
         if not ProfileForm.objectName():
             ProfileForm.setObjectName(u"ProfileForm")
-        ProfileForm.resize(591, 535)
+        ProfileForm.resize(587, 607)
         ProfileForm.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -104,7 +104,7 @@ class Ui_ProfileForm(object):
 "            ")
         self.groupBox = QGroupBox(ProfileForm)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 561, 511))
+        self.groupBox.setGeometry(QRect(10, 10, 561, 481))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 4):
             self.tableWidget.setColumnCount(4)
@@ -145,7 +145,7 @@ class Ui_ProfileForm(object):
         __qtablewidgetitem16 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem16)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 70, 521, 421))
+        self.tableWidget.setGeometry(QRect(20, 70, 521, 401))
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(46)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(125)
@@ -154,6 +154,15 @@ class Ui_ProfileForm(object):
         self.returnBtn = QPushButton(self.groupBox)
         self.returnBtn.setObjectName(u"returnBtn")
         self.returnBtn.setGeometry(QRect(430, 20, 111, 37))
+        self.groupBox_2 = QGroupBox(ProfileForm)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.groupBox_2.setGeometry(QRect(10, 500, 561, 91))
+        self.refuseBtn = QPushButton(self.groupBox_2)
+        self.refuseBtn.setObjectName(u"refuseBtn")
+        self.refuseBtn.setGeometry(QRect(430, 30, 111, 37))
+        self.confirmBtn = QPushButton(self.groupBox_2)
+        self.confirmBtn.setObjectName(u"confirmBtn")
+        self.confirmBtn.setGeometry(QRect(290, 30, 111, 37))
 
         self.retranslateUi(ProfileForm)
 
@@ -161,7 +170,7 @@ class Ui_ProfileForm(object):
     # setupUi
 
     def retranslateUi(self, ProfileForm):
-        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u6211\u5bc4\u7684", None))
+        ProfileForm.setWindowTitle(QCoreApplication.translate("ProfileForm", u"\u6211\u6536\u7684", None))
         self.groupBox.setTitle(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u4fe1\u606f", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("ProfileForm", u"\u5feb\u9012\u5355\u53f7", None));
@@ -198,5 +207,8 @@ class Ui_ProfileForm(object):
         ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("ProfileForm", u"\u65b0\u5efa\u884c", None));
         self.returnBtn.setText(QCoreApplication.translate("ProfileForm", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("ProfileForm", u"\u7528\u6237\u64cd\u4f5c", None))
+        self.refuseBtn.setText(QCoreApplication.translate("ProfileForm", u"\u62d2\u7edd\u7b7e\u6536", None))
+        self.confirmBtn.setText(QCoreApplication.translate("ProfileForm", u"\u786e\u8ba4\u7b7e\u6536", None))
     # retranslateUi
 

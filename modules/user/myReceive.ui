@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>535</height>
+    <width>587</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>我寄的</string>
+   <string>我收的</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -98,7 +98,7 @@
      <x>10</x>
      <y>10</y>
      <width>561</width>
-     <height>511</height>
+     <height>481</height>
     </rect>
    </property>
    <property name="title">
@@ -110,7 +110,7 @@
       <x>20</x>
       <y>70</y>
       <width>521</width>
-      <height>421</height>
+      <height>401</height>
      </rect>
     </property>
     <attribute name="horizontalHeaderCascadingSectionResizes">
@@ -225,6 +225,45 @@
     </property>
     <property name="text">
      <string>返回上一级</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>561</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>用户操作</string>
+   </property>
+   <widget class="QPushButton" name="refuseBtn">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>30</y>
+      <width>111</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>拒绝签收</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="confirmBtn">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>30</y>
+      <width>111</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确认签收</string>
     </property>
    </widget>
   </widget>
