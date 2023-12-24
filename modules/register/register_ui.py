@@ -16,159 +16,149 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
+    QWidget)
 
-class Ui_LoginForm(object):
-    def setupUi(self, LoginForm):
-        if not LoginForm.objectName():
-            LoginForm.setObjectName(u"LoginForm")
-        LoginForm.resize(603, 334)
-        self.verticalLayout = QVBoxLayout(LoginForm)
+class Ui_Register(object):
+    def setupUi(self, RegisterForm):
+        if not RegisterForm.objectName():
+            RegisterForm.setObjectName(u"RegisterForm")
+        RegisterForm.resize(623, 442)
+        self.verticalLayout = QVBoxLayout(RegisterForm)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label_2 = QLabel(LoginForm)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setStyleSheet(u"QLabel {\n"
-"	font: 12pt \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"}")
-
-        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-
-        self.label = QLabel(LoginForm)
+        self.label = QLabel(RegisterForm)
         self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"QLabel#label {\n"
-"	font: 22pt \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"    qproperty-alignment: AlignCenter;\n"
-"}\n"
-"")
+        self.label.setStyleSheet(u"\n"
+"            QLabel#label {\n"
+"                font: 22pt \"\u5e7c\u5706\";\n"
+"                font-weight: bold;\n"
+"                qproperty-alignment: AlignCenter;\n"
+"            }\n"
+"        ")
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
 
-        self.lineEdit_account = QLineEdit(LoginForm)
-        self.lineEdit_account.setObjectName(u"lineEdit_account")
-        self.lineEdit_account.setStyleSheet(u"QLineEdit {\n"
-"    padding: 8px;\n"
-"    font-size: 14px;\n"
-"    border: 1px solid #ccc;\n"
-"    border-radius: 4px;\n"
-"}")
+        self.phoneInput = QLineEdit(RegisterForm)
+        self.phoneInput.setObjectName(u"phoneInput")
+        self.phoneInput.setStyleSheet(u"\n"
+"            QLineEdit {\n"
+"                padding: 8px;\n"
+"                font-size: 14px;\n"
+"                border: 1px solid #ccc;\n"
+"                border-radius: 4px;\n"
+"            }\n"
+"    ")
 
-        self.gridLayout.addWidget(self.lineEdit_account, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.phoneInput, 1, 1, 1, 1)
 
-        self.label_3 = QLabel(LoginForm)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setStyleSheet(u"QLabel {\n"
-"	font: 12pt \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"}")
+        self.phtonLabel = QLabel(RegisterForm)
+        self.phtonLabel.setObjectName(u"phtonLabel")
+        self.phtonLabel.setStyleSheet(u"\n"
+"            QLabel {\n"
+"                font: 12pt \"\u5e7c\u5706\";\n"
+"                font-weight: bold;\n"
+"            }\n"
+"        ")
 
-        self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.phtonLabel, 1, 0, 1, 1)
 
-        self.lineEdit_password = QLineEdit(LoginForm)
-        self.lineEdit_password.setObjectName(u"lineEdit_password")
-        self.lineEdit_password.setStyleSheet(u"QLineEdit {\n"
-"    padding: 8px;\n"
-"    font-size: 14px;\n"
-"    border: 1px solid #ccc;\n"
-"    border-radius: 4px;\n"
-"}")
-        self.lineEdit_password.setEchoMode(QLineEdit.Password)
+        self.pwdInput = QLineEdit(RegisterForm)
+        self.pwdInput.setObjectName(u"pwdInput")
+        self.pwdInput.setStyleSheet(u"\n"
+"            QLineEdit {\n"
+"                padding: 8px;\n"
+"                font-size: 14px;\n"
+"                border: 1px solid #ccc;\n"
+"                border-radius: 4px;\n"
+"            }\n"
+"        ")
+        self.pwdInput.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
-        self.gridLayout.addWidget(self.lineEdit_password, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.pwdInput, 2, 1, 1, 1)
+
+        self.pwdLabel = QLabel(RegisterForm)
+        self.pwdLabel.setObjectName(u"pwdLabel")
+        self.pwdLabel.setStyleSheet(u"\n"
+"            QLabel {\n"
+"                font: 12pt \"\u5e7c\u5706\";\n"
+"                font-weight: bold;\n"
+"            }\n"
+"        ")
+
+        self.gridLayout.addWidget(self.pwdLabel, 2, 0, 1, 1)
+
+        self.confirmPwdLabel = QLabel(RegisterForm)
+        self.confirmPwdLabel.setObjectName(u"confirmPwdLabel")
+        self.confirmPwdLabel.setStyleSheet(u"\n"
+"            QLabel {\n"
+"                font: 12pt \"\u5e7c\u5706\";\n"
+"                font-weight: bold;\n"
+"            }\n"
+"        ")
+
+        self.gridLayout.addWidget(self.confirmPwdLabel, 3, 0, 1, 1)
+
+        self.confirmPwdInput = QLineEdit(RegisterForm)
+        self.confirmPwdInput.setObjectName(u"confirmPwdInput")
+        self.confirmPwdInput.setStyleSheet(u"\n"
+"            QLineEdit {\n"
+"                padding: 8px;\n"
+"                font-size: 14px;\n"
+"                border: 1px solid #ccc;\n"
+"                border-radius: 4px;\n"
+"            }\n"
+"    ")
+        self.confirmPwdInput.setEchoMode(QLineEdit.PasswordEchoOnEdit)
+
+        self.gridLayout.addWidget(self.confirmPwdInput, 3, 1, 1, 1)
 
 
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.pushButton_login = QPushButton(LoginForm)
-        self.pushButton_login.setObjectName(u"pushButton_login")
-        self.pushButton_login.setStyleSheet(u"QPushButton {\n"
-"    padding: 8px 16px;\n"
-"	font: 15px \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #4CAF50;\n"
-"    border-radius: 4px;\n"
-"    color: #fff;\n"
-"    background-color: #4CAF50;\n"
-"}\n"
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Minimum)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.registerBtn = QPushButton(RegisterForm)
+        self.registerBtn.setObjectName(u"registerBtn")
+        self.registerBtn.setStyleSheet(u"\n"
+"        QPushButton {\n"
+"            padding: 8px 16px;\n"
+"            font: 15px \"\u5e7c\u5706\";\n"
+"            font-weight: bold;\n"
+"            border: 1px solid #4CAF50;\n"
+"            border-radius: 4px;\n"
+"            color: #fff;\n"
+"            background-color: #4CAF50;\n"
+"        }\n"
 "\n"
-"/* \u9f20\u6807\u60ac\u505c\u65f6\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton:hover {\n"
-"    background-color: #45a049;\n"
-"    border: 1px solid #45a049;\n"
-"}")
+"        /* \u9f20\u6807\u60ac\u505c\u65f6\u6309\u94ae\u6837\u5f0f */\n"
+"        QPushButton:hover {\n"
+"            background-color: #45a049;\n"
+"            border: 1px solid #45a049;\n"
+"        }\n"
+"        ")
 
-        self.verticalLayout.addWidget(self.pushButton_login)
+        self.verticalLayout.addWidget(self.registerBtn)
 
-        self.pushButton_register = QPushButton(LoginForm)
-        self.pushButton_register.setObjectName(u"pushButton_register")
-        self.pushButton_register.setStyleSheet(u"QPushButton {\n"
-"    padding: 8px 16px;\n"
-"	font: 15px \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #4CAF50;\n"
-"    border-radius: 4px;\n"
-"    color: #fff;\n"
-"    background-color: #4CAF50;\n"
-"}\n"
-"\n"
-"/* \u9f20\u6807\u60ac\u505c\u65f6\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton:hover {\n"
-"    background-color: #45a049;\n"
-"    border: 1px solid #45a049;\n"
-"}")
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
-        self.verticalLayout.addWidget(self.pushButton_register)
-
-        self.pushButton = QPushButton(LoginForm)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setStyleSheet(u"/* \u8bbe\u7f6e\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton {\n"
-"    padding: 8px 16px;\n"
-"	font: 15px \"\u5e7c\u5706\";\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #4CAF50;\n"
-"    border-radius: 4px;\n"
-"    color: #fff;\n"
-"    background-color: #4CAF50;\n"
-"}\n"
-"\n"
-"/* \u9f20\u6807\u60ac\u505c\u65f6\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton:hover {\n"
-"    background-color: #45a049;\n"
-"    border: 1px solid #45a049;\n"
-"}\n"
-"\n"
-"/* \u6e38\u5ba2\u8bbf\u95ee\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton#pushButton_visitor {\n"
-"    color: #333;\n"
-"    background-color: #ddd;\n"
-"    border: 1px solid #ddd;\n"
-"}\n"
-"\n"
-"/* \u9f20\u6807\u60ac\u505c\u65f6\u6e38\u5ba2\u8bbf\u95ee\u6309\u94ae\u6837\u5f0f */\n"
-"QPushButton#pushButton_visitor:hover {\n"
-"    background-color: #bbb;\n"
-"    border: 1px solid #bbb;\n"
-"}")
-
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addItem(self.verticalSpacer_2)
 
 
-        self.retranslateUi(LoginForm)
+        self.retranslateUi(RegisterForm)
 
-        QMetaObject.connectSlotsByName(LoginForm)
+        QMetaObject.connectSlotsByName(RegisterForm)
     # setupUi
 
-    def retranslateUi(self, LoginForm):
-        LoginForm.setWindowTitle(QCoreApplication.translate("LoginForm", u"\u767b\u5165\u7cfb\u7edf", None))
-        self.label_2.setText(QCoreApplication.translate("LoginForm", u"\u624b\u673a\u53f7", None))
-        self.label.setText(QCoreApplication.translate("LoginForm", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
-        self.label_3.setText(QCoreApplication.translate("LoginForm", u"\u5bc6\u7801:", None))
-        self.pushButton_login.setText(QCoreApplication.translate("LoginForm", u"\u767b\u5f55", None))
-        self.pushButton_register.setText(QCoreApplication.translate("LoginForm", u"\u6ce8\u518c", None))
-        self.pushButton.setText(QCoreApplication.translate("LoginForm", u"\u6e38\u5ba2\u8bbf\u95ee", None))
+    def retranslateUi(self, RegisterForm):
+        RegisterForm.setWindowTitle(QCoreApplication.translate("Register", u"\u767b\u5165\u7cfb\u7edf", None))
+        self.label.setText(QCoreApplication.translate("Register", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
+        self.phtonLabel.setText(QCoreApplication.translate("Register", u"\u624b\u673a\u53f7", None))
+        self.pwdLabel.setText(QCoreApplication.translate("Register", u"\u5bc6\u7801:", None))
+        self.confirmPwdLabel.setText(QCoreApplication.translate("Register", u"\u786e\u8ba4\u5bc6\u7801\uff1a", None))
+        self.registerBtn.setText(QCoreApplication.translate("Register", u"\u786e\u8ba4\u6ce8\u518c", None))
     # retranslateUi
 
