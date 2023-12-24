@@ -171,3 +171,4 @@ class Ui_LoginForm(object):
         self.pushButton_register.setText(QCoreApplication.translate("LoginForm", u"\u6ce8\u518c", None))
         self.pushButton.setText(QCoreApplication.translate("LoginForm", u"\u6e38\u5ba2\u8bbf\u95ee", None))
     # retranslateUi
+
