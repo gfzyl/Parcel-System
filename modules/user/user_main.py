@@ -3,6 +3,7 @@ from qt_material import apply_stylesheet
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal
 
+
 from .user_main_ui import Ui_user_main
 from .mySend_ui import Ui_mySend
 from .myReceive_ui import Ui_myReceive
@@ -12,6 +13,7 @@ from .user_modify_info_ui import Ui_user_modify_info
 from .user_sendout_ui import Ui_user_sendout
 from .user_search_delivery_ui import Ui_user_search_delivery
 from ...controller.sql import Sql
+#from ...controller.login import LoginWindow
 class UserMainWindow(QWidget,Ui_user_main):
     logout_signal = Signal()
     def __init__(self):
@@ -77,18 +79,44 @@ class Window1(QWidget,Ui_user_search_delivery):
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
 
-            # 获取表头信息，用于映射数据库字段和表格列
-            header_labels = [self.tableWidget.horizontalHeaderItem(col).text() for col in
-                             range(self.tableWidget.columnCount())]
-
             # 将查询结果填充到表格中
             for row_num, row_data in enumerate(result):
+                print(row_data)
                 self.tableWidget.insertRow(row_num)
-                for col_num, col_label in enumerate(header_labels):
-                    # 通过表头信息映射列表中的索引
-                    col_data = row_data[col_num] if col_num < len(row_data) else ""
-                    item = QTableWidgetItem(str(col_data))
-                    self.tableWidget.setItem(row_num, col_num, item)
+
+                item1 = QTableWidgetItem(str(row_data[0]))
+                self.tableWidget.setItem(row_num, 0, item1)
+                item2 = QTableWidgetItem(str(row_data[3]))
+                self.tableWidget.setItem(row_num, 1, item2)
+                item3 = QTableWidgetItem(str(row_data[4]))
+                self.tableWidget.setItem(row_num, 2, item3)
+                item4 = QTableWidgetItem(str(row_data[5]))
+                self.tableWidget.setItem(row_num, 3, item4)
+                item5 = QTableWidgetItem(str(row_data[6]))
+                self.tableWidget.setItem(row_num, 4, item5)
+                item6 = QTableWidgetItem(str(row_data[7]))
+                self.tableWidget.setItem(row_num, 5, item6)
+                item7 = QTableWidgetItem(str(row_data[8]))
+                self.tableWidget.setItem(row_num, 6, item7)
+                item8 = QTableWidgetItem(str(row_data[9]))
+                self.tableWidget.setItem(row_num, 7, item8)
+                item9 = QTableWidgetItem(str(row_data[10]))
+                self.tableWidget.setItem(row_num, 8, item9)
+                item10 = QTableWidgetItem(str(row_data[11]))
+                self.tableWidget.setItem(row_num, 9, item10)
+                item11 = QTableWidgetItem(str(row_data[12]))
+                self.tableWidget.setItem(row_num, 10, item11)
+                item12 = QTableWidgetItem(str(row_data[13]))
+                self.tableWidget.setItem(row_num, 11, item12)
+                item13 = QTableWidgetItem(str(row_data[14]))
+                self.tableWidget.setItem(row_num, 12, item13)
+                item14 = QTableWidgetItem(str(row_data[15]))
+                self.tableWidget.setItem(row_num, 13, item14)
+                item15 = QTableWidgetItem(str(row_data[17]))
+                self.tableWidget.setItem(row_num, 14, item15)
+
+
+
         else:
             # 处理没有查询结果的情况
             self.tableWidget.clearContents()
@@ -124,9 +152,9 @@ class Window2(QWidget,Ui_user_sendout):
         self.comboBox_addressBook2.currentTextChanged.connect(self.addDate_2)
 
         self.submitBtn.clicked.connect(self.bind)
-        self.returnBtn.clicked.connect(self.goto_logout)
+        self.returnBtn.clicked.connect(self.back)
 
-    def goto_logout(self):
+    def back(self):
             self.close()
 
     def change_1(self):
@@ -190,12 +218,112 @@ class Window3(QWidget,Ui_myReceive):
         super().__init__()
         # 我收到的
         self.setupUi(self)
+        self.sql = Sql()
+        self.sql.connect()
+        self.insertData()
+
+        self.tableWidget.cellClicked.connect(self.cellClicked)
+        self.confirmBtn.clicked.connect(self.confirmAct)
+        self.refuseBtn.clicked.connect(self.refuseAct)
+        self.returnBtn.clicked.connect(self.back)
+
+    def insertData(self):
+
+        # temp = LoginWindow()     #调用登陆时输入的账号
+        self.account = '120'  # 后面替换
+
+        statement = f"SELECT * FROM parcel_info WHERE recipient_tel = '{self.account}'"
+        result = self.sql.execute_query(statement)
+        print(result)
+
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(0)
+
+        # 将查询结果填充到表格中
+        for row_num, row_data in enumerate(result):
+            print(row_data)
+            self.tableWidget.insertRow(row_num)
+
+            item1 = QTableWidgetItem(str(row_data[0]))
+            self.tableWidget.setItem(row_num, 0, item1)
+            item2 = QTableWidgetItem(str(row_data[0]))
+            self.tableWidget.setItem(row_num, 1, item2)
+            item3 = QTableWidgetItem(str(row_data[14]))
+            self.tableWidget.setItem(row_num, 2, item3)
+            item4 = QTableWidgetItem(str(row_data[15]))
+            self.tableWidget.setItem(row_num, 3, item4)
+
+    def confirmAct(self):
+
+        result_id = self.tableWidget.item(self.row,0).text()
+        statement = f"UPDATE parcel_info SET status = 2 WHERE parcel_id= %s"
+        value = (result_id,)       #单个元素加上逗号
+        self.sql.execute_update(statement,value)
+
+
+    def cellClicked(self,row,column):
+        self.row=row
+        self.column=column
+    def refuseAct(self):
+        result_id = self.tableWidget.item(self.row, 0).text()
+        statement = f"UPDATE parcel_info SET status = 3 WHERE parcel_id= %s"
+        value = (result_id,)  # 单个元素加上逗号
+        self.sql.execute_update(statement, value)
+
+
+    def back(self):
+        # 清除输入框的搜索条件，确保每次进来都是空的
+        self.parcelIdInput.clear()
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(12)  # 每次看到都有12个空列
+        self.close()
 
 class Window4(QWidget,Ui_mySend):
     def __init__(self):
         super().__init__()
         # 我寄的
         self.setupUi(self)
+        self.setupUi(self)
+        self.sql = Sql()
+        self.sql.connect()
+
+        self.insertData()
+        self.returnBtn.clicked.connect(self.back)
+
+    def insertData(self):
+        # temp = LoginWindow()     #调用登陆时输入的账号
+        self.account = '110'  # 后面替换
+
+        statement = f"SELECT * FROM parcel_info WHERE sender_tel = '{self.account}'"
+        result = self.sql.execute_query(statement)
+        print(result)
+
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(0)
+
+        # 将查询结果填充到表格中
+        for row_num, row_data in enumerate(result):
+            print(row_data)
+            self.tableWidget.insertRow(row_num)
+
+            item1 = QTableWidgetItem(str(row_data[0]))
+            self.tableWidget.setItem(row_num, 0, item1)
+            item2 = QTableWidgetItem(str(row_data[0]))
+            self.tableWidget.setItem(row_num, 1, item2)
+            item3 = QTableWidgetItem(str(row_data[14]))
+            self.tableWidget.setItem(row_num, 2, item3)
+            item4 = QTableWidgetItem(str(row_data[15]))
+            self.tableWidget.setItem(row_num, 3, item4)
+
+
+
+    def back(self):
+        # 清除输入框的搜索条件，确保每次进来都是空的
+        self.parcelIdInput.clear()
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(12)  # 每次看到都有12个空列
+        self.close()
+
 
 class Window5(QWidget,Ui_user_modify_info):
     def __init__(self):
