@@ -11,12 +11,45 @@ from .address_book_ui import Ui_address_book
 from .user_modify_info_ui import Ui_user_modify_info
 from .user_sendout_ui import Ui_user_sendout
 from .user_search_delivery_ui import Ui_user_search_delivery
-class UserMainWindow(QWidget):
+
+
+class UserMainWindow(QWidget,Ui_user_main):
     def __init__(self):
         super().__init__()
-        # 设置界面为我们生成的界面
-        self.ui = Ui_user_main()
-        self.ui.setupUi(self)
+        self.setupUi(self)
+        
+
+
+class Window1(QWidget,Ui_user_search_delivery):
+    def __init__(self):
+        super().__init__()
+        #查询快递
+        self.setupUi(self)
+
+class Window2(QWidget,Ui_user_sendout):
+    def __init__(self):
+        super().__init__()
+        # 寄快递
+        self.setupUi(self)
+
+class Window3(QWidget,Ui_myReceive):
+    def __init__(self):
+        super().__init__()
+        # 我收到的
+        self.setupUi(self)
+
+class Window4(QWidget,Ui_mySend):
+    def __init__(self):
+        super().__init__()
+        # 我寄的
+        self.setupUi(self)
+
+class Window5(QWidget,Ui_user_modify_info):
+    def __init__(self):
+        super().__init__()
+        # 修改个人信息
+        self.setupUi(self)
+
 
 # 程序入口
 if __name__ == "__main__":
