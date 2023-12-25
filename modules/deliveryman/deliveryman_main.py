@@ -14,12 +14,19 @@ from qt_material import apply_stylesheet
  # 继承QWidget类，以获取其属性和方法
 class DeliverymanMainWindow(QWidget, Ui_deliveryman_main):
     logout_signal = Signal()
-    def __init__(self):
+    def __init__(self, login_window):
         super().__init__()
         self.setupUi(self)
 
         # 按键
         self.quitBtn.clicked.connect(self.goto_logout)
+
+        
+        # 连接登录信号
+        login_window.login_signal.connect(self.receive_login_info)
+
+    def receive_login_info(self, account):
+        print(f"当前登录账户ID: {account}")
 
     
     def goto_logout(self):

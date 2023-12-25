@@ -10,12 +10,18 @@ from .user_main_ui import Ui_user_main
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
-class UserMainWindow(QWidget):
-    def __init__(self):
+class UserMainWindow(QWidget, Ui_user_main):
+    def __init__(self, login_window):
         super().__init__()
-        # 设置界面为我们生成的界面
-        self.ui = Ui_user_main()
-        self.ui.setupUi(self)
+        # 设置界面为我们生成的界面2
+        self.setupUi(self)
+         
+         # 连接登录信号
+        login_window.login_signal.connect(self.receive_login_info)
+
+    def receive_login_info(self, account):
+        print(f"当前登录账户ID: {account}")
+
 
 # 程序入口
 if __name__ == "__main__":

@@ -32,6 +32,7 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
 
     def searchDelivery(self):
         parcel_id = self.parcelIdInput.text()
+        # 这里还需要有逻辑，用户只能查到自己的快递
         statement = f"SELECT * FROM parcel_info WHERE parcel_id = '{parcel_id}'"
         result = self.sql.execute_query(statement=statement)
         if result:
