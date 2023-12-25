@@ -23,7 +23,7 @@ class Ui_user_search_delivery(object):
     def setupUi(self, user_search_delivery):
         if not user_search_delivery.objectName():
             user_search_delivery.setObjectName(u"user_search_delivery")
-        user_search_delivery.resize(1118, 585)
+        user_search_delivery.resize(1103, 565)
         user_search_delivery.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -186,10 +186,10 @@ class Ui_user_search_delivery(object):
 
         self.horizontalLayout.addWidget(self.parcelIdInput)
 
-        self.queryBtn = QPushButton(self.layoutWidget)
-        self.queryBtn.setObjectName(u"queryBtn")
+        self.searchBtn = QPushButton(self.layoutWidget)
+        self.searchBtn.setObjectName(u"searchBtn")
 
-        self.horizontalLayout.addWidget(self.queryBtn)
+        self.horizontalLayout.addWidget(self.searchBtn)
 
         self.returnBtn = QPushButton(self.groupBox)
         self.returnBtn.setObjectName(u"returnBtn")
@@ -261,7 +261,7 @@ class Ui_user_search_delivery(object):
         ___qtablewidgetitem27.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
         self.parcelIdLabel.setText(QCoreApplication.translate("user_search_delivery", u"\u5feb\u9012\u5355\u53f7", None))
         self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("user_search_delivery", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
-        self.queryBtn.setText(QCoreApplication.translate("user_search_delivery", u"\u67e5\u8be2", None))
+        self.searchBtn.setText(QCoreApplication.translate("user_search_delivery", u"\u67e5\u8be2", None))
         self.returnBtn.setText(QCoreApplication.translate("user_search_delivery", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 

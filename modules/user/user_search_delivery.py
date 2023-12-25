@@ -3,7 +3,7 @@ import sys
 
 # 任何一个PySide界面程序都需要使用QApplication
 # 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget,QTableWidgetItem
 from PySide6.QtGui import QIcon
 from ...controller.sql import Sql
 # 导入我们生成的界面
@@ -23,13 +23,41 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
         self.searchBtn.clicked.connect(self.searchDelivery)
 
     def back(self):
-        self.use_search_window.show()
+        self.close()
+
 
     def searchDelivery(self):
-        pass
-    
-    
-    
+        parcel_id = self.parcelIdInput.text()
+        statement = f"SELECT * FROM parcel_info WHERE parcel_id = '{parcel_id}'"
+        result = self.sql.execute_query(statement=statement)
+        if result:
+            # 清空表格
+            print(result)
+            self.tableWidget.clearContents()
+            self.tableWidget.setRowCount(0)
+            print(result)
+            
+
+            # 获取表头信息，用于映射数据库字段和表格列
+            header_labels = [self.tableWidget.horizontalHeaderItem(col).text() for col in range(self.tableWidget.columnCount())]
+
+            # 将查询结果填充到表格中
+            for row_num, row_data in enumerate(result):
+                self.tableWidget.insertRow(row_num)
+                for col_num, col_label in enumerate(header_labels):
+                    # 通过表头信息映射列表中的索引
+                    col_data = row_data[col_num] if col_num < len(row_data) else ""
+                    item = QTableWidgetItem(str(col_data))
+                    self.tableWidget.setItem(row_num, col_num, item)
+        else:
+            # 处理没有查询结果的情况
+            self.tableWidget.clearContents()
+            self.tableWidget.setRowCount(0)
+
+
+
+
+
 
 # 程序入口
 if __name__ == "__main__":
