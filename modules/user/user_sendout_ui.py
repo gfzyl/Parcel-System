@@ -120,6 +120,7 @@ class Ui_user_sendout(object):
         self.gridLayout.addWidget(self.label_in_address_book, 1, 0, 1, 1)
 
         self.comboBox_addressBook1 = QComboBox(self.layoutWidget)
+        self.comboBox_addressBook1.addItem("")
         self.comboBox_addressBook1.setObjectName(u"comboBox_addressBook1")
 
         self.gridLayout.addWidget(self.comboBox_addressBook1, 1, 1, 1, 1)
@@ -222,6 +223,7 @@ class Ui_user_sendout(object):
         self.gridLayout_2.addWidget(self.label_in_address_book1, 1, 0, 1, 1)
 
         self.comboBox_addressBook2 = QComboBox(self.layoutWidget_2)
+        self.comboBox_addressBook2.addItem("")
         self.comboBox_addressBook2.setObjectName(u"comboBox_addressBook2")
 
         self.gridLayout_2.addWidget(self.comboBox_addressBook2, 1, 1, 1, 1)
@@ -334,6 +336,8 @@ class Ui_user_sendout(object):
         self.label_5.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
         self.label_6.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
+        self.comboBox_addressBook1.setItemText(0, "")
+
         self.groupBox_2.setTitle(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
         self.label_3.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
         self.label_7.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
@@ -343,6 +347,8 @@ class Ui_user_sendout(object):
         self.label_9.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
         self.label_10.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book1.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
+        self.comboBox_addressBook2.setItemText(0, "")
+
         self.label_11.setText(QCoreApplication.translate("user_sendout", u"\u5907\u6ce8:", None))
         self.submitBtn.setText(QCoreApplication.translate("user_sendout", u"\u63d0\u4ea4\u8ba2\u5355", None))
         self.returnBtn.setText(QCoreApplication.translate("user_sendout", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))

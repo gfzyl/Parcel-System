@@ -139,7 +139,13 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox_addressBook1"/>
+        <widget class="QComboBox" name="comboBox_addressBook1">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </item>
@@ -271,7 +277,13 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox_addressBook2"/>
+        <widget class="QComboBox" name="comboBox_addressBook2">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </item>

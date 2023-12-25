@@ -120,7 +120,8 @@ class Window2(QWidget,Ui_user_sendout):
         print(result_list2)
         self.comboBox_addressBook1.addItems(result_list2)
         self.comboBox_addressBook2.addItems(result_list2)
-
+        self.comboBox_addressBook1.currentTextChanged.connect(self.addDate_1)
+        self.comboBox_addressBook2.currentTextChanged.connect(self.addDate_2)
 
         self.submitBtn.clicked.connect(self.bind)
         self.returnBtn.clicked.connect(self.goto_logout)
@@ -143,6 +144,24 @@ class Window2(QWidget,Ui_user_sendout):
             result_list = [item[0] for item in result_comboBox]
             self.comboBox_city2.clear()
             self.comboBox_city2.addItems(result_list)
+    def addDate_1(self):
+        str = self.comboBox_addressBook1.currentText()
+        list = str.split('-')
+        self.lineEdit_name1.setText(list[0])
+        self.lineEdit_phone1.setText(list[1])
+        self.comboBox_province1.setCurrentText(list[2])
+        self.comboBox_city1.setCurrentText(list[3])
+        self.lineEdit_address1.setText(list[4])
+
+
+    def addDate_2(self):
+        str = self.comboBox_addressBook2.currentText()
+        list = str.split('-')
+        self.lineEdit_name2.setText(list[0])
+        self.lineEdit_phone2.setText(list[1])
+        self.comboBox_province2.setCurrentText(list[2])
+        self.comboBox_city2.setCurrentText(list[3])
+        self.lineEdit_address2.setText(list[4])
 
     def bind(self):                      #写入数据库
 
@@ -158,16 +177,12 @@ class Window2(QWidget,Ui_user_sendout):
             result_address2 = self.lineEdit_address2.text()
             result_extra = self.lineEdit_extra.text()
 
-            result_addressBook1 = self.comboBox_addressBook1.currentText()
-            result_addressBook2 = self.comboBox_addressBook2.currentText()
-
-            print(result_name1, result_phone1, result_province1, result_city1, result_address1, result_name2,
-                  result_phone2, result_province2, result_city2, result_address2, result_extra)
-
             statement = "INSERT INTO parcel_info(sender, sender_tel, sender_prv,sender_city,sender_place,recipient, recipient_tel, recipient_prv,recipient_city,recipient_place,notes) VALUES (%s, %s, %s,%s,%s,%s, %s, %s,%s,%s,%s)"
+
             values = (
             result_name1, result_phone1, result_province1, result_city1, result_address1, result_name2, result_phone2,
             result_province2, result_city2, result_address2, result_extra)
+
             self.sql.execute_insert(statement, values)
 
 class Window3(QWidget,Ui_myReceive):
