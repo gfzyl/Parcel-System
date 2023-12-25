@@ -5,17 +5,31 @@ import sys
 # 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
+from ...controller.sql import Sql
 # 导入我们生成的界面
 from .user_search_delivery_ui import Ui_user_search_delivery
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
-class UserSearchDeliveryWindow(QWidget):
+class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
     def __init__(self):
         super().__init__()
-        # 设置界面为我们生成的界面
-        self.ui = Ui_user_search_delivery()
-        self.ui.setupUi(self)
+        self.setupUi(self)
+        self.sql=Sql()
+        self.sql.connect()
+        
+        # 按键
+        self.returnBtn.clicked.connect(self.back)
+        self.searchBtn.clicked.connect(self.searchDelivery)
+
+    def back(self):
+        self.use_search_window.show()
+
+    def searchDelivery(self):
+        pass
+    
+    
+    
 
 # 程序入口
 if __name__ == "__main__":
