@@ -89,10 +89,10 @@ if __name__ == "__main__":
     # 初始化并展示我们的界面组件
     window = UserMainWindow()
     # 设置窗口图标
-    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
-    window.setWindowIcon(appIcon);
+    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png")
+    window.setWindowIcon(appIcon)
 
     window.show()
-    
+
     # 结束QApplication
     app.exec_()

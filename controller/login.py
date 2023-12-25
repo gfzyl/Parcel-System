@@ -120,8 +120,8 @@ if __name__ == "__main__":
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
     window = LoginWindow()
-    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
-    window.setWindowIcon(appIcon);
+    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png")
+    window.setWindowIcon(appIcon)
     window.show()
     app.exec_()
     
