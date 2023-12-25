@@ -280,7 +280,6 @@ class Window4(QWidget,Ui_mySend):
         super().__init__()
         # 我寄的
         self.setupUi(self)
-        self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
 
@@ -322,40 +321,54 @@ class Window5(QWidget,Ui_user_modify_info):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
+        self.sql = Sql()
+        self.sql.connect()
 
-
-        self.lineEdit_newPhone.text()
-        self.btn_changePassword.clicked.connect(self.changePasword)
+        self.btn_changePassword.clicked.connect(self.changePassword)
         self.btn_changePhone.clicked.connect(self.changePhone)
         self.btn_viewAddressBook.clicked.connect(self.viewAddressBook)
 
-        self.window_modify=Window_modify()
-        self.window_viewAdress = Window_viewAdress()
-        self.window_addAdress = Window_addAddress()
-
     def changePassword(self):
-
-        self.account =
         result_oldPassword = self.lineEdit_oldPassword.text()
         result_newPassword = self.lineEdit_newPassword.text()
         result_againPassword = self.lineEdit_againPassword.text()
 
+        self.account = '1'      #后面从登录界面导入
+        statement = f"SELECT user_pwd FROM [user] WHERE user_id = '{self.account}'"
+        result = self.sql.execute_query(statement)
+        print(result[0][0])   #从元组中获取密码
+        if result_oldPassword==result[0][0]:
+                if  result_newPassword==result_againPassword:
+                    statement_modifyPassword = f"UPDATE [user] SET user_pwd = %s WHERE user_id= %s"
+                    values =(result_newPassword,self.account)
+                    self.sql.execute_update(statement_modifyPassword, values)
+
+                else:
+                    pass       #可以设置个弹窗
+        if result_oldPassword!=result[0][0]:
+            pass               #可以设置个弹窗
 
     def changePhone(self):
-        pass
+        result_newPhone = self.lineEdit_newPhone.text()
+        statement = f"UPDATE [user] SET user_phone = %s WHERE user_id= %s"
+        values = (result_newPhone, self.account)
+        self.sql.execute_update(statement, values)
     def viewAddressBook(self):
-        pass
+        self.window_viewAdress = Window_viewAdress()
+        self.window_viewAdress.show()
 
-class Window_modify(QWidget,Ui_user_modify_info):
-    def __init__(self):
-        super().__init__()
-        # 修改个人信息
-        self.setupUi(self)
+
+
+
 class Window_viewAdress(QWidget,Ui_address_book):
     def __init__(self):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
+        self.sql = Sql()
+        self.sql.connect()
+        self.window_addAdress = Window_addAddress()
+
 class Window_addAddress(QWidget,Ui_add_address_book):
     def __init__(self):
         super().__init__()
