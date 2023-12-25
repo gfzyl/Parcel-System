@@ -33,7 +33,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="phoneInput">
+      <widget class="QLineEdit" name="accountInput">
        <property name="styleSheet">
         <string notr="true">
             QLineEdit {
@@ -47,7 +47,7 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="phtonLabel">
+      <widget class="QLabel" name="accountLabel">
        <property name="styleSheet">
         <string notr="true">
             QLabel {
@@ -57,7 +57,7 @@
         </string>
        </property>
        <property name="text">
-        <string>手机号</string>
+        <string>账号：</string>
        </property>
       </widget>
      </item>

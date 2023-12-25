@@ -55,10 +55,6 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
             self.tableWidget.setRowCount(0)
 
 
-
-
-
-
 # 程序入口
 if __name__ == "__main__":
     # 初始化QApplication，界面展示要包含在QApplication初始化之后，结束之前

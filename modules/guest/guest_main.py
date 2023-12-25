@@ -22,9 +22,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         self.sql.connect()
         statement = "SELECT prv_name FROM province"
         result_comboBox = self.sql.execute_query(statement)
-        print(result_comboBox)                         #格式不对，需要转换
         result_list = [item[0] for item in result_comboBox]
-        print(result_list)
 
         # 窗体
         self.use_search_window = UserSearchDeliveryWindow()
