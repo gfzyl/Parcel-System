@@ -14,10 +14,7 @@ from ..modules.postman.postman_main import PostmanMainWindow
 from ..modules.register.register import RegisterWindow
 from ..modules.admin.admin_main import AdminMainWindow
 
-dscscs
 
-
-boojk    FGHFGHFHGJGJ
 class LoginWindow(QWidget,Ui_login):
     def __init__(self):
         super().__init__()
@@ -37,6 +34,7 @@ class LoginWindow(QWidget,Ui_login):
 
         # 连接信号,每个界面都有返回登录的操作，最终将返回至登录界面
         self.admin_main_window.logout_signal.connect(self.show_login_window)
+        self.guest_main_window.logout_signal.connect(self.show_login_window)
         # 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
 
 

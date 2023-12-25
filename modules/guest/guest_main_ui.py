@@ -56,20 +56,20 @@ class Ui_guest_main(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.layoutWidget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.nameInput1 = QLineEdit(self.layoutWidget)
+        self.nameInput1.setObjectName(u"nameInput1")
 
-        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout.addWidget(self.nameInput1)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.lineEdit_2 = QLineEdit(self.layoutWidget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.telInput1 = QLineEdit(self.layoutWidget)
+        self.telInput1.setObjectName(u"telInput1")
 
-        self.horizontalLayout.addWidget(self.lineEdit_2)
+        self.horizontalLayout.addWidget(self.telInput1)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -82,14 +82,11 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_2.addWidget(self.label_4)
 
-        self.comboBox = QComboBox(self.layoutWidget)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.prvComboBox1 = QComboBox(self.layoutWidget)
+        self.prvComboBox1.addItem("")
+        self.prvComboBox1.setObjectName(u"prvComboBox1")
 
-        self.horizontalLayout_2.addWidget(self.comboBox)
+        self.horizontalLayout_2.addWidget(self.prvComboBox1)
 
         self.label_5 = QLabel(self.layoutWidget)
         self.label_5.setObjectName(u"label_5")
@@ -97,14 +94,10 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_2.addWidget(self.label_5)
 
-        self.comboBox_2 = QComboBox(self.layoutWidget)
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.cityComboBox1 = QComboBox(self.layoutWidget)
+        self.cityComboBox1.setObjectName(u"cityComboBox1")
 
-        self.horizontalLayout_2.addWidget(self.comboBox_2)
+        self.horizontalLayout_2.addWidget(self.cityComboBox1)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -116,10 +109,10 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_3.addWidget(self.label_6)
 
-        self.lineEdit_3 = QLineEdit(self.layoutWidget)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.placeInput1 = QLineEdit(self.layoutWidget)
+        self.placeInput1.setObjectName(u"placeInput1")
 
-        self.horizontalLayout_3.addWidget(self.lineEdit_3)
+        self.horizontalLayout_3.addWidget(self.placeInput1)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_3)
@@ -155,20 +148,20 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_4.addWidget(self.label_3)
 
-        self.lineEdit_4 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.nameInput2 = QLineEdit(self.layoutWidget_2)
+        self.nameInput2.setObjectName(u"nameInput2")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_4)
+        self.horizontalLayout_4.addWidget(self.nameInput2)
 
         self.label_7 = QLabel(self.layoutWidget_2)
         self.label_7.setObjectName(u"label_7")
 
         self.horizontalLayout_4.addWidget(self.label_7)
 
-        self.lineEdit_5 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.telInput2 = QLineEdit(self.layoutWidget_2)
+        self.telInput2.setObjectName(u"telInput2")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_5)
+        self.horizontalLayout_4.addWidget(self.telInput2)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
@@ -181,14 +174,11 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_5.addWidget(self.label_8)
 
-        self.comboBox_3 = QComboBox(self.layoutWidget_2)
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.prvComboBox2 = QComboBox(self.layoutWidget_2)
+        self.prvComboBox2.addItem("")
+        self.prvComboBox2.setObjectName(u"prvComboBox2")
 
-        self.horizontalLayout_5.addWidget(self.comboBox_3)
+        self.horizontalLayout_5.addWidget(self.prvComboBox2)
 
         self.label_9 = QLabel(self.layoutWidget_2)
         self.label_9.setObjectName(u"label_9")
@@ -196,14 +186,10 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_5.addWidget(self.label_9)
 
-        self.comboBox_4 = QComboBox(self.layoutWidget_2)
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.setObjectName(u"comboBox_4")
+        self.cityComboBox2 = QComboBox(self.layoutWidget_2)
+        self.cityComboBox2.setObjectName(u"cityComboBox2")
 
-        self.horizontalLayout_5.addWidget(self.comboBox_4)
+        self.horizontalLayout_5.addWidget(self.cityComboBox2)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_5)
@@ -215,10 +201,10 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_6.addWidget(self.label_10)
 
-        self.lineEdit_6 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.placeInput2 = QLineEdit(self.layoutWidget_2)
+        self.placeInput2.setObjectName(u"placeInput2")
 
-        self.horizontalLayout_6.addWidget(self.lineEdit_6)
+        self.horizontalLayout_6.addWidget(self.placeInput2)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
@@ -240,16 +226,16 @@ class Ui_guest_main(object):
 
         self.horizontalLayout_7.addWidget(self.label_11)
 
-        self.lineEdit_7 = QLineEdit(self.layoutWidget_3)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setStyleSheet(u"  QLineEdit {\n"
+        self.notesInput = QLineEdit(self.layoutWidget_3)
+        self.notesInput.setObjectName(u"notesInput")
+        self.notesInput.setStyleSheet(u"  QLineEdit {\n"
 "                padding: 8px;\n"
 "                font-size: 14px;\n"
 "                border: 1px solid #ccc;\n"
 "                border-radius: 4px;\n"
 "            }")
 
-        self.horizontalLayout_7.addWidget(self.lineEdit_7)
+        self.horizontalLayout_7.addWidget(self.notesInput)
 
         self.layoutWidget1 = QWidget(guest_main)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
@@ -348,33 +334,17 @@ class Ui_guest_main(object):
         self.label.setText(QCoreApplication.translate("guest_main", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
         self.label_2.setText(QCoreApplication.translate("guest_main", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
         self.label_4.setText(QCoreApplication.translate("guest_main", u"\u7701", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
+        self.prvComboBox1.setItemText(0, "")
 
         self.label_5.setText(QCoreApplication.translate("guest_main", u"\u5e02", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
-
         self.label_6.setText(QCoreApplication.translate("guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
         self.label_3.setText(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
         self.label_7.setText(QCoreApplication.translate("guest_main", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
         self.label_8.setText(QCoreApplication.translate("guest_main", u"\u7701", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
+        self.prvComboBox2.setItemText(0, "")
 
         self.label_9.setText(QCoreApplication.translate("guest_main", u"\u5e02", None))
-        self.comboBox_4.setItemText(0, QCoreApplication.translate("guest_main", u"\u6d4b\u8bd51", None))
-        self.comboBox_4.setItemText(1, QCoreApplication.translate("guest_main", u"2", None))
-        self.comboBox_4.setItemText(2, QCoreApplication.translate("guest_main", u"3", None))
-        self.comboBox_4.setItemText(3, QCoreApplication.translate("guest_main", u"4", None))
-
         self.label_10.setText(QCoreApplication.translate("guest_main", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_11.setText(QCoreApplication.translate("guest_main", u"\u5907\u6ce8:", None))
         self.searchBtn.setText(QCoreApplication.translate("guest_main", u"\u67e5\u8be2\u8ba2\u5355", None))

@@ -6,3 +6,8 @@
 在终端路径D:\Project\ParcelSystem时运行下面的指令
 
 python -m Parcel-System.controller.login
+
+日志：
+
+2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
+

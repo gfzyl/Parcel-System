@@ -63,7 +63,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="nameInput1"/>
        </item>
        <item>
         <widget class="QLabel" name="label_2">
@@ -73,7 +73,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="telInput1"/>
        </item>
       </layout>
      </item>
@@ -93,25 +93,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="prvComboBox1">
          <item>
           <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
+           <string/>
           </property>
          </item>
         </widget>
@@ -130,28 +115,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_2">
-         <item>
-          <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
-          </property>
-         </item>
-        </widget>
+        <widget class="QComboBox" name="cityComboBox1"/>
        </item>
       </layout>
      </item>
@@ -165,7 +129,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="placeInput1"/>
        </item>
       </layout>
      </item>
@@ -221,7 +185,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_4"/>
+        <widget class="QLineEdit" name="nameInput2"/>
        </item>
        <item>
         <widget class="QLabel" name="label_7">
@@ -231,7 +195,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
+        <widget class="QLineEdit" name="telInput2"/>
        </item>
       </layout>
      </item>
@@ -251,25 +215,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_3">
+        <widget class="QComboBox" name="prvComboBox2">
          <item>
           <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
+           <string/>
           </property>
          </item>
         </widget>
@@ -288,28 +237,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_4">
-         <item>
-          <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
-          </property>
-         </item>
-        </widget>
+        <widget class="QComboBox" name="cityComboBox2"/>
        </item>
       </layout>
      </item>
@@ -323,7 +251,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
+        <widget class="QLineEdit" name="placeInput2"/>
        </item>
       </layout>
      </item>
@@ -356,7 +284,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_7">
+     <widget class="QLineEdit" name="notesInput">
       <property name="styleSheet">
        <string notr="true">  QLineEdit {
                 padding: 8px;
