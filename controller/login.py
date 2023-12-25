@@ -17,7 +17,7 @@ from ..modules.admin.admin_main import AdminMainWindow
 dscscs
 
 
-boojk
+boojk    FGHFGHFHGJGJ
 class LoginWindow(QWidget,Ui_login):
     def __init__(self):
         super().__init__()
