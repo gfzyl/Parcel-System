@@ -69,10 +69,10 @@ class Ui_user_modify_info(object):
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.pushButton = QPushButton(self.tabWidget)
-        self.pushButton.setObjectName(u"pushButton")
+        self.btn_viewAddressBook = QPushButton(self.tabWidget)
+        self.btn_viewAddressBook.setObjectName(u"btn_viewAddressBook")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.btn_viewAddressBook)
 
 
         self.gridLayout_2.addLayout(self.horizontalLayout, 4, 1, 1, 1)
@@ -95,42 +95,37 @@ class Ui_user_modify_info(object):
 
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.new_password_lineedit = QLineEdit(self.tabWidget)
-        self.new_password_lineedit.setObjectName(u"new_password_lineedit")
-        self.new_password_lineedit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
+        self.lineEdit_newPassword = QLineEdit(self.tabWidget)
+        self.lineEdit_newPassword.setObjectName(u"lineEdit_newPassword")
+        self.lineEdit_newPassword.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
-        self.gridLayout.addWidget(self.new_password_lineedit, 1, 1, 1, 1)
-
-        self.btn_change_password = QPushButton(self.tabWidget)
-        self.btn_change_password.setObjectName(u"btn_change_password")
-
-        self.gridLayout.addWidget(self.btn_change_password, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit_newPassword, 1, 1, 1, 1)
 
         self.label_new_password = QLabel(self.tabWidget)
         self.label_new_password.setObjectName(u"label_new_password")
 
         self.gridLayout.addWidget(self.label_new_password, 1, 0, 1, 1)
 
-        self.new_phone_lineedit = QLineEdit(self.tabWidget)
-        self.new_phone_lineedit.setObjectName(u"new_phone_lineedit")
+        self.lineEdit_newPhone = QLineEdit(self.tabWidget)
+        self.lineEdit_newPhone.setObjectName(u"lineEdit_newPhone")
 
-        self.gridLayout.addWidget(self.new_phone_lineedit, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit_newPhone, 3, 1, 1, 1)
 
-        self.old_password_lineedit = QLineEdit(self.tabWidget)
-        self.old_password_lineedit.setObjectName(u"old_password_lineedit")
-        self.old_password_lineedit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
+        self.lineEdit_oldPassword = QLineEdit(self.tabWidget)
+        self.lineEdit_oldPassword.setObjectName(u"lineEdit_oldPassword")
+        self.lineEdit_oldPassword.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
-        self.gridLayout.addWidget(self.old_password_lineedit, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit_oldPassword, 0, 1, 1, 1)
 
         self.label_old_password = QLabel(self.tabWidget)
         self.label_old_password.setObjectName(u"label_old_password")
 
         self.gridLayout.addWidget(self.label_old_password, 0, 0, 1, 1)
 
-        self.btn_change_phone = QPushButton(self.tabWidget)
-        self.btn_change_phone.setObjectName(u"btn_change_phone")
+        self.btn_changePhone = QPushButton(self.tabWidget)
+        self.btn_changePhone.setObjectName(u"btn_changePhone")
 
-        self.gridLayout.addWidget(self.btn_change_phone, 3, 2, 1, 1)
+        self.gridLayout.addWidget(self.btn_changePhone, 3, 2, 1, 1)
 
         self.label_new_phone = QLabel(self.tabWidget)
         self.label_new_phone.setObjectName(u"label_new_phone")
@@ -142,10 +137,15 @@ class Ui_user_modify_info(object):
 
         self.gridLayout.addWidget(self.label, 2, 0, 1, 1)
 
-        self.lineEdit = QLineEdit(self.tabWidget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit_againPassword = QLineEdit(self.tabWidget)
+        self.lineEdit_againPassword.setObjectName(u"lineEdit_againPassword")
 
-        self.gridLayout.addWidget(self.lineEdit, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit_againPassword, 2, 1, 1, 1)
+
+        self.btn_changePassword = QPushButton(self.tabWidget)
+        self.btn_changePassword.setObjectName(u"btn_changePassword")
+
+        self.gridLayout.addWidget(self.btn_changePassword, 2, 2, 1, 1)
 
 
         self.gridLayout_2.addLayout(self.gridLayout, 1, 1, 1, 1)
@@ -170,12 +170,12 @@ class Ui_user_modify_info(object):
     def retranslateUi(self, user_modify_info):
         user_modify_info.setWindowTitle(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
         self.tabWidget.setTitle(QCoreApplication.translate("user_modify_info", u"\u4e2a\u4eba\u4fe1\u606f", None))
-        self.pushButton.setText(QCoreApplication.translate("user_modify_info", u"\u70b9\u51fb\u67e5\u770b\u5730\u5740\u7c3f\u4fe1\u606f", None))
-        self.btn_change_password.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u5bc6\u7801", None))
+        self.btn_viewAddressBook.setText(QCoreApplication.translate("user_modify_info", u"\u70b9\u51fb\u67e5\u770b\u5730\u5740\u7c3f\u4fe1\u606f", None))
         self.label_new_password.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u5bc6\u7801:", None))
         self.label_old_password.setText(QCoreApplication.translate("user_modify_info", u"\u65e7\u5bc6\u7801:", None))
-        self.btn_change_phone.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u624b\u673a\u53f7", None))
+        self.btn_changePhone.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u624b\u673a\u53f7", None))
         self.label_new_phone.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u624b\u673a\u53f7:", None))
-        self.label.setText(QCoreApplication.translate("user_modify_info", u"\u65e7\u624b\u673a\u53f7:", None))
+        self.label.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u5bc6\u7801\uff1a", None))
+        self.btn_changePassword.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u5bc6\u7801", None))
     # retranslateUi
 

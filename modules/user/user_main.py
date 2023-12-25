@@ -273,9 +273,6 @@ class Window3(QWidget,Ui_myReceive):
 
     def back(self):
         # 清除输入框的搜索条件，确保每次进来都是空的
-        self.parcelIdInput.clear()
-        self.tableWidget.clearContents()
-        self.tableWidget.setRowCount(12)  # 每次看到都有12个空列
         self.close()
 
 class Window4(QWidget,Ui_mySend):
@@ -318,18 +315,53 @@ class Window4(QWidget,Ui_mySend):
 
 
     def back(self):
-        # 清除输入框的搜索条件，确保每次进来都是空的
-        self.parcelIdInput.clear()
-        self.tableWidget.clearContents()
-        self.tableWidget.setRowCount(12)  # 每次看到都有12个空列
         self.close()
-
 
 class Window5(QWidget,Ui_user_modify_info):
     def __init__(self):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
+
+
+        self.lineEdit_newPhone.text()
+        self.btn_changePassword.clicked.connect(self.changePasword)
+        self.btn_changePhone.clicked.connect(self.changePhone)
+        self.btn_viewAddressBook.clicked.connect(self.viewAddressBook)
+
+        self.window_modify=Window_modify()
+        self.window_viewAdress = Window_viewAdress()
+        self.window_addAdress = Window_addAddress()
+
+    def changePassword(self):
+
+        self.account =
+        result_oldPassword = self.lineEdit_oldPassword.text()
+        result_newPassword = self.lineEdit_newPassword.text()
+        result_againPassword = self.lineEdit_againPassword.text()
+
+
+    def changePhone(self):
+        pass
+    def viewAddressBook(self):
+        pass
+
+class Window_modify(QWidget,Ui_user_modify_info):
+    def __init__(self):
+        super().__init__()
+        # 修改个人信息
+        self.setupUi(self)
+class Window_viewAdress(QWidget,Ui_address_book):
+    def __init__(self):
+        super().__init__()
+        # 修改个人信息
+        self.setupUi(self)
+class Window_addAddress(QWidget,Ui_add_address_book):
+    def __init__(self):
+        super().__init__()
+        # 修改个人信息
+        self.setupUi(self)
+
 
 # 程序入口
 if __name__ == "__main__":
