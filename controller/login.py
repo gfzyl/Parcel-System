@@ -25,15 +25,19 @@ class LoginWindow(QWidget,Ui_login):
         self.registerBtn.clicked.connect(self.goto_register)
         self.guestBtn.clicked.connect(self.goto_guest_main)
         
-
-        self.user_main_window = userWindow()
-        #self.admin_main_window = adminWindow()
         # 以后就直接引入别的界面就可以
+        self.user_main_window = userWindow()
         self.admin_main_window = AdminMainWindow()
         self.guest_main_window = guestWindow()
         self.deliveryman_main_window = deliverymanWindow()
         self.postman_main_window = postmanWindow()
         self.register_window = registerWindow()
+
+        # 连接信号
+        self.admin_main_window.logout_signal.connect(self.show_login_window)
+
+    def show_login_window(self):
+        self.show()
 
     def goto_register(self):
         self.hide()
@@ -47,7 +51,6 @@ class LoginWindow(QWidget,Ui_login):
 
 
     def goto_vary_main(self):
-        self.hide()
     # 普通用户的账户是数字1开头，派送员的账户是数字2开头，快递员的账户是数字3开头，管理员的账户是数字4开头
         self.account = self.accountInput.text()
         self.pwd = self.pwdInput.text()
@@ -71,6 +74,8 @@ class LoginWindow(QWidget,Ui_login):
 
         else:
             print("无效的账号格式")
+
+        self.close()
 
 
     def query_deliveryman(self, account, pwd):
