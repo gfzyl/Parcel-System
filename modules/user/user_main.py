@@ -420,19 +420,28 @@ class Window_viewAddress(QWidget,Ui_address_book):
         self.window_addAdress.show()
 
     def modify(self):        #表格数据有问题，暂时不实现
+        pass
+        # result_name = self.tableWidget.item(self.row, 1).text()
+        # result_phone = self.tableWidget.item(self.row, 2).text()
+        # result_province = self.tableWidget.item(self.row, 3).text()
+        # result_city = self.tableWidget.item(self.row, 4).text()
+        # result_address = self.tableWidget.item(self.row, 5).text()
+        #
+        # statement = f"UPDATE parcel_info SET status = 2 WHERE name= %s AND phone =%s AND province=%s AND city=%s AND address=%s"
+        # value = (result_name,result_phone,result_province,result_city,result_address)  # 单个元素加上逗号
+        # self.sql.execute_update(statement, value)
+
+
+    def delete(self):  #表格数据有问题
         result_name = self.tableWidget.item(self.row, 1).text()
         result_phone = self.tableWidget.item(self.row, 2).text()
         result_province = self.tableWidget.item(self.row, 3).text()
         result_city = self.tableWidget.item(self.row, 4).text()
         result_address = self.tableWidget.item(self.row, 5).text()
 
-        statement = f"UPDATE parcel_info SET status = 2 WHERE name= %s AND phone =%s AND province=%s AND city=%s AND address=%s"
-        value = (result_name,result_phone,result_province,result_city,result_address)  # 单个元素加上逗号
+        statement = f"DELETE FROM address_book WHERE name= %s AND phone =%s AND province=%s AND city=%s AND place=%s"
+        value = (result_name, result_phone, result_province, result_city, result_address)  # 单个元素加上逗号
         self.sql.execute_update(statement, value)
-
-
-    def delete(self):  #表格数据有问题
-        pass
 
 
 class Window_addAddress(QWidget,Ui_add_address_book):
