@@ -12,12 +12,42 @@ from .user_modify_info_ui import Ui_user_modify_info
 from .user_sendout_ui import Ui_user_sendout
 from .user_search_delivery_ui import Ui_user_search_delivery
 
-
 class UserMainWindow(QWidget,Ui_user_main):
+    logout_signal = Signal()
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        
+        self.queryBtn.clicked.connect(self.queryFun)
+        self.sendBtn.clicked.connect(self.sendFun)
+        self.myReceiveBtn.clicked.connect(self.myReceiveFun)
+        self.mySendBtn.clicked.connect(self.mySendFun)
+        self.modifyInfoBtn.clicked.connect(self.modifyInfoFun)
+        self.logoutBtn.clicked.connect(self.logoutFun)
+
+    def queryFun(self):
+        self.queryWindow=Window1()
+        self.queryWindow.show()
+
+
+    def sendFun(self):
+        self.sendWindow=Window2()
+        self.sendWindow.show()
+
+    def myReceiveFun(self):
+        self.myReceiveWindow=Window3()
+        self.myReceiveWindow.show()
+
+    def mySendFun(self):
+        self.mySendWindow=Window4()
+        self.mySendWindow.show()
+
+    def modifyInfoFun(self):
+        self.modifyInfoWindow=Window5()
+        self.modifyInfoWindow.show()
+
+    def logoutFun(self):
+        self.logout_signal.emit()
+        self.close()
 
 
 class Window1(QWidget,Ui_user_search_delivery):
@@ -49,7 +79,6 @@ class Window5(QWidget,Ui_user_modify_info):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
-
 
 # 程序入口
 if __name__ == "__main__":

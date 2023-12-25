@@ -273,7 +273,7 @@ class Ui_user_sendout(object):
 
         self.layoutWidget1 = QWidget(user_sendout)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(10, 540, 495, 39))
+        self.layoutWidget1.setGeometry(QRect(10, 540, 495, 40))
         self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -375,6 +375,6 @@ class Ui_user_sendout(object):
         self.label_in_address_book1.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
         self.label_11.setText(QCoreApplication.translate("user_sendout", u"\u5907\u6ce8:", None))
         self.submitBtn.setText(QCoreApplication.translate("user_sendout", u"\u63d0\u4ea4\u8ba2\u5355", None))
-        self.returnBtn.setText(QCoreApplication.translate("user_sendout", u"\u8fd4\u56de\u4e3b\u754c\u9762", None))
+        self.returnBtn.setText(QCoreApplication.translate("user_sendout", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 
