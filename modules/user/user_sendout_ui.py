@@ -56,20 +56,20 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.layoutWidget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit_name1 = QLineEdit(self.layoutWidget)
+        self.lineEdit_name1.setObjectName(u"lineEdit_name1")
 
-        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout.addWidget(self.lineEdit_name1)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.lineEdit_2 = QLineEdit(self.layoutWidget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_phone1 = QLineEdit(self.layoutWidget)
+        self.lineEdit_phone1.setObjectName(u"lineEdit_phone1")
 
-        self.horizontalLayout.addWidget(self.lineEdit_2)
+        self.horizontalLayout.addWidget(self.lineEdit_phone1)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -82,14 +82,11 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_2.addWidget(self.label_4)
 
-        self.comboBox = QComboBox(self.layoutWidget)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_province1 = QComboBox(self.layoutWidget)
+        self.comboBox_province1.addItem("")
+        self.comboBox_province1.setObjectName(u"comboBox_province1")
 
-        self.horizontalLayout_2.addWidget(self.comboBox)
+        self.horizontalLayout_2.addWidget(self.comboBox_province1)
 
         self.label_5 = QLabel(self.layoutWidget)
         self.label_5.setObjectName(u"label_5")
@@ -97,14 +94,10 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_2.addWidget(self.label_5)
 
-        self.comboBox_2 = QComboBox(self.layoutWidget)
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.comboBox_city1 = QComboBox(self.layoutWidget)
+        self.comboBox_city1.setObjectName(u"comboBox_city1")
 
-        self.horizontalLayout_2.addWidget(self.comboBox_2)
+        self.horizontalLayout_2.addWidget(self.comboBox_city1)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -116,20 +109,20 @@ class Ui_user_sendout(object):
 
         self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
 
-        self.lineEdit_3 = QLineEdit(self.layoutWidget)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_address1 = QLineEdit(self.layoutWidget)
+        self.lineEdit_address1.setObjectName(u"lineEdit_address1")
 
-        self.gridLayout.addWidget(self.lineEdit_3, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit_address1, 0, 1, 1, 1)
 
         self.label_in_address_book = QLabel(self.layoutWidget)
         self.label_in_address_book.setObjectName(u"label_in_address_book")
 
         self.gridLayout.addWidget(self.label_in_address_book, 1, 0, 1, 1)
 
-        self.comboBox_address_book = QComboBox(self.layoutWidget)
-        self.comboBox_address_book.setObjectName(u"comboBox_address_book")
+        self.comboBox_addressBook1 = QComboBox(self.layoutWidget)
+        self.comboBox_addressBook1.setObjectName(u"comboBox_addressBook1")
 
-        self.gridLayout.addWidget(self.comboBox_address_book, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.comboBox_addressBook1, 1, 1, 1, 1)
 
 
         self.verticalLayout.addLayout(self.gridLayout)
@@ -165,20 +158,20 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_4.addWidget(self.label_3)
 
-        self.lineEdit_4 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.lineEdit_name2 = QLineEdit(self.layoutWidget_2)
+        self.lineEdit_name2.setObjectName(u"lineEdit_name2")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_4)
+        self.horizontalLayout_4.addWidget(self.lineEdit_name2)
 
         self.label_7 = QLabel(self.layoutWidget_2)
         self.label_7.setObjectName(u"label_7")
 
         self.horizontalLayout_4.addWidget(self.label_7)
 
-        self.lineEdit_5 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_phone2 = QLineEdit(self.layoutWidget_2)
+        self.lineEdit_phone2.setObjectName(u"lineEdit_phone2")
 
-        self.horizontalLayout_4.addWidget(self.lineEdit_5)
+        self.horizontalLayout_4.addWidget(self.lineEdit_phone2)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
@@ -191,14 +184,11 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_5.addWidget(self.label_8)
 
-        self.comboBox_3 = QComboBox(self.layoutWidget_2)
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.comboBox_province2 = QComboBox(self.layoutWidget_2)
+        self.comboBox_province2.addItem("")
+        self.comboBox_province2.setObjectName(u"comboBox_province2")
 
-        self.horizontalLayout_5.addWidget(self.comboBox_3)
+        self.horizontalLayout_5.addWidget(self.comboBox_province2)
 
         self.label_9 = QLabel(self.layoutWidget_2)
         self.label_9.setObjectName(u"label_9")
@@ -206,24 +196,20 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_5.addWidget(self.label_9)
 
-        self.comboBox_4 = QComboBox(self.layoutWidget_2)
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.setObjectName(u"comboBox_4")
+        self.comboBox_city2 = QComboBox(self.layoutWidget_2)
+        self.comboBox_city2.setObjectName(u"comboBox_city2")
 
-        self.horizontalLayout_5.addWidget(self.comboBox_4)
+        self.horizontalLayout_5.addWidget(self.comboBox_city2)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_5)
 
         self.gridLayout_2 = QGridLayout()
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.lineEdit_6 = QLineEdit(self.layoutWidget_2)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_address2 = QLineEdit(self.layoutWidget_2)
+        self.lineEdit_address2.setObjectName(u"lineEdit_address2")
 
-        self.gridLayout_2.addWidget(self.lineEdit_6, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.lineEdit_address2, 0, 1, 1, 1)
 
         self.label_10 = QLabel(self.layoutWidget_2)
         self.label_10.setObjectName(u"label_10")
@@ -235,10 +221,10 @@ class Ui_user_sendout(object):
 
         self.gridLayout_2.addWidget(self.label_in_address_book1, 1, 0, 1, 1)
 
-        self.comboBox_address_book1 = QComboBox(self.layoutWidget_2)
-        self.comboBox_address_book1.setObjectName(u"comboBox_address_book1")
+        self.comboBox_addressBook2 = QComboBox(self.layoutWidget_2)
+        self.comboBox_addressBook2.setObjectName(u"comboBox_addressBook2")
 
-        self.gridLayout_2.addWidget(self.comboBox_address_book1, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.comboBox_addressBook2, 1, 1, 1, 1)
 
 
         self.verticalLayout_2.addLayout(self.gridLayout_2)
@@ -260,16 +246,16 @@ class Ui_user_sendout(object):
 
         self.horizontalLayout_7.addWidget(self.label_11)
 
-        self.lineEdit_7 = QLineEdit(self.layoutWidget_3)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setStyleSheet(u"  QLineEdit {\n"
+        self.lineEdit_extra = QLineEdit(self.layoutWidget_3)
+        self.lineEdit_extra.setObjectName(u"lineEdit_extra")
+        self.lineEdit_extra.setStyleSheet(u"  QLineEdit {\n"
 "                padding: 8px;\n"
 "                font-size: 14px;\n"
 "                border: 1px solid #ccc;\n"
 "                border-radius: 4px;\n"
 "            }")
 
-        self.horizontalLayout_7.addWidget(self.lineEdit_7)
+        self.horizontalLayout_7.addWidget(self.lineEdit_extra)
 
         self.layoutWidget1 = QWidget(user_sendout)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
@@ -343,34 +329,18 @@ class Ui_user_sendout(object):
         self.label.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
         self.label_2.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
         self.label_4.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
+        self.comboBox_province1.setItemText(0, "")
 
         self.label_5.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
-
         self.label_6.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
         self.label_3.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
         self.label_7.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
         self.label_8.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
-        self.comboBox_3.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
+        self.comboBox_province2.setItemText(0, "")
 
         self.label_9.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
-        self.comboBox_4.setItemText(0, QCoreApplication.translate("user_sendout", u"\u6d4b\u8bd51", None))
-        self.comboBox_4.setItemText(1, QCoreApplication.translate("user_sendout", u"2", None))
-        self.comboBox_4.setItemText(2, QCoreApplication.translate("user_sendout", u"3", None))
-        self.comboBox_4.setItemText(3, QCoreApplication.translate("user_sendout", u"4", None))
-
         self.label_10.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book1.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
         self.label_11.setText(QCoreApplication.translate("user_sendout", u"\u5907\u6ce8:", None))

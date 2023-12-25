@@ -282,7 +282,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="queryBtn">
+      <widget class="QPushButton" name="searchBtn">
        <property name="text">
         <string>查询</string>
        </property>
