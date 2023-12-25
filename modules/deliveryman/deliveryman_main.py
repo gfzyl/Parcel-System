@@ -6,7 +6,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 # 导入我们生成的界面
-from modules.deliveryman.deliveryman_main_ui import Ui_deliveryman_main
+from .deliveryman_main_ui import Ui_deliveryman_main
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法

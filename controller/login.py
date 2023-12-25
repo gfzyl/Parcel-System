@@ -7,12 +7,11 @@ from .sql import Sql  # 连接数据库
 
 
 # 导入我们生成的界面
-from ..modules.guest.guest_main_ui import Ui_guest_main
-from ..modules.user.user_main_ui import Ui_user_main
-from ..modules.admin.admin_main_ui import Ui_admin_main
-from ..modules.deliveryman.deliveryman_main_ui import Ui_deliveryman_main
-from ..modules.postman.postman_main_ui import Ui_postman_main
-from ..modules.register.register_ui import Ui_register
+from ..modules.guest.guest_main import GuestMainWindow
+from ..modules.user.user_main import UserMainWindow
+from ..modules.deliveryman.deliveryman_main import DeliverymanMainWindow
+from ..modules.postman.postman_main import PostmanMainWindow
+from ..modules.register.register import RegisterWindow
 from ..modules.admin.admin_main import AdminMainWindow
 
 
@@ -26,18 +25,20 @@ class LoginWindow(QWidget,Ui_login):
         self.guestBtn.clicked.connect(self.goto_guest_main)
         
         # 以后就直接引入别的界面就可以
-        self.user_main_window = userWindow()
+        self.user_main_window = UserMainWindow()
         self.admin_main_window = AdminMainWindow()
-        self.guest_main_window = guestWindow()
-        self.deliveryman_main_window = deliverymanWindow()
-        self.postman_main_window = postmanWindow()
-        self.register_window = registerWindow()
+        self.guest_main_window = GuestMainWindow()
+        self.deliveryman_main_window = DeliverymanMainWindow()
+        self.postman_main_window = PostmanMainWindow()
+        self.register_window = RegisterWindow()
 
         # 连接信号
         self.admin_main_window.logout_signal.connect(self.show_login_window)
 
+
     def show_login_window(self):
         self.show()
+
 
     def goto_register(self):
         self.hide()
@@ -84,6 +85,7 @@ class LoginWindow(QWidget,Ui_login):
         statement = f"SELECT * FROM deliveryman WHERE delivery_id = {account} AND delivery_pwd = {pwd}"
         return self.sql.execute_query(statement=statement)
 
+
     def query_postman(self, account, pwd):
         self.sql=Sql()
         self.sql.connect()
@@ -108,41 +110,6 @@ class LoginWindow(QWidget,Ui_login):
             return result
 
 
-class userWindow(QWidget,Ui_user_main):
-    def __init__(self):
-        super().__init__()
-        # 管理员搜索派送员
-        self.setupUi(self)
-
-class adminWindow(QWidget,Ui_admin_main):
-    def __init__(self):
-        super().__init__()
-        # 管理员管理派送员
-        self.setupUi(self)
-
-class guestWindow(QWidget,Ui_guest_main):
-    def __init__(self):
-        super().__init__()
-        # 管理员搜索快递员
-        self.setupUi(self)
-
-class deliverymanWindow(QWidget,Ui_deliveryman_main):
-    def __init__(self):
-        super().__init__()
-        # 管理员管理快递员
-        self.setupUi(self)
-
-class postmanWindow(QWidget,Ui_postman_main):
-    def __init__(self):
-        super().__init__()
-        # 管理员搜索快递
-        self.setupUi(self)
-
-class registerWindow(QWidget,Ui_register):
-    def __init__(self):
-        super().__init__()
-        # 返回登录界面
-        self.setupUi(self)
 
 # 程序入口
 if __name__ == "__main__":

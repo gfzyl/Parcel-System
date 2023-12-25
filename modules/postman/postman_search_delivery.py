@@ -5,7 +5,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 # 导入我们生成的界面
-from postman_search_delivery_ui import Ui_postman_search_delivery
+from .postman_search_delivery_ui import Ui_postman_search_delivery
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
