@@ -37,6 +37,7 @@ class LoginWindow(QWidget,Ui_login):
         self.guest_main_window.logout_signal.connect(self.show_login_window)
         self.register_window.confirmSignal.connect(self.show_login_window)
         self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
+        self.postman_main_window.logout_signal.connect(self.show_login_window)
         # 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
 
 
