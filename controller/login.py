@@ -13,9 +13,10 @@ from ..modules.admin.admin_main_ui import Ui_admin_main
 from ..modules.deliveryman.deliveryman_main_ui import Ui_deliveryman_main
 from ..modules.postman.postman_main_ui import Ui_postman_main
 from ..modules.register.register_ui import Ui_register
+from ..modules.admin.admin_main import AdminMainWindow
 
 
-class MyWindow(QWidget,Ui_login):
+class LoginWindow(QWidget,Ui_login):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -26,7 +27,9 @@ class MyWindow(QWidget,Ui_login):
         
 
         self.user_main_window = userWindow()
-        self.admin_main_window = adminWindow()
+        #self.admin_main_window = adminWindow()
+        # 以后就直接引入别的界面就可以
+        self.admin_main_window = AdminMainWindow()
         self.guest_main_window = guestWindow()
         self.deliveryman_main_window = deliverymanWindow()
         self.postman_main_window = postmanWindow()
@@ -44,6 +47,7 @@ class MyWindow(QWidget,Ui_login):
 
 
     def goto_vary_main(self):
+        self.hide()
     # 普通用户的账户是数字1开头，派送员的账户是数字2开头，快递员的账户是数字3开头，管理员的账户是数字4开头
         self.account = self.accountInput.text()
         self.pwd = self.pwdInput.text()
@@ -140,7 +144,7 @@ if __name__ == "__main__":
     # 初始化QApplication，界面展示要包含在QApplication初始化之后，结束之前
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
-    window = MyWindow()
+    window = LoginWindow()
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
     window.setWindowIcon(appIcon);
     window.show()

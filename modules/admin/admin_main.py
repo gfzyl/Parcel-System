@@ -10,7 +10,7 @@ from .admin_search_postman_ui import Ui_admin_search_postman
 from .admin_manage_postman_ui import Ui_admin_manage_postman
 from .admin_search_delivery_ui import Ui_admin_search_delivery
 from ..login.login_ui import Ui_login
-class MyWindow(QWidget,Ui_admin_main):
+class AdminMainWindow(QWidget,Ui_admin_main):
     def __init__(self):
         super().__init__()
         # 设置界面为我们生成的界面
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     # 初始化QApplication，界面展示要包含在QApplication初始化之后，结束之前
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
-    window = MyWindow()
+    window = AdminMainWindow()
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
     window.setWindowIcon(appIcon);
     window.show()

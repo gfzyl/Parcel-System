@@ -10,7 +10,7 @@ from modules.deliveryman.deliveryman_main_ui import Ui_deliveryman_main
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
-class MyWidget(QWidget):
+class DeliverymanMainWindow(QWidget):
     def __init__(self):
         super().__init__()
         # 设置界面为我们生成的界面
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     apply_stylesheet(app, theme="light_blue.xml")
  
     # 初始化并展示我们的界面组件
-    window = MyWidget()
+    window = DeliverymanMainWindow()
     # 设置窗口图标
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
     window.setWindowIcon(appIcon);
