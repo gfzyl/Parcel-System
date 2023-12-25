@@ -58,6 +58,7 @@ class LoginWindow(QWidget,Ui_login):
     # 普通用户的账户是数字1开头，派送员的账户是数字2开头，快递员的账户是数字3开头，管理员的账户是数字4开头
         self.account = self.accountInput.text()
         self.pwd = self.pwdInput.text()
+        print(self.account, self.pwd)
 
         # 假设你的数据库中有不同的表用于存储每种类型的用户信息
         if self.account.startswith('1'):  # 普通用户
@@ -65,10 +66,12 @@ class LoginWindow(QWidget,Ui_login):
                 self.user_main_window.show()
 
         elif self.account.startswith('2'):  # 派送员
+            print('要登录的是派送员')
             if self.query_user(self.account, self.pwd):
                 self.deliveryman_main_window.show()
 
         elif self.account.startswith('3'):  # 快递员
+            print('要登录的是快递员')
             if self.query_user(self.account, self.pwd):
                 self.postman_main_window.show()
 
