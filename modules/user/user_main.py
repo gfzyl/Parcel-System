@@ -1,22 +1,23 @@
-from PySide6.QtWidgets import QApplication, QWidget,QTableWidgetItem
-from qt_material import apply_stylesheet
-from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
+from qt_material import apply_stylesheet
 
-
-from .user_main_ui import Ui_user_main
-from .mySend_ui import Ui_mySend
-from .myReceive_ui import Ui_myReceive
 from .add_address_book_ui import Ui_add_address_book
 from .address_book_ui import Ui_address_book
+from .myReceive_ui import Ui_myReceive
+from .mySend_ui import Ui_mySend
+from .user_main_ui import Ui_user_main
 from .user_modify_info_ui import Ui_user_modify_info
-from .user_sendout_ui import Ui_user_sendout
 from .user_search_delivery_ui import Ui_user_search_delivery
+from .user_sendout_ui import Ui_user_sendout
 from ...controller.sql import Sql
-#from ...controller.login import LoginWindow
+
+
+
 class UserMainWindow(QWidget,Ui_user_main):
     logout_signal = Signal()
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         self.setupUi(self)
         self.queryBtn.clicked.connect(self.queryFun)
@@ -25,6 +26,10 @@ class UserMainWindow(QWidget,Ui_user_main):
         self.mySendBtn.clicked.connect(self.mySendFun)
         self.modifyInfoBtn.clicked.connect(self.modifyInfoFun)
         self.logoutBtn.clicked.connect(self.logoutFun)
+        loginWindow.loginin_signal.connect(self.receiveAccount)
+
+    def receiveAccount(self,account):
+        self.account = account
 
     def queryFun(self):
         self.queryWindow=Window1()
@@ -36,15 +41,15 @@ class UserMainWindow(QWidget,Ui_user_main):
         self.sendWindow.show()
 
     def myReceiveFun(self):
-        self.myReceiveWindow=Window3()
+        self.myReceiveWindow=Window3(loginWindow=self)
         self.myReceiveWindow.show()
 
     def mySendFun(self):
-        self.mySendWindow=Window4()
+        self.mySendWindow=Window4(loginWindow=self)
         self.mySendWindow.show()
 
     def modifyInfoFun(self):
-        self.modifyInfoWindow=Window5()
+        self.modifyInfoWindow=Window5(loginWindow=self)
         self.modifyInfoWindow.show()
 
     def logoutFun(self):
@@ -214,13 +219,15 @@ class Window2(QWidget,Ui_user_sendout):
             self.sql.execute_insert(statement, values)
 
 class Window3(QWidget,Ui_myReceive):
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         # 我收到的
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
+        self.account = loginWindow.account
         self.insertData()
+
 
         self.tableWidget.cellClicked.connect(self.cellClicked)
         self.confirmBtn.clicked.connect(self.confirmAct)
@@ -230,7 +237,7 @@ class Window3(QWidget,Ui_myReceive):
     def insertData(self):
 
         # temp = LoginWindow()     #调用登陆时输入的账号
-        self.account = '120'  # 后面替换
+        #self.account = '120'  # 后面替换
 
         statement = f"SELECT * FROM parcel_info WHERE recipient_tel = '{self.account}'"
         result = self.sql.execute_query(statement)
@@ -276,19 +283,20 @@ class Window3(QWidget,Ui_myReceive):
         self.close()
 
 class Window4(QWidget,Ui_mySend):
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         # 我寄的
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
+        self.account=loginWindow.account
 
         self.insertData()
         self.returnBtn.clicked.connect(self.back)
 
     def insertData(self):
         # temp = LoginWindow()     #调用登陆时输入的账号
-        self.account = '110'  # 后面替换
+        #self.account = '110'  # 后面替换
 
         statement = f"SELECT * FROM parcel_info WHERE sender_tel = '{self.account}'"
         result = self.sql.execute_query(statement)
@@ -317,7 +325,7 @@ class Window4(QWidget,Ui_mySend):
         self.close()
 
 class Window5(QWidget,Ui_user_modify_info):
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
@@ -327,6 +335,7 @@ class Window5(QWidget,Ui_user_modify_info):
         self.btn_changePassword.clicked.connect(self.changePassword)
         self.btn_changePhone.clicked.connect(self.changePhone)
         self.btn_viewAddressBook.clicked.connect(self.viewAddressBook)
+        self.account =loginWindow.account
 
     def changePassword(self):
         result_oldPassword = self.lineEdit_oldPassword.text()
@@ -354,26 +363,119 @@ class Window5(QWidget,Ui_user_modify_info):
         values = (result_newPhone, self.account)
         self.sql.execute_update(statement, values)
     def viewAddressBook(self):
-        self.window_viewAdress = Window_viewAdress()
+        self.window_viewAdress = Window_viewAddress(loginWindow=self)
         self.window_viewAdress.show()
 
-
-
-
-class Window_viewAdress(QWidget,Ui_address_book):
-    def __init__(self):
+class Window_viewAddress(QWidget,Ui_address_book):
+    def __init__(self,loginWindow):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
-        self.window_addAdress = Window_addAddress()
+        self.insertData()
+        self.account =loginWindow.account
+
+        self.tableWidget.cellClicked.connect(self.cellClicked)
+        self.btn_addAddress.clicked.connect(self.addAddress)
+        self.btn_modify.clicked.connect(self.modify)
+        self.btn_delete.clicked.connect(self.delete)
+
+    def insertData(self):
+
+        # temp = LoginWindow()     #调用登陆时输入的账号
+        self.account = '1'  # 后面替换
+
+        statement = f"SELECT * FROM address_book WHERE user_id = '{self.account}'"
+        result = self.sql.execute_query(statement)
+        print(result)
+
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(0)
+
+        # 将查询结果填充到表格中
+        for row_num, row_data in enumerate(result):
+            print(row_data)
+            self.tableWidget.insertRow(row_num)
+
+            item1 = QTableWidgetItem(str(row_num))
+            self.tableWidget.setItem(row_num, 0, item1)
+            item2 = QTableWidgetItem(str(row_data[1]))
+            self.tableWidget.setItem(row_num, 1, item2)
+            item3 = QTableWidgetItem(str(row_data[2]))
+            self.tableWidget.setItem(row_num, 2, item3)
+            item4 = QTableWidgetItem(str(row_data[3]))
+            self.tableWidget.setItem(row_num, 3, item4)
+            item5 = QTableWidgetItem(str(row_data[4]))
+            self.tableWidget.setItem(row_num, 4, item5)
+            item6 = QTableWidgetItem(str(row_data[5]))
+            self.tableWidget.setItem(row_num, 5, item6)
+
+    def cellClicked(self, row, column):
+        self.row = row
+        self.column = column
+
+    def addAddress(self):
+        self.window_addAdress = Window_addAddress(loginWindow=self)
+        self.window_addAdress.show()
+
+    def modify(self):        #表格数据有问题，暂时不实现
+        result_name = self.tableWidget.item(self.row, 1).text()
+        result_phone = self.tableWidget.item(self.row, 2).text()
+        result_province = self.tableWidget.item(self.row, 3).text()
+        result_city = self.tableWidget.item(self.row, 4).text()
+        result_address = self.tableWidget.item(self.row, 5).text()
+
+        statement = f"UPDATE parcel_info SET status = 2 WHERE name= %s AND phone =%s AND province=%s AND city=%s AND address=%s"
+        value = (result_name,result_phone,result_province,result_city,result_address)  # 单个元素加上逗号
+        self.sql.execute_update(statement, value)
+
+
+    def delete(self):  #表格数据有问题
+        pass
+
 
 class Window_addAddress(QWidget,Ui_add_address_book):
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
+        self.sql = Sql()
+        self.sql.connect()
+        self.account=loginWindow.account
+
+        statement = "SELECT prv_name FROM province"
+        result_comboBox = self.sql.execute_query(statement)
+        print(result_comboBox)  # 格式不对，需要转换
+        result_list = [item[0] for item in result_comboBox]
+        print(result_list)
+
+        self.comboBox_province.addItems(result_list)
+        self.comboBox_province.currentTextChanged.connect(self.change_1)
+        self.btn_add.clicked.connect(self.bind)
+
+
+
+
+    def change_1(self):
+        result = self.comboBox_province.currentText()
+        statement = f"SELECT city_name FROM city, province WHERE city.prv_id = province.prv_id AND province.prv_name ='{result}'"
+        result_comboBox = self.sql.execute_query(statement)
+        result_list = [item[0] for item in result_comboBox]
+        self.comboBox_city.clear()
+        self.comboBox_city.addItems(result_list)
+
+
+    def bind(self):
+        result_name = self.lineEdit_name.text()
+        result_phone = self.lineEdit_phone.text()
+        result_province = self.comboBox_province.currentText()
+        result_city = self.comboBox_city.currentText()
+        result_address = self.lineEdit_address.text()
+
+        statement = "INSERT INTO address_book (user_id,name,phone,province,city,place) VALUES (%s,%s, %s, %s,%s,%s)"
+        values = (self.account,result_name, result_phone, result_province, result_city, result_address)
+        self.sql.execute_insert(statement, values)
 
 
 # 程序入口

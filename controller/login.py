@@ -3,6 +3,7 @@ from ..modules.login.login_ui import Ui_login
 from PySide6.QtWidgets import QApplication, QWidget
 from qt_material import apply_stylesheet
 from PySide6.QtGui import QIcon
+from PySide6.QtCore import Signal
 from .sql import Sql  # 连接数据库
 
 
@@ -16,6 +17,7 @@ from ..modules.admin.admin_main import AdminMainWindow
 
 
 class LoginWindow(QWidget,Ui_login):
+    loginin_signal=Signal(str)
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -25,7 +27,7 @@ class LoginWindow(QWidget,Ui_login):
         self.guestBtn.clicked.connect(self.goto_guest_main)
         
         # 以后就直接引入别的界面就可以
-        self.user_main_window = UserMainWindow()
+        self.user_main_window = UserMainWindow(loginWindow=self)
         self.admin_main_window = AdminMainWindow()
         self.guest_main_window = GuestMainWindow()
         self.deliveryman_main_window = DeliverymanMainWindow()
@@ -62,14 +64,17 @@ class LoginWindow(QWidget,Ui_login):
         # 假设你的数据库中有不同的表用于存储每种类型的用户信息
         if self.account.startswith('1'):  # 普通用户
             if self.query_user(self.account, self.pwd):
+                self.loginin_signal.emit(self.account)
                 self.user_main_window.show()
 
         elif self.account.startswith('2'):  # 派送员
             if self.query_user(self.account, self.pwd):
+                self.loginin_signal.emit(self.account)
                 self.deliveryman_main_window.show()
 
         elif self.account.startswith('3'):  # 快递员
             if self.query_user(self.account, self.pwd):
+                self.loginin_signal.emit(self.account)
                 self.postman_main_window.show()
 
         elif self.account.startswith('4'):  # 管理员
