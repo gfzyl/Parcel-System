@@ -38,17 +38,43 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
 
-            # 获取表头信息，用于映射数据库字段和表格列
-            header_labels = [self.tableWidget.horizontalHeaderItem(col).text() for col in range(self.tableWidget.columnCount())]
-
             # 将查询结果填充到表格中
             for row_num, row_data in enumerate(result):
+                print(row_data)
                 self.tableWidget.insertRow(row_num)
-                for col_num, col_label in enumerate(header_labels):
-                    # 通过表头信息映射列表中的索引
-                    col_data = row_data[col_num] if col_num < len(row_data) else ""
-                    item = QTableWidgetItem(str(col_data))
-                    self.tableWidget.setItem(row_num, col_num, item)
+
+                item1 = QTableWidgetItem(str(row_data[0]))
+                self.tableWidget.setItem(row_num, 0, item1)
+                item2 = QTableWidgetItem(str(row_data[3]))
+                self.tableWidget.setItem(row_num, 1, item2)
+                item3 = QTableWidgetItem(str(row_data[4]))
+                self.tableWidget.setItem(row_num, 2, item3)
+                item4 = QTableWidgetItem(str(row_data[5]))
+                self.tableWidget.setItem(row_num, 3, item4)
+                item5 = QTableWidgetItem(str(row_data[6]))
+                self.tableWidget.setItem(row_num, 4, item5)
+                item6 = QTableWidgetItem(str(row_data[7]))
+                self.tableWidget.setItem(row_num, 5, item6)
+                item7 = QTableWidgetItem(str(row_data[8]))
+                self.tableWidget.setItem(row_num, 6, item7)
+                item8 = QTableWidgetItem(str(row_data[9]))
+                self.tableWidget.setItem(row_num, 7, item8)
+                item9 = QTableWidgetItem(str(row_data[10]))
+                self.tableWidget.setItem(row_num, 8, item9)
+                item10 = QTableWidgetItem(str(row_data[11]))
+                self.tableWidget.setItem(row_num, 9, item10)
+                item11 = QTableWidgetItem(str(row_data[12]))
+                self.tableWidget.setItem(row_num, 10, item11)
+                item12 = QTableWidgetItem(str(row_data[13]))
+                self.tableWidget.setItem(row_num, 11, item12)
+                item13 = QTableWidgetItem(str(row_data[14]))
+                self.tableWidget.setItem(row_num, 12, item13)
+                item14 = QTableWidgetItem(str(row_data[15]))
+                self.tableWidget.setItem(row_num, 13, item14)
+                item15 = QTableWidgetItem(str(row_data[17]))
+                self.tableWidget.setItem(row_num, 14, item15)
+
+
         else:
             # 处理没有查询结果的情况
             self.tableWidget.clearContents()
