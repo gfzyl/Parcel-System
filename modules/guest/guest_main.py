@@ -27,8 +27,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         print(result_list)
 
         # 窗体
-        self.deliveryman_search_window = UserSearchDeliveryWindow()
-
+        self.use_search_window = UserSearchDeliveryWindow()
 
         # 按键
         self.prvComboBox1.addItems(result_list )
@@ -46,7 +45,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         self.close()
 
     def goto_user_search_delivery(self):
-        pass
+        self.use_search_window.show()
 
     
     def change_1(self):
