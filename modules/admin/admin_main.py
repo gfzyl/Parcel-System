@@ -14,7 +14,7 @@ from .admin_search_delivery_ui import Ui_admin_search_delivery
 class AdminMainWindow(QWidget,Ui_admin_main):
     logout_signal = Signal()
 
-115131351
+
     def __init__(self):
         super().__init__()
         # 设置界面为我们生成的界面
