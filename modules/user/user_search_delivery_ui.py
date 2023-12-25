@@ -107,8 +107,8 @@ class Ui_user_search_delivery(object):
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 1091, 551))
         self.tableWidget = QTableWidget(self.groupBox)
-        if (self.tableWidget.columnCount() < 17):
-            self.tableWidget.setColumnCount(17)
+        if (self.tableWidget.columnCount() < 15):
+            self.tableWidget.setColumnCount(15)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -139,38 +139,34 @@ class Ui_user_search_delivery(object):
         self.tableWidget.setHorizontalHeaderItem(13, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(14, __qtablewidgetitem14)
-        __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(15, __qtablewidgetitem15)
-        __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(16, __qtablewidgetitem16)
         if (self.tableWidget.rowCount() < 13):
             self.tableWidget.setRowCount(13)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem17)
+        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem18)
+        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem18)
         __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem19)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem20)
+        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem21)
+        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem21)
         __qtablewidgetitem22 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem22)
+        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem23)
+        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem24)
+        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem24)
         __qtablewidgetitem25 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem25)
+        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem25)
         __qtablewidgetitem26 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem26)
+        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem26)
         __qtablewidgetitem27 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem27)
-        __qtablewidgetitem28 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem28)
-        __qtablewidgetitem29 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem29)
+        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem27)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(20, 120, 1061, 421))
         self.tableWidget.verticalHeader().setVisible(False)
@@ -210,63 +206,59 @@ class Ui_user_search_delivery(object):
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("user_search_delivery", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("user_search_delivery", u"\u914d\u9001\u5458id", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u7701", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("user_search_delivery", u"\u5feb\u9012\u5458id", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u5e02", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u7701", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u5e02", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u7701", None));
         ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u5e02", None));
         ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u7701", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(9)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u5e02", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u4eba\u59d3\u540d", None));
         ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(10)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None));
         ___qtablewidgetitem11 = self.tableWidget.horizontalHeaderItem(11)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u4eba\u59d3\u540d", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("user_search_delivery", u"\u5907\u6ce8", None));
         ___qtablewidgetitem12 = self.tableWidget.horizontalHeaderItem(12)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("user_search_delivery", u"\u5f53\u524d\u4f4d\u7f6e", None));
         ___qtablewidgetitem13 = self.tableWidget.horizontalHeaderItem(13)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("user_search_delivery", u"\u5907\u6ce8", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("user_search_delivery", u"\u5f53\u524d\u72b6\u6001", None));
         ___qtablewidgetitem14 = self.tableWidget.horizontalHeaderItem(14)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("user_search_delivery", u"\u5f53\u524d\u4f4d\u7f6e", None));
-        ___qtablewidgetitem15 = self.tableWidget.horizontalHeaderItem(15)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("user_search_delivery", u"\u5f53\u524d\u72b6\u6001", None));
-        ___qtablewidgetitem16 = self.tableWidget.horizontalHeaderItem(16)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("user_search_delivery", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
-        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("user_search_delivery", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
+        ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(2)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(3)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(5)
         ___qtablewidgetitem20.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(6)
         ___qtablewidgetitem21.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(5)
+        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(7)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(6)
+        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(8)
         ___qtablewidgetitem23.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem24 = self.tableWidget.verticalHeaderItem(7)
+        ___qtablewidgetitem24 = self.tableWidget.verticalHeaderItem(9)
         ___qtablewidgetitem24.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem25 = self.tableWidget.verticalHeaderItem(8)
+        ___qtablewidgetitem25 = self.tableWidget.verticalHeaderItem(10)
         ___qtablewidgetitem25.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem26 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem26 = self.tableWidget.verticalHeaderItem(11)
         ___qtablewidgetitem26.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem27 = self.tableWidget.verticalHeaderItem(10)
+        ___qtablewidgetitem27 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem27.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem28 = self.tableWidget.verticalHeaderItem(11)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem29 = self.tableWidget.verticalHeaderItem(12)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("user_search_delivery", u"\u65b0\u5efa\u884c", None));
         self.parcelIdLabel.setText(QCoreApplication.translate("user_search_delivery", u"\u5feb\u9012\u5355\u53f7", None))
         self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("user_search_delivery", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
         self.queryBtn.setText(QCoreApplication.translate("user_search_delivery", u"\u67e5\u8be2", None))

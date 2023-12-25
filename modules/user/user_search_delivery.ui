@@ -188,16 +188,6 @@
     </column>
     <column>
      <property name="text">
-      <string>配送员id</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>快递员id</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>寄出省</string>
      </property>
     </column>

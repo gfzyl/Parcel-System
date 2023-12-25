@@ -10,6 +10,7 @@ from ...controller.sql import Sql
 # 导入我们生成的界面
 from .guest_main_ui import Ui_guest_main
 from qt_material import apply_stylesheet
+from ..user.user_search_delivery import UserSearchDeliveryWindow
 
  # 继承QWidget类，以获取其属性和方法
 class GuestMainWindow(QWidget,Ui_guest_main):
@@ -25,13 +26,27 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         result_list = [item[0] for item in result_comboBox]
         print(result_list)
 
+        # 窗体
+        self.deliveryman_search_window = UserSearchDeliveryWindow()
+
+
+        # 按键
         self.prvComboBox1.addItems(result_list )
         self.prvComboBox2.addItems(result_list )
-
         self.prvComboBox1.currentTextChanged.connect(self.change_1)
         self.prvComboBox2.currentTextChanged.connect(self.change_2)
         self.submitBtn.clicked.connect(self.bind)
+        self.searchBtn.clicked.connect(self.goto_user_search_delivery)
         self.quitBtn.clicked.connect(self.goto_logout)
+
+    
+    def goto_logout(self):
+    # 选择退出登录的时候触发信号
+        self.logout_signal.emit()
+        self.close()
+
+    def goto_user_search_delivery(self):
+        pass
 
     
     def change_1(self):
