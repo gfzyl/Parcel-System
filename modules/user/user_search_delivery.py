@@ -23,7 +23,11 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
         self.searchBtn.clicked.connect(self.searchDelivery)
 
     def back(self):
-        self.close()
+        # 清除输入框的搜索条件，确保每次进来都是空的
+        self.parcelIdInput.clear()
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(12) # 每次看到都有12个空列
+        self.close() 
 
 
     def searchDelivery(self):
@@ -31,12 +35,8 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
         statement = f"SELECT * FROM parcel_info WHERE parcel_id = '{parcel_id}'"
         result = self.sql.execute_query(statement=statement)
         if result:
-            # 清空表格
-            print(result)
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
-            print(result)
-            
 
             # 获取表头信息，用于映射数据库字段和表格列
             header_labels = [self.tableWidget.horizontalHeaderItem(col).text() for col in range(self.tableWidget.columnCount())]
