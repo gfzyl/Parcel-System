@@ -1,8 +1,6 @@
 # 导入sys
 import sys
 
-# 任何一个PySide界面程序都需要使用QApplication
-# 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal
@@ -41,6 +39,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
     # 选择退出登录的时候触发信号
         self.logout_signal.emit()
         self.close()
+
 
     def goto_user_search_delivery(self):
         self.use_search_window.show()
