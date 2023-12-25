@@ -161,25 +161,25 @@ class Ui_admin_search_postman(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.input1_lineedit = QLineEdit(self.layoutWidget)
-        self.input1_lineedit.setObjectName(u"input1_lineedit")
+        self.workIdInput = QLineEdit(self.layoutWidget)
+        self.workIdInput.setObjectName(u"workIdInput")
 
-        self.horizontalLayout.addWidget(self.input1_lineedit)
+        self.horizontalLayout.addWidget(self.workIdInput)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.input2_lineedit = QLineEdit(self.layoutWidget)
-        self.input2_lineedit.setObjectName(u"input2_lineedit")
+        self.telInput = QLineEdit(self.layoutWidget)
+        self.telInput.setObjectName(u"telInput")
 
-        self.horizontalLayout.addWidget(self.input2_lineedit)
+        self.horizontalLayout.addWidget(self.telInput)
 
-        self.btn_query = QPushButton(self.layoutWidget)
-        self.btn_query.setObjectName(u"btn_query")
+        self.searchBtn = QPushButton(self.layoutWidget)
+        self.searchBtn.setObjectName(u"searchBtn")
 
-        self.horizontalLayout.addWidget(self.btn_query)
+        self.horizontalLayout.addWidget(self.searchBtn)
 
 
         self.retranslateUi(admin_search_postman)
@@ -227,9 +227,9 @@ class Ui_admin_search_postman(object):
         ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("admin_search_postman", u"\u65b0\u5efa\u884c", None));
         self.label.setText(QCoreApplication.translate("admin_search_postman", u"\u5de5\u53f7\uff1a", None))
-        self.input1_lineedit.setPlaceholderText(QCoreApplication.translate("admin_search_postman", u"\u6309\u5de5\u53f7\u67e5\u8be2", None))
+        self.workIdInput.setPlaceholderText(QCoreApplication.translate("admin_search_postman", u"\u6309\u5de5\u53f7\u67e5\u8be2", None))
         self.label_2.setText(QCoreApplication.translate("admin_search_postman", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
-        self.input2_lineedit.setPlaceholderText(QCoreApplication.translate("admin_search_postman", u"\u6309\u7535\u8bdd\u53f7\u7801\u67e5\u8be2", None))
-        self.btn_query.setText(QCoreApplication.translate("admin_search_postman", u"\u67e5\u8be2", None))
+        self.telInput.setPlaceholderText(QCoreApplication.translate("admin_search_postman", u"\u6309\u7535\u8bdd\u53f7\u7801\u67e5\u8be2", None))
+        self.searchBtn.setText(QCoreApplication.translate("admin_search_postman", u"\u67e5\u8be2", None))
     # retranslateUi
 
