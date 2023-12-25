@@ -14,10 +14,6 @@ from ..modules.postman.postman_main import PostmanMainWindow
 from ..modules.register.register import RegisterWindow
 from ..modules.admin.admin_main import AdminMainWindow
 
-dscscs
-
-
-boojk    FGHFGHFHGJGJ
 class LoginWindow(QWidget,Ui_login):
     def __init__(self):
         super().__init__()
