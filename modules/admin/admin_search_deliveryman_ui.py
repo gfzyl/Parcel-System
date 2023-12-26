@@ -23,7 +23,7 @@ class Ui_admin_search_deliveryman(object):
     def setupUi(self, admin_search_deliveryman):
         if not admin_search_deliveryman.objectName():
             admin_search_deliveryman.setObjectName(u"admin_search_deliveryman")
-        admin_search_deliveryman.resize(667, 462)
+        admin_search_deliveryman.resize(673, 485)
         admin_search_deliveryman.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -105,7 +105,7 @@ class Ui_admin_search_deliveryman(object):
 "            ")
         self.groupBox = QGroupBox(admin_search_deliveryman)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 641, 441))
+        self.groupBox.setGeometry(QRect(10, 10, 641, 461))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 6):
             self.tableWidget.setColumnCount(6)
@@ -153,11 +153,11 @@ class Ui_admin_search_deliveryman(object):
         __qtablewidgetitem19.setFlags(Qt.ItemIsSelectable|Qt.ItemIsDragEnabled|Qt.ItemIsDropEnabled|Qt.ItemIsUserCheckable|Qt.ItemIsEnabled);
         self.tableWidget.setItem(0, 0, __qtablewidgetitem19)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 90, 621, 341))
+        self.tableWidget.setGeometry(QRect(10, 110, 621, 341))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 40, 601, 40))
+        self.layoutWidget.setGeometry(QRect(20, 60, 601, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -186,6 +186,9 @@ class Ui_admin_search_deliveryman(object):
 
         self.horizontalLayout.addWidget(self.searchBtn)
 
+        self.returnBtn = QPushButton(self.groupBox)
+        self.returnBtn.setObjectName(u"returnBtn")
+        self.returnBtn.setGeometry(QRect(500, 10, 121, 37))
 
         self.retranslateUi(admin_search_deliveryman)
 
@@ -243,5 +246,6 @@ class Ui_admin_search_deliveryman(object):
         self.label_2.setText(QCoreApplication.translate("admin_search_deliveryman", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
         self.telInput.setPlaceholderText(QCoreApplication.translate("admin_search_deliveryman", u"\u9009\u62e9\u6309\u7535\u8bdd\u53f7\u7801\u67e5\u8be2", None))
         self.searchBtn.setText(QCoreApplication.translate("admin_search_deliveryman", u"\u67e5\u8be2", None))
+        self.returnBtn.setText(QCoreApplication.translate("admin_search_deliveryman", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 

@@ -1,6 +1,3 @@
-# 导入sys
-import sys
-
 from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
 from PySide6.QtGui import QIcon
 from ...controller.sql import Sql
@@ -20,8 +17,10 @@ class AdminSearchPostmanWindow(QWidget, Ui_admin_search_postman):
 
         # 按键
         self.searchBtn.clicked.connect(self.searchPostman)
+        self.returnBtn.clicked.connect(self.back)
 
-    
+    def back(self):
+        self.close()   
 
     def searchPostman(self):
         workId = self.workIdInput.text()
@@ -44,7 +43,6 @@ class AdminSearchPostmanWindow(QWidget, Ui_admin_search_postman):
         if result:
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
-
             
             # 将查询结果填充到表格中
             for row_num, row_data in enumerate(result):

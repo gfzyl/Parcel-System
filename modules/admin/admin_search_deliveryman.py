@@ -20,7 +20,10 @@ class AdminSearchDeliverymanWindow(QWidget, Ui_admin_search_deliveryman):
 
         # 按键
         self.searchBtn.clicked.connect(self.searchDeliveryman)
+        self.returnBtn.clicked.connect(self.back)
 
+    def back(self):
+        self.close()
 
     def searchDeliveryman(self):
         workId = self.workIdInput.text()

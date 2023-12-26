@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1118</width>
-    <height>672</height>
+    <width>1229</width>
+    <height>685</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -97,8 +97,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1101</width>
-     <height>651</height>
+     <width>1201</width>
+     <height>661</height>
     </rect>
    </property>
    <property name="title">
@@ -108,8 +108,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
-      <width>1061</width>
+      <y>50</y>
+      <width>1181</width>
       <height>441</height>
      </rect>
     </property>
@@ -263,16 +263,26 @@
     </column>
     <column>
      <property name="text">
+      <string>取件码</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
       <string>预计送达时间</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>完整路线</string>
      </property>
     </column>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>500</y>
-      <width>601</width>
+      <x>120</x>
+      <y>510</y>
+      <width>621</width>
       <height>40</height>
      </rect>
     </property>
@@ -280,30 +290,30 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>快递编号：</string>
+        <string>快递单号：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit"/>
+      <widget class="QLineEdit" name="parcelIdInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>电话号码：</string>
+        <string>收件人电话：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input2_lineedit"/>
+      <widget class="QLineEdit" name="telInput"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>550</y>
+      <x>120</x>
+      <y>560</y>
       <width>621</width>
       <height>40</height>
      </rect>
@@ -312,63 +322,120 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>配送员工号：</string>
+        <string>配送员ID：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit_2"/>
+      <widget class="QLineEdit" name="deliveryIdInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>快递员工号：</string>
+        <string>快递员ID：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input2_lineedit_2"/>
+      <widget class="QLineEdit" name="postIdInput"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>600</y>
-      <width>431</width>
+      <x>120</x>
+      <y>610</y>
+      <width>951</width>
       <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="label_7">
        <property name="text">
-        <string>寄出市：</string>
+        <string>寄出省:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="sendPrvBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>寄出市:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="sendCityBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>收件省:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="rePrvBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>收件市：</string>
+        <string>收件市:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_2"/>
+      <widget class="QComboBox" name="reCityBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_query_3">
+      <widget class="QPushButton" name="searchBtn">
        <property name="text">
         <string>查询</string>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="returnBtn">
+    <property name="geometry">
+     <rect>
+      <x>1057</x>
+      <y>10</y>
+      <width>131</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回上一级</string>
+    </property>
    </widget>
   </widget>
  </widget>

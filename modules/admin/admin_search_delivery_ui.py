@@ -23,7 +23,7 @@ class Ui_admin_search_delivery(object):
     def setupUi(self, admin_search_delivery):
         if not admin_search_delivery.objectName():
             admin_search_delivery.setObjectName(u"admin_search_delivery")
-        admin_search_delivery.resize(1118, 672)
+        admin_search_delivery.resize(1229, 685)
         admin_search_delivery.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -105,10 +105,10 @@ class Ui_admin_search_delivery(object):
 "            ")
         self.groupBox = QGroupBox(admin_search_delivery)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 1101, 651))
+        self.groupBox.setGeometry(QRect(10, 10, 1201, 661))
         self.tableWidget = QTableWidget(self.groupBox)
-        if (self.tableWidget.columnCount() < 17):
-            self.tableWidget.setColumnCount(17)
+        if (self.tableWidget.columnCount() < 19):
+            self.tableWidget.setColumnCount(19)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -143,40 +143,44 @@ class Ui_admin_search_delivery(object):
         self.tableWidget.setHorizontalHeaderItem(15, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(16, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(17, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(18, __qtablewidgetitem18)
         if (self.tableWidget.rowCount() < 13):
             self.tableWidget.setRowCount(13)
-        __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem17)
-        __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem18)
         __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem19)
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem20)
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem21)
+        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem21)
         __qtablewidgetitem22 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem22)
+        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem23)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem24)
+        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem24)
         __qtablewidgetitem25 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem25)
+        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem25)
         __qtablewidgetitem26 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem26)
+        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem26)
         __qtablewidgetitem27 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem27)
+        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem27)
         __qtablewidgetitem28 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem28)
+        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem28)
         __qtablewidgetitem29 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem29)
+        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem31)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 40, 1061, 441))
+        self.tableWidget.setGeometry(QRect(10, 50, 1181, 441))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 500, 601, 40))
+        self.layoutWidget.setGeometry(QRect(120, 510, 621, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -185,24 +189,24 @@ class Ui_admin_search_delivery(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.input1_lineedit = QLineEdit(self.layoutWidget)
-        self.input1_lineedit.setObjectName(u"input1_lineedit")
+        self.parcelIdInput = QLineEdit(self.layoutWidget)
+        self.parcelIdInput.setObjectName(u"parcelIdInput")
 
-        self.horizontalLayout.addWidget(self.input1_lineedit)
+        self.horizontalLayout.addWidget(self.parcelIdInput)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.input2_lineedit = QLineEdit(self.layoutWidget)
-        self.input2_lineedit.setObjectName(u"input2_lineedit")
+        self.telInput = QLineEdit(self.layoutWidget)
+        self.telInput.setObjectName(u"telInput")
 
-        self.horizontalLayout.addWidget(self.input2_lineedit)
+        self.horizontalLayout.addWidget(self.telInput)
 
         self.layoutWidget_2 = QWidget(self.groupBox)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(10, 550, 621, 40))
+        self.layoutWidget_2.setGeometry(QRect(120, 560, 621, 40))
         self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -211,52 +215,79 @@ class Ui_admin_search_delivery(object):
 
         self.horizontalLayout_2.addWidget(self.label_3)
 
-        self.input1_lineedit_2 = QLineEdit(self.layoutWidget_2)
-        self.input1_lineedit_2.setObjectName(u"input1_lineedit_2")
+        self.deliveryIdInput = QLineEdit(self.layoutWidget_2)
+        self.deliveryIdInput.setObjectName(u"deliveryIdInput")
 
-        self.horizontalLayout_2.addWidget(self.input1_lineedit_2)
+        self.horizontalLayout_2.addWidget(self.deliveryIdInput)
 
         self.label_4 = QLabel(self.layoutWidget_2)
         self.label_4.setObjectName(u"label_4")
 
         self.horizontalLayout_2.addWidget(self.label_4)
 
-        self.input2_lineedit_2 = QLineEdit(self.layoutWidget_2)
-        self.input2_lineedit_2.setObjectName(u"input2_lineedit_2")
+        self.postIdInput = QLineEdit(self.layoutWidget_2)
+        self.postIdInput.setObjectName(u"postIdInput")
 
-        self.horizontalLayout_2.addWidget(self.input2_lineedit_2)
+        self.horizontalLayout_2.addWidget(self.postIdInput)
 
         self.layoutWidget1 = QWidget(self.groupBox)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(10, 600, 431, 41))
+        self.layoutWidget1.setGeometry(QRect(120, 610, 951, 41))
         self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.label_7 = QLabel(self.layoutWidget1)
+        self.label_7.setObjectName(u"label_7")
+
+        self.horizontalLayout_3.addWidget(self.label_7)
+
+        self.sendPrvBox = QComboBox(self.layoutWidget1)
+        self.sendPrvBox.addItem("")
+        self.sendPrvBox.setObjectName(u"sendPrvBox")
+
+        self.horizontalLayout_3.addWidget(self.sendPrvBox)
+
         self.label_5 = QLabel(self.layoutWidget1)
         self.label_5.setObjectName(u"label_5")
 
         self.horizontalLayout_3.addWidget(self.label_5)
 
-        self.comboBox = QComboBox(self.layoutWidget1)
-        self.comboBox.setObjectName(u"comboBox")
+        self.sendCityBox = QComboBox(self.layoutWidget1)
+        self.sendCityBox.addItem("")
+        self.sendCityBox.setObjectName(u"sendCityBox")
 
-        self.horizontalLayout_3.addWidget(self.comboBox)
+        self.horizontalLayout_3.addWidget(self.sendCityBox)
+
+        self.label_8 = QLabel(self.layoutWidget1)
+        self.label_8.setObjectName(u"label_8")
+
+        self.horizontalLayout_3.addWidget(self.label_8)
+
+        self.rePrvBox = QComboBox(self.layoutWidget1)
+        self.rePrvBox.addItem("")
+        self.rePrvBox.setObjectName(u"rePrvBox")
+
+        self.horizontalLayout_3.addWidget(self.rePrvBox)
 
         self.label_6 = QLabel(self.layoutWidget1)
         self.label_6.setObjectName(u"label_6")
 
         self.horizontalLayout_3.addWidget(self.label_6)
 
-        self.comboBox_2 = QComboBox(self.layoutWidget1)
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.reCityBox = QComboBox(self.layoutWidget1)
+        self.reCityBox.addItem("")
+        self.reCityBox.setObjectName(u"reCityBox")
 
-        self.horizontalLayout_3.addWidget(self.comboBox_2)
+        self.horizontalLayout_3.addWidget(self.reCityBox)
 
-        self.btn_query_3 = QPushButton(self.layoutWidget1)
-        self.btn_query_3.setObjectName(u"btn_query_3")
+        self.searchBtn = QPushButton(self.layoutWidget1)
+        self.searchBtn.setObjectName(u"searchBtn")
 
-        self.horizontalLayout_3.addWidget(self.btn_query_3)
+        self.horizontalLayout_3.addWidget(self.searchBtn)
 
+        self.returnBtn = QPushButton(self.groupBox)
+        self.returnBtn.setObjectName(u"returnBtn")
+        self.returnBtn.setGeometry(QRect(1057, 10, 131, 37))
 
         self.retranslateUi(admin_search_delivery)
 
@@ -299,39 +330,54 @@ class Ui_admin_search_delivery(object):
         ___qtablewidgetitem15 = self.tableWidget.horizontalHeaderItem(15)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("admin_search_delivery", u"\u5f53\u524d\u72b6\u6001", None));
         ___qtablewidgetitem16 = self.tableWidget.horizontalHeaderItem(16)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("admin_search_delivery", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
-        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("admin_search_delivery", u"\u53d6\u4ef6\u7801", None));
+        ___qtablewidgetitem17 = self.tableWidget.horizontalHeaderItem(17)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("admin_search_delivery", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
+        ___qtablewidgetitem18 = self.tableWidget.horizontalHeaderItem(18)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("admin_search_delivery", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(1)
         ___qtablewidgetitem20.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(2)
         ___qtablewidgetitem21.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(5)
+        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(3)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(6)
+        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem23.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem24 = self.tableWidget.verticalHeaderItem(7)
+        ___qtablewidgetitem24 = self.tableWidget.verticalHeaderItem(5)
         ___qtablewidgetitem24.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem25 = self.tableWidget.verticalHeaderItem(8)
+        ___qtablewidgetitem25 = self.tableWidget.verticalHeaderItem(6)
         ___qtablewidgetitem25.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem26 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem26 = self.tableWidget.verticalHeaderItem(7)
         ___qtablewidgetitem26.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem27 = self.tableWidget.verticalHeaderItem(10)
+        ___qtablewidgetitem27 = self.tableWidget.verticalHeaderItem(8)
         ___qtablewidgetitem27.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem28 = self.tableWidget.verticalHeaderItem(11)
+        ___qtablewidgetitem28 = self.tableWidget.verticalHeaderItem(9)
         ___qtablewidgetitem28.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem29 = self.tableWidget.verticalHeaderItem(12)
+        ___qtablewidgetitem29 = self.tableWidget.verticalHeaderItem(10)
         ___qtablewidgetitem29.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
-        self.label.setText(QCoreApplication.translate("admin_search_delivery", u"\u5feb\u9012\u7f16\u53f7\uff1a", None))
-        self.label_2.setText(QCoreApplication.translate("admin_search_delivery", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
-        self.label_3.setText(QCoreApplication.translate("admin_search_delivery", u"\u914d\u9001\u5458\u5de5\u53f7\uff1a", None))
-        self.label_4.setText(QCoreApplication.translate("admin_search_delivery", u"\u5feb\u9012\u5458\u5de5\u53f7\uff1a", None))
-        self.label_5.setText(QCoreApplication.translate("admin_search_delivery", u"\u5bc4\u51fa\u5e02\uff1a", None))
-        self.label_6.setText(QCoreApplication.translate("admin_search_delivery", u"\u6536\u4ef6\u5e02\uff1a", None))
-        self.btn_query_3.setText(QCoreApplication.translate("admin_search_delivery", u"\u67e5\u8be2", None))
+        ___qtablewidgetitem30 = self.tableWidget.verticalHeaderItem(11)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem31 = self.tableWidget.verticalHeaderItem(12)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("admin_search_delivery", u"\u65b0\u5efa\u884c", None));
+        self.label.setText(QCoreApplication.translate("admin_search_delivery", u"\u5feb\u9012\u5355\u53f7\uff1a", None))
+        self.label_2.setText(QCoreApplication.translate("admin_search_delivery", u"\u6536\u4ef6\u4eba\u7535\u8bdd\uff1a", None))
+        self.label_3.setText(QCoreApplication.translate("admin_search_delivery", u"\u914d\u9001\u5458ID\uff1a", None))
+        self.label_4.setText(QCoreApplication.translate("admin_search_delivery", u"\u5feb\u9012\u5458ID\uff1a", None))
+        self.label_7.setText(QCoreApplication.translate("admin_search_delivery", u"\u5bc4\u51fa\u7701:", None))
+        self.sendPrvBox.setItemText(0, "")
+
+        self.label_5.setText(QCoreApplication.translate("admin_search_delivery", u"\u5bc4\u51fa\u5e02:", None))
+        self.sendCityBox.setItemText(0, "")
+
+        self.label_8.setText(QCoreApplication.translate("admin_search_delivery", u"\u6536\u4ef6\u7701:", None))
+        self.rePrvBox.setItemText(0, "")
+
+        self.label_6.setText(QCoreApplication.translate("admin_search_delivery", u"\u6536\u4ef6\u5e02:", None))
+        self.reCityBox.setItemText(0, "")
+
+        self.searchBtn.setText(QCoreApplication.translate("admin_search_delivery", u"\u67e5\u8be2", None))
+        self.returnBtn.setText(QCoreApplication.translate("admin_search_delivery", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 

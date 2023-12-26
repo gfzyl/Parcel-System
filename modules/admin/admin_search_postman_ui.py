@@ -148,11 +148,11 @@ class Ui_admin_search_postman(object):
         __qtablewidgetitem17 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem17)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 100, 521, 341))
+        self.tableWidget.setGeometry(QRect(10, 120, 521, 341))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 40, 511, 40))
+        self.layoutWidget.setGeometry(QRect(20, 60, 511, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -181,6 +181,9 @@ class Ui_admin_search_postman(object):
 
         self.horizontalLayout.addWidget(self.searchBtn)
 
+        self.returnBtn = QPushButton(self.groupBox)
+        self.returnBtn.setObjectName(u"returnBtn")
+        self.returnBtn.setGeometry(QRect(423, 10, 111, 37))
 
         self.retranslateUi(admin_search_postman)
 
@@ -231,5 +234,6 @@ class Ui_admin_search_postman(object):
         self.label_2.setText(QCoreApplication.translate("admin_search_postman", u"\u7535\u8bdd\u53f7\u7801\uff1a", None))
         self.telInput.setPlaceholderText(QCoreApplication.translate("admin_search_postman", u"\u6309\u7535\u8bdd\u53f7\u7801\u67e5\u8be2", None))
         self.searchBtn.setText(QCoreApplication.translate("admin_search_postman", u"\u67e5\u8be2", None))
+        self.returnBtn.setText(QCoreApplication.translate("admin_search_postman", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 
