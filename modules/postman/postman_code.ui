@@ -60,7 +60,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="lineEdit_code">
        <property name="styleSheet">
         <string notr="true">
                                     padding: 8px;
@@ -140,7 +140,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="buttonConfirm">
+      <widget class="QPushButton" name="btn_confirm">
        <property name="styleSheet">
         <string notr="true">
            QPushButton {
@@ -182,7 +182,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="buttonCancle">
+      <widget class="QPushButton" name="btn_cancel">
        <property name="styleSheet">
         <string notr="true">
            QPushButton {

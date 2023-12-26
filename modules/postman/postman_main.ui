@@ -77,6 +77,9 @@
         <attribute name="horizontalHeaderCascadingSectionResizes">
          <bool>false</bool>
         </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>100</number>
+        </attribute>
         <attribute name="verticalHeaderVisible">
          <bool>false</bool>
         </attribute>
@@ -132,11 +135,6 @@
         </column>
         <column>
          <property name="text">
-          <string>完整路线</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
           <string>省份</string>
          </property>
         </column>
@@ -153,6 +151,11 @@
         <column>
          <property name="text">
           <string>目前状态</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>取件码</string>
          </property>
         </column>
        </widget>
@@ -207,7 +210,7 @@
        </property>
        <layout class="QHBoxLayout" name="horizontalLayoutActions">
         <item>
-         <widget class="QPushButton" name="searchBtn">
+         <widget class="QPushButton" name="btn_search">
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -217,14 +220,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="addCodeBtn">
+         <widget class="QPushButton" name="btn_addCode">
           <property name="text">
            <string>添加取件码</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="quitBtn">
+         <widget class="QPushButton" name="btn_return">
           <property name="text">
            <string>退出登录</string>
           </property>

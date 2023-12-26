@@ -17,7 +17,7 @@ from ..modules.admin.admin_main import AdminMainWindow
 
 
 class LoginWindow(QWidget,Ui_login):
-    loginin_signal=Signal(str)
+    login_signal=Signal(str)
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -30,16 +30,17 @@ class LoginWindow(QWidget,Ui_login):
         self.user_main_window = UserMainWindow(loginWindow=self)
         self.admin_main_window = AdminMainWindow()
         self.guest_main_window = GuestMainWindow()
-        self.deliveryman_main_window = DeliverymanMainWindow()
-        self.postman_main_window = PostmanMainWindow()
+        self.deliveryman_main_window = DeliverymanMainWindow(loginWindow=self)
+        self.postman_main_window = PostmanMainWindow(loginWindow=self)
         self.register_window = RegisterWindow()
 
         # 连接信号,每个界面都有返回登录的操作，最终将返回至登录界面
         self.admin_main_window.logout_signal.connect(self.show_login_window)
         self.guest_main_window.logout_signal.connect(self.show_login_window)
         self.user_main_window.logout_signal.connect(self.show_login_window)
+        self.postman_main_window.logout_signal.connect(self.show_login_window)
+        self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
         # 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
-
 
     def show_login_window(self):
         self.show()
@@ -64,17 +65,17 @@ class LoginWindow(QWidget,Ui_login):
         # 假设你的数据库中有不同的表用于存储每种类型的用户信息
         if self.account.startswith('1'):  # 普通用户
             if self.query_user(self.account, self.pwd):
-                self.loginin_signal.emit(self.account)
+                self.login_signal.emit(self.account)
                 self.user_main_window.show()
 
         elif self.account.startswith('2'):  # 派送员
             if self.query_user(self.account, self.pwd):
-                self.loginin_signal.emit(self.account)
+                self.login_signal.emit(self.account)
                 self.deliveryman_main_window.show()
 
         elif self.account.startswith('3'):  # 快递员
             if self.query_user(self.account, self.pwd):
-                self.loginin_signal.emit(self.account)
+                self.login_signal.emit(self.account)
                 self.postman_main_window.show()
 
         elif self.account.startswith('4'):  # 管理员

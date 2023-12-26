@@ -26,7 +26,8 @@ class UserMainWindow(QWidget,Ui_user_main):
         self.mySendBtn.clicked.connect(self.mySendFun)
         self.modifyInfoBtn.clicked.connect(self.modifyInfoFun)
         self.logoutBtn.clicked.connect(self.logoutFun)
-        loginWindow.loginin_signal.connect(self.receiveAccount)
+        loginWindow.login_signal.connect(self.receiveAccount)
+
 
     def receiveAccount(self,account):
         self.account = account
@@ -224,6 +225,8 @@ class Window3(QWidget,Ui_myReceive):
         # 我收到的
         self.setupUi(self)
         self.sql = Sql()
+
+
         self.sql.connect()
         self.account = loginWindow.account
         self.insertData()
@@ -432,7 +435,7 @@ class Window_viewAddress(QWidget,Ui_address_book):
         # self.sql.execute_update(statement, value)
 
 
-    def delete(self):  #表格数据有问题
+    def delete(self):
         result_name = self.tableWidget.item(self.row, 1).text()
         result_phone = self.tableWidget.item(self.row, 2).text()
         result_province = self.tableWidget.item(self.row, 3).text()

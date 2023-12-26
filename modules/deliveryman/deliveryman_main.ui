@@ -94,7 +94,7 @@
    <property name="title">
     <string>快递信息</string>
    </property>
-   <widget class="QPushButton" name="quitBtn">
+   <widget class="QPushButton" name="btn_return">
     <property name="geometry">
      <rect>
       <x>404</x>
@@ -208,7 +208,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEdit_place"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -218,7 +218,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboBox_place">
        <item>
         <property name="text">
          <string>途经城市1</string>
@@ -238,7 +238,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="confirmBtn">
+   <widget class="QPushButton" name="btn_confirm">
     <property name="geometry">
      <rect>
       <x>150</x>

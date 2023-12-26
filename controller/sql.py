@@ -20,8 +20,9 @@ class Sql:
         try:
             self.cursor.execute(statement)
             result = self.cursor.fetchall()
-            return result
             print("查询成功")
+            return result
+
         except Exception as e:
             print(f"查询操作错误: {e}")
             return None
@@ -40,6 +41,22 @@ class Sql:
 
     def execute_delete(self, statement, value=None):
             self.execute_update(statement, value)
+
+    def sql1(self):
+        # print(sql)
+        serverName = '127.0.0.1'  # sql服务器名，这里(127.0.0.1)是本地数据库IP
+        userName = 'sa'  # 登陆用户名和密码
+        passWord = 'sa'  # 建立连接并获取cursor
+        conn = pymssql.connect(serverName, userName, passWord, "kd")  # 连接数据库
+        # //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        cur = conn.cursor()  # 创建游标 提交sql语句
+        cur.execute(self)  # 提交sql命令
+        fanhui = cur.fetchall()  # 获取查询结果 在fanhui列表中以[( ,),( ,)]保存
+        cur.close()  # 关闭游标
+        conn.close()
+        if fanhui == []:
+            fanhui = [('',), ]
+        return fanhui
 
 
     def close(self):

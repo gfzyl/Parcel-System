@@ -95,9 +95,9 @@ class Ui_deliveryman_main(object):
 "                font: bold 16px \"\u5e7c\u5706\";\n"
 "            }\n"
 "        ")
-        self.quitBtn = QPushButton(self.groupBox)
-        self.quitBtn.setObjectName(u"quitBtn")
-        self.quitBtn.setGeometry(QRect(404, 20, 101, 31))
+        self.btn_return = QPushButton(self.groupBox)
+        self.btn_return.setObjectName(u"btn_return")
+        self.btn_return.setGeometry(QRect(404, 20, 101, 31))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 4):
             self.tableWidget.setColumnCount(4)
@@ -145,27 +145,27 @@ class Ui_deliveryman_main(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.layoutWidget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit_place = QLineEdit(self.layoutWidget)
+        self.lineEdit_place.setObjectName(u"lineEdit_place")
 
-        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout.addWidget(self.lineEdit_place)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.comboBox = QComboBox(self.layoutWidget)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_place = QComboBox(self.layoutWidget)
+        self.comboBox_place.addItem("")
+        self.comboBox_place.addItem("")
+        self.comboBox_place.addItem("")
+        self.comboBox_place.setObjectName(u"comboBox_place")
 
-        self.horizontalLayout.addWidget(self.comboBox)
+        self.horizontalLayout.addWidget(self.comboBox_place)
 
-        self.confirmBtn = QPushButton(self.groupBox)
-        self.confirmBtn.setObjectName(u"confirmBtn")
-        self.confirmBtn.setGeometry(QRect(150, 430, 101, 31))
+        self.btn_confirm = QPushButton(self.groupBox)
+        self.btn_confirm.setObjectName(u"btn_confirm")
+        self.btn_confirm.setGeometry(QRect(150, 430, 101, 31))
 
         self.retranslateUi(deliveryman_main)
 
@@ -175,7 +175,7 @@ class Ui_deliveryman_main(object):
     def retranslateUi(self, deliveryman_main):
         deliveryman_main.setWindowTitle(QCoreApplication.translate("deliveryman_main", u"\u6d3e\u9001\u5458", None))
         self.groupBox.setTitle(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u4fe1\u606f", None))
-        self.quitBtn.setText(QCoreApplication.translate("deliveryman_main", u"\u9000\u51fa\u767b\u5f55", None))
+        self.btn_return.setText(QCoreApplication.translate("deliveryman_main", u"\u9000\u51fa\u767b\u5f55", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -206,10 +206,10 @@ class Ui_deliveryman_main(object):
         ___qtablewidgetitem13.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
         self.label.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u4f4d\u7f6e\uff1a", None))
         self.label_2.setText(QCoreApplication.translate("deliveryman_main", u"\u9009\u62e9\u6700\u65b0\u5230\u8fbe\u4f4d\u7f6e\uff1a", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e021", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e022", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e023", None))
+        self.comboBox_place.setItemText(0, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e021", None))
+        self.comboBox_place.setItemText(1, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e022", None))
+        self.comboBox_place.setItemText(2, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e023", None))
 
-        self.confirmBtn.setText(QCoreApplication.translate("deliveryman_main", u"\u786e\u8ba4\u66f4\u6539", None))
+        self.btn_confirm.setText(QCoreApplication.translate("deliveryman_main", u"\u786e\u8ba4\u66f4\u6539", None))
     # retranslateUi
 
