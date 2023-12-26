@@ -18,32 +18,15 @@ from ..modules.admin.admin_main import AdminMainWindow
 
 class LoginWindow(QWidget,Ui_login):
     # 专门为后续界面提供成功登录的账号
-    # 2023-12-25 02:36 其他界面已经可以接收账号,只要发给用户/快递员/配送员即可
     login_signal = Signal(str)
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        # 判断身份进入不同界面
+        # 判断身份进入不同界面,然后创建对象
         self.loginBtn.clicked.connect(self.goto_vary_main)
         self.registerBtn.clicked.connect(self.goto_register)
         self.guestBtn.clicked.connect(self.goto_guest_main)
         
-        # 以后就直接引入别的界面就可以
-        self.user_main_window = UserMainWindow(login_window=self)
-        self.admin_main_window = AdminMainWindow()
-        self.guest_main_window = GuestMainWindow()
-        self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
-        self.postman_main_window = PostmanMainWindow(login_window=self)
-        self.register_window = RegisterWindow()
-
-        # 连接信号,每个界面都有返回登录的操作，最终将返回至登录界面
-        self.admin_main_window.logout_signal.connect(self.show_login_window)
-        self.guest_main_window.logout_signal.connect(self.show_login_window)
-        self.register_window.confirmSignal.connect(self.show_login_window)
-        self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
-        self.postman_main_window.logout_signal.connect(self.show_login_window)
-        # 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
-
 
     def show_login_window(self):
         self.show()
@@ -51,13 +34,17 @@ class LoginWindow(QWidget,Ui_login):
 
     def goto_register(self):
         self.hide()
+        self.register_window = RegisterWindow()
         self.register_window.show()
+        self.register_window.confirmSignal.connect(self.show_login_window)
 
 
     def goto_guest_main(self):
         # 选择退出登录的时候该界面该隐藏
         self.hide()
+        self.guest_main_window = GuestMainWindow()
         self.guest_main_window.show()
+        self.guest_main_window.logout_signal.connect(self.show_login_window)
 
 
     def goto_vary_main(self):
@@ -67,21 +54,31 @@ class LoginWindow(QWidget,Ui_login):
 
         if self.account.startswith('1'):  # 普通用户
             if self.query_user(self.account, self.pwd):
+                self.user_main_window = UserMainWindow(login_window=self)
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.user_main_window.show()
+                self.user_main_window.logout_signal.connect(self.show_login_window)
+
 
         elif self.account.startswith('2'):  # 派送员
             if self.query_deliveryman(self.account, self.pwd):
                 self.login_signal.emit(self.account)# 发射登录信号
+                self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
                 self.deliveryman_main_window.show()
+                self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
+
 
         elif self.account.startswith('3'):  # 快递员
             if self.query_postman(self.account, self.pwd):
                 self.login_signal.emit(self.account)# 发射登录信号
+                self.postman_main_window = PostmanMainWindow(login_window=self)
                 self.postman_main_window.show()
+                self.postman_main_window.logout_signal.connect(self.show_login_window)
+
 
         elif self.account.startswith('4'):  # 管理员
-            if self.query_user(self.account, self.pwd):
+            if self.query_admin(self.account, self.pwd):
+                self.admin_main_window = AdminMainWindow()
                 self.admin_main_window.show()
 
         else:

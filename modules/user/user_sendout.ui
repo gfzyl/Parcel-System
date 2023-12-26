@@ -63,7 +63,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="lineEdit_name1"/>
        </item>
        <item>
         <widget class="QLabel" name="label_2">
@@ -73,7 +73,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="lineEdit_phone1"/>
        </item>
       </layout>
      </item>
@@ -93,25 +93,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="comboBox_province1">
          <item>
           <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
+           <string/>
           </property>
          </item>
         </widget>
@@ -130,28 +115,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_2">
-         <item>
-          <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
-          </property>
-         </item>
-        </widget>
+        <widget class="QComboBox" name="comboBox_city1"/>
        </item>
       </layout>
      </item>
@@ -165,7 +129,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="lineEdit_address1"/>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_in_address_book">
@@ -175,7 +139,13 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox_address_book"/>
+        <widget class="QComboBox" name="comboBox_addressBook1">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </item>
@@ -231,7 +201,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_4"/>
+        <widget class="QLineEdit" name="lineEdit_name2"/>
        </item>
        <item>
         <widget class="QLabel" name="label_7">
@@ -241,7 +211,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
+        <widget class="QLineEdit" name="lineEdit_phone2"/>
        </item>
       </layout>
      </item>
@@ -261,25 +231,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_3">
+        <widget class="QComboBox" name="comboBox_province2">
          <item>
           <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
+           <string/>
           </property>
          </item>
         </widget>
@@ -298,35 +253,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_4">
-         <item>
-          <property name="text">
-           <string>测试1</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4</string>
-          </property>
-         </item>
-        </widget>
+        <widget class="QComboBox" name="comboBox_city2"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_6"/>
+        <widget class="QLineEdit" name="lineEdit_address2"/>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_10">
@@ -343,7 +277,13 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox_address_book"/>
+        <widget class="QComboBox" name="comboBox_addressBook2">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </item>
@@ -376,7 +316,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_7">
+     <widget class="QLineEdit" name="lineEdit_extra">
       <property name="styleSheet">
        <string notr="true">  QLineEdit {
                 padding: 8px;
@@ -395,7 +335,7 @@
      <x>10</x>
      <y>540</y>
      <width>495</width>
-     <height>39</height>
+     <height>40</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -477,7 +417,7 @@
         </string>
       </property>
       <property name="text">
-       <string>返回主界面</string>
+       <string>返回上一级</string>
       </property>
      </widget>
     </item>

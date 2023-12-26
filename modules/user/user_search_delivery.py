@@ -3,7 +3,7 @@ import sys
 
 # 任何一个PySide界面程序都需要使用QApplication
 # 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
-from PySide6.QtWidgets import QApplication, QWidget,QTableWidgetItem
+from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
 from PySide6.QtGui import QIcon
 from ...controller.sql import Sql
 # 导入我们生成的界面
@@ -41,7 +41,6 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
 
             # 将查询结果填充到表格中
             for row_num, row_data in enumerate(result):
-                print(row_data)
                 self.tableWidget.insertRow(row_num)
 
                 item1 = QTableWidgetItem(str(row_data[0]))
@@ -74,7 +73,6 @@ class UserSearchDeliveryWindow(QWidget,Ui_user_search_delivery):
                 self.tableWidget.setItem(row_num, 13, item14)
                 item15 = QTableWidgetItem(str(row_data[17]))
                 self.tableWidget.setItem(row_num, 14, item15)
-
 
         else:
             # 处理没有查询结果的情况

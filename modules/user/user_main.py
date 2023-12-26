@@ -1,26 +1,68 @@
-# 导入sys
-import sys
-
-# 任何一个PySide界面程序都需要使用QApplication
-# 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
-# 导入我们生成的界面
+from PySide6.QtCore import Signal
 from .user_main_ui import Ui_user_main
+from .user_modify_info import UserModifyInfoWindow
+from .user_search_delivery import UserSearchDeliveryWindow
+from .user_sendout import UserSendoutWindow
+from .myReceive import MyReceiveWindow
+from .mySend import MySendWindow    
+
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
 class UserMainWindow(QWidget, Ui_user_main):
+    logout_signal = Signal()
     def __init__(self, login_window):
         super().__init__()
-        # 设置界面为我们生成的界面2
         self.setupUi(self)
-         
-         # 连接登录信号
+
+        # 按键
+        self.logoutBtn.clicked.connect(self.goto_logout)
+        self.searchBtn.clicked.connect(self.goto_search_delivery)
+        self.sendBtn.clicked.connect(self.goto_user_sendout)
+        self.myReceiveBtn.clicked.connect(self.goto_myReceive)
+        self.mySendBtn.clicked.connect(self.goto_myReceive)
+        self.modifyInfoBtn.clicked.connect(self.goto_user_modify_info)
+
+        # 信号
         login_window.login_signal.connect(self.receive_login_info)
+
 
     def receive_login_info(self, account):
         print(f"当前登录账户ID: {account}, 身份:User")
+        self.account = account
+
+
+    def goto_search_delivery(self):
+        user_search_delivery_window = UserSearchDeliveryWindow()
+        user_search_delivery_window.show()
+
+
+    def goto_user_sendout(self):
+        user_sendout_window = UserSendoutWindow()
+        user_sendout_window.show()
+
+    
+    def goto_user_modify_info(self):
+        user_modify_info_window = UserModifyInfoWindow()
+        user_modify_info_window.show()
+
+
+    def goto_myReceive(self):
+        myReceive_window = MyReceiveWindow(user_main_window=self)
+        myReceive_window.show()
+
+    
+    def goto_mySend(self):
+        mySend_window = MySendWindow()
+        mySend_window.show()
+
+
+    def goto_logout(self):
+        # 选择退出登录的时候触发信号
+        self.logout_signal.emit()
+        self.close()
 
 
 # 程序入口

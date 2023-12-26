@@ -41,8 +41,10 @@ class RegisterWindow(QWidget, Ui_register):
         if result:
             QMessageBox.warning(self, "警告", "账号已存在，请重新输入！", QMessageBox.Ok)
         else:
+            if pwd == '' or confirm_pwd == '':
+                QMessageBox.warning(self, "警告", "请输入密码！", QMessageBox.Ok)
             # 判定两次密码是否一致
-            if pwd != confirm_pwd:
+            elif pwd != confirm_pwd:
                 QMessageBox.warning(self, "警告", "两次密码输入不一致，请重新输入！", QMessageBox.Ok)
             else:
                 # 将账号密码写入数据库中
