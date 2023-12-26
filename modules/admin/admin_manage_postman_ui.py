@@ -167,25 +167,26 @@ class Ui_admin_manage_postman(object):
 
         self.horizontalLayout_5.addWidget(self.label_10)
 
-        self.workIdInput_3 = QLineEdit(self.layoutWidget_4)
-        self.workIdInput_3.setObjectName(u"workIdInput_3")
+        self.workIdInputTop = QLineEdit(self.layoutWidget_4)
+        self.workIdInputTop.setObjectName(u"workIdInputTop")
 
-        self.horizontalLayout_5.addWidget(self.workIdInput_3)
+        self.horizontalLayout_5.addWidget(self.workIdInputTop)
 
         self.label_11 = QLabel(self.layoutWidget_4)
         self.label_11.setObjectName(u"label_11")
 
         self.horizontalLayout_5.addWidget(self.label_11)
 
-        self.workCity_2 = QComboBox(self.layoutWidget_4)
-        self.workCity_2.setObjectName(u"workCity_2")
+        self.workCityBox = QComboBox(self.layoutWidget_4)
+        self.workCityBox.addItem("")
+        self.workCityBox.setObjectName(u"workCityBox")
 
-        self.horizontalLayout_5.addWidget(self.workCity_2)
+        self.horizontalLayout_5.addWidget(self.workCityBox)
 
-        self.searchBtn_2 = QPushButton(self.layoutWidget_4)
-        self.searchBtn_2.setObjectName(u"searchBtn_2")
+        self.searchBtn = QPushButton(self.layoutWidget_4)
+        self.searchBtn.setObjectName(u"searchBtn")
 
-        self.horizontalLayout_5.addWidget(self.searchBtn_2)
+        self.horizontalLayout_5.addWidget(self.searchBtn)
 
         self.groupBox_2 = QGroupBox(admin_manage_postman)
         self.groupBox_2.setObjectName(u"groupBox_2")
@@ -238,10 +239,10 @@ class Ui_admin_manage_postman(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.workIdInput = QLineEdit(self.layoutWidget_2)
-        self.workIdInput.setObjectName(u"workIdInput")
+        self.workIdInputBottom = QLineEdit(self.layoutWidget_2)
+        self.workIdInputBottom.setObjectName(u"workIdInputBottom")
 
-        self.horizontalLayout.addWidget(self.workIdInput)
+        self.horizontalLayout.addWidget(self.workIdInputBottom)
 
         self.label_3 = QLabel(self.layoutWidget_2)
         self.label_3.setObjectName(u"label_3")
@@ -300,10 +301,10 @@ class Ui_admin_manage_postman(object):
 
         self.horizontalLayout_3.addWidget(self.label_7)
 
-        self.workCityInput1 = QLineEdit(self.layoutWidget_5)
-        self.workCityInput1.setObjectName(u"workCityInput1")
+        self.workCityInput = QLineEdit(self.layoutWidget_5)
+        self.workCityInput.setObjectName(u"workCityInput")
 
-        self.horizontalLayout_3.addWidget(self.workCityInput1)
+        self.horizontalLayout_3.addWidget(self.workCityInput)
 
         self.label_8 = QLabel(self.layoutWidget_5)
         self.label_8.setObjectName(u"label_8")
@@ -328,9 +329,9 @@ class Ui_admin_manage_postman(object):
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("admin_manage_postman", u"\u7535\u8bdd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("admin_manage_postman", u"\u5e74\u9f84", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("admin_manage_postman", u"\u5de5\u4f5c\u70b9", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("admin_manage_postman", u"\u5de5\u4f5c\u70b9", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("admin_manage_postman", u"\u5e74\u9f84", None));
         ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("admin_manage_postman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(1)
@@ -360,7 +361,9 @@ class Ui_admin_manage_postman(object):
         self.returnBtn.setText(QCoreApplication.translate("admin_manage_postman", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
         self.label_10.setText(QCoreApplication.translate("admin_manage_postman", u"\u5de5\u53f7\uff1a", None))
         self.label_11.setText(QCoreApplication.translate("admin_manage_postman", u"\u5de5\u4f5c\u70b9\uff1a", None))
-        self.searchBtn_2.setText(QCoreApplication.translate("admin_manage_postman", u"\u67e5\u8be2", None))
+        self.workCityBox.setItemText(0, "")
+
+        self.searchBtn.setText(QCoreApplication.translate("admin_manage_postman", u"\u67e5\u8be2", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("admin_manage_postman", u"\u9009\u62e9\u8868\u5355\u4e2d\u7684\u5458\u5de5\u4fe1\u606f\u5728\u4e0b\u65b9\u4fee\u6539", None))
         self.createBtn.setText(QCoreApplication.translate("admin_manage_postman", u"\u65b0\u5efa\u5458\u5de5\u4fe1\u606f", None))
         self.updBtn.setText(QCoreApplication.translate("admin_manage_postman", u"\u4fee\u6539\u5458\u5de5\u4fe1\u606f", None))

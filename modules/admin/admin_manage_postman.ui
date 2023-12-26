@@ -203,12 +203,12 @@
     </column>
     <column>
      <property name="text">
-      <string>年龄</string>
+      <string>工作点</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>工作点</string>
+      <string>年龄</string>
      </property>
     </column>
    </widget>
@@ -243,7 +243,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workIdInput_3"/>
+      <widget class="QLineEdit" name="workIdInputTop"/>
      </item>
      <item>
       <widget class="QLabel" name="label_11">
@@ -253,10 +253,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="workCity_2"/>
+      <widget class="QComboBox" name="workCityBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="searchBtn_2">
+      <widget class="QPushButton" name="searchBtn">
        <property name="text">
         <string>查询</string>
        </property>
@@ -392,7 +398,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workIdInput"/>
+      <widget class="QLineEdit" name="workIdInputBottom"/>
      </item>
      <item>
       <widget class="QLabel" name="label_3">
@@ -466,7 +472,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workCityInput1"/>
+      <widget class="QLineEdit" name="workCityInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_8">

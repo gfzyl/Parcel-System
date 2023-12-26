@@ -107,9 +107,9 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>40</x>
       <y>110</y>
-      <width>821</width>
+      <width>921</width>
       <height>341</height>
      </rect>
     </property>
@@ -219,6 +219,11 @@
     <column>
      <property name="text">
       <string>年龄</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>当前状态</string>
      </property>
     </column>
    </widget>
@@ -408,7 +413,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workIdInputBotttom"/>
+      <widget class="QLineEdit" name="workIdInputBottom">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_3">
