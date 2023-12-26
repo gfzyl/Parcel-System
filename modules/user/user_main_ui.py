@@ -72,10 +72,10 @@ class Ui_user_main(object):
 
         self.gridLayout.addWidget(self.sendBtn, 4, 2, 1, 1)
 
-        self.searchBtn = QPushButton(self.tabWidget)
-        self.searchBtn.setObjectName(u"searchBtn")
+        self.queryBtn = QPushButton(self.tabWidget)
+        self.queryBtn.setObjectName(u"queryBtn")
 
-        self.gridLayout.addWidget(self.searchBtn, 4, 1, 1, 1)
+        self.gridLayout.addWidget(self.queryBtn, 4, 1, 1, 1)
 
         self.modifyInfoBtn = QPushButton(self.tabWidget)
         self.modifyInfoBtn.setObjectName(u"modifyInfoBtn")
@@ -143,7 +143,7 @@ class Ui_user_main(object):
         user_main.setWindowTitle(QCoreApplication.translate("user_main", u"\u7528\u6237\u4e3b\u754c\u9762", None))
         self.tabWidget.setTitle(QCoreApplication.translate("user_main", u"\u7528\u6237\u4e3b\u754c\u9762", None))
         self.sendBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u8981\u5bc4\u5feb\u9012", None))
-        self.searchBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u8981\u67e5\u5feb\u9012", None))
+        self.queryBtn.setText(QCoreApplication.translate("user_main", u"\u6211\u8981\u67e5\u5feb\u9012", None))
         self.modifyInfoBtn.setText(QCoreApplication.translate("user_main", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
         self.label_4.setText("")
         self.logoutBtn.setText(QCoreApplication.translate("user_main", u"\u9000\u51fa\u767b\u5f55", None))

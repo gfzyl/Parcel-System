@@ -23,7 +23,7 @@ class Ui_user_search_delivery(object):
     def setupUi(self, user_search_delivery):
         if not user_search_delivery.objectName():
             user_search_delivery.setObjectName(u"user_search_delivery")
-        user_search_delivery.resize(1103, 565)
+        user_search_delivery.resize(1118, 585)
         user_search_delivery.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"

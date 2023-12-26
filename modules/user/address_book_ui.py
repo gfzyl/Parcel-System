@@ -151,21 +151,21 @@ class Ui_address_book(object):
 "        ")
         self.horizontalLayoutActions = QHBoxLayout(self.groupBoxActions)
         self.horizontalLayoutActions.setObjectName(u"horizontalLayoutActions")
-        self.btnAdd = QPushButton(self.groupBoxActions)
-        self.btnAdd.setObjectName(u"btnAdd")
-        self.btnAdd.setStyleSheet(u"")
+        self.btn_addAddress = QPushButton(self.groupBoxActions)
+        self.btn_addAddress.setObjectName(u"btn_addAddress")
+        self.btn_addAddress.setStyleSheet(u"")
 
-        self.horizontalLayoutActions.addWidget(self.btnAdd)
+        self.horizontalLayoutActions.addWidget(self.btn_addAddress)
 
-        self.btnModify = QPushButton(self.groupBoxActions)
-        self.btnModify.setObjectName(u"btnModify")
+        self.btn_modify = QPushButton(self.groupBoxActions)
+        self.btn_modify.setObjectName(u"btn_modify")
 
-        self.horizontalLayoutActions.addWidget(self.btnModify)
+        self.horizontalLayoutActions.addWidget(self.btn_modify)
 
-        self.btnDelete = QPushButton(self.groupBoxActions)
-        self.btnDelete.setObjectName(u"btnDelete")
+        self.btn_delete = QPushButton(self.groupBoxActions)
+        self.btn_delete.setObjectName(u"btn_delete")
 
-        self.horizontalLayoutActions.addWidget(self.btnDelete)
+        self.horizontalLayoutActions.addWidget(self.btn_delete)
 
 
         self.verticalLayoutButtons.addWidget(self.groupBoxActions)
@@ -204,8 +204,8 @@ class Ui_address_book(object):
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("address_book", u"\u8be6\u7ec6\u5730\u5740", None));
         self.groupBoxActions.setTitle(QCoreApplication.translate("address_book", u"\u7528\u6237\u64cd\u4f5c", None))
-        self.btnAdd.setText(QCoreApplication.translate("address_book", u"\u6dfb\u52a0\u5730\u5740\u7c3f\u4fe1\u606f", None))
-        self.btnModify.setText(QCoreApplication.translate("address_book", u"\u4fee\u6539", None))
-        self.btnDelete.setText(QCoreApplication.translate("address_book", u"\u5220\u9664", None))
+        self.btn_addAddress.setText(QCoreApplication.translate("address_book", u"\u6dfb\u52a0\u5730\u5740\u7c3f\u4fe1\u606f", None))
+        self.btn_modify.setText(QCoreApplication.translate("address_book", u"\u4fee\u6539", None))
+        self.btn_delete.setText(QCoreApplication.translate("address_book", u"\u5220\u9664", None))
     # retranslateUi
 

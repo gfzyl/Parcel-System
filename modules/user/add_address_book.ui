@@ -94,7 +94,13 @@
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBoxProvince"/>
+         <widget class="QComboBox" name="comboBox_province">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="labelCity">
@@ -104,14 +110,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBoxCity"/>
+         <widget class="QComboBox" name="comboBox_city"/>
         </item>
        </layout>
       </item>
       <item row="6" column="1">
        <layout class="QHBoxLayout" name="horizontalLayoutAddButton">
         <item>
-         <widget class="QPushButton" name="btnAdd">
+         <widget class="QPushButton" name="btn_add">
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -148,7 +154,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEditName"/>
+         <widget class="QLineEdit" name="lineEdit_name"/>
         </item>
         <item>
          <widget class="QLabel" name="labelPhone">
@@ -158,7 +164,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEditPhone"/>
+         <widget class="QLineEdit" name="lineEdit_phone"/>
         </item>
        </layout>
       </item>
@@ -204,7 +210,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEditAddress"/>
+         <widget class="QLineEdit" name="lineEdit_address"/>
         </item>
        </layout>
       </item>

@@ -83,31 +83,32 @@ class Ui_add_address_book(object):
 
         self.horizontalLayoutProvinceCity.addWidget(self.labelProvince)
 
-        self.comboBoxProvince = QComboBox(self.groupBoxAddressBook)
-        self.comboBoxProvince.setObjectName(u"comboBoxProvince")
+        self.comboBox_province = QComboBox(self.groupBoxAddressBook)
+        self.comboBox_province.addItem("")
+        self.comboBox_province.setObjectName(u"comboBox_province")
 
-        self.horizontalLayoutProvinceCity.addWidget(self.comboBoxProvince)
+        self.horizontalLayoutProvinceCity.addWidget(self.comboBox_province)
 
         self.labelCity = QLabel(self.groupBoxAddressBook)
         self.labelCity.setObjectName(u"labelCity")
 
         self.horizontalLayoutProvinceCity.addWidget(self.labelCity)
 
-        self.comboBoxCity = QComboBox(self.groupBoxAddressBook)
-        self.comboBoxCity.setObjectName(u"comboBoxCity")
+        self.comboBox_city = QComboBox(self.groupBoxAddressBook)
+        self.comboBox_city.setObjectName(u"comboBox_city")
 
-        self.horizontalLayoutProvinceCity.addWidget(self.comboBoxCity)
+        self.horizontalLayoutProvinceCity.addWidget(self.comboBox_city)
 
 
         self.gridLayout.addLayout(self.horizontalLayoutProvinceCity, 2, 1, 1, 1)
 
         self.horizontalLayoutAddButton = QHBoxLayout()
         self.horizontalLayoutAddButton.setObjectName(u"horizontalLayoutAddButton")
-        self.btnAdd = QPushButton(self.groupBoxAddressBook)
-        self.btnAdd.setObjectName(u"btnAdd")
-        self.btnAdd.setStyleSheet(u"")
+        self.btn_add = QPushButton(self.groupBoxAddressBook)
+        self.btn_add.setObjectName(u"btn_add")
+        self.btn_add.setStyleSheet(u"")
 
-        self.horizontalLayoutAddButton.addWidget(self.btnAdd)
+        self.horizontalLayoutAddButton.addWidget(self.btn_add)
 
 
         self.gridLayout.addLayout(self.horizontalLayoutAddButton, 6, 1, 1, 1)
@@ -123,20 +124,20 @@ class Ui_add_address_book(object):
 
         self.horizontalLayoutAdd.addWidget(self.labelName)
 
-        self.lineEditName = QLineEdit(self.groupBoxAddressBook)
-        self.lineEditName.setObjectName(u"lineEditName")
+        self.lineEdit_name = QLineEdit(self.groupBoxAddressBook)
+        self.lineEdit_name.setObjectName(u"lineEdit_name")
 
-        self.horizontalLayoutAdd.addWidget(self.lineEditName)
+        self.horizontalLayoutAdd.addWidget(self.lineEdit_name)
 
         self.labelPhone = QLabel(self.groupBoxAddressBook)
         self.labelPhone.setObjectName(u"labelPhone")
 
         self.horizontalLayoutAdd.addWidget(self.labelPhone)
 
-        self.lineEditPhone = QLineEdit(self.groupBoxAddressBook)
-        self.lineEditPhone.setObjectName(u"lineEditPhone")
+        self.lineEdit_phone = QLineEdit(self.groupBoxAddressBook)
+        self.lineEdit_phone.setObjectName(u"lineEdit_phone")
 
-        self.horizontalLayoutAdd.addWidget(self.lineEditPhone)
+        self.horizontalLayoutAdd.addWidget(self.lineEdit_phone)
 
 
         self.gridLayout.addLayout(self.horizontalLayoutAdd, 0, 1, 1, 1)
@@ -156,10 +157,10 @@ class Ui_add_address_book(object):
 
         self.horizontalLayoutAddress.addWidget(self.labelAddress)
 
-        self.lineEditAddress = QLineEdit(self.groupBoxAddressBook)
-        self.lineEditAddress.setObjectName(u"lineEditAddress")
+        self.lineEdit_address = QLineEdit(self.groupBoxAddressBook)
+        self.lineEdit_address.setObjectName(u"lineEdit_address")
 
-        self.horizontalLayoutAddress.addWidget(self.lineEditAddress)
+        self.horizontalLayoutAddress.addWidget(self.lineEdit_address)
 
 
         self.gridLayout.addLayout(self.horizontalLayoutAddress, 4, 1, 1, 1)
@@ -181,8 +182,10 @@ class Ui_add_address_book(object):
         add_address_book.setWindowTitle(QCoreApplication.translate("add_address_book", u"\u5730\u5740\u7c3f", None))
         self.groupBoxAddressBook.setTitle(QCoreApplication.translate("add_address_book", u"\u6dfb\u52a0\u5730\u5740\u7c3f", None))
         self.labelProvince.setText(QCoreApplication.translate("add_address_book", u"\u7701\u4efd\uff1a", None))
+        self.comboBox_province.setItemText(0, "")
+
         self.labelCity.setText(QCoreApplication.translate("add_address_book", u"\u5730\u7ea7\u5e02\uff1a", None))
-        self.btnAdd.setText(QCoreApplication.translate("add_address_book", u"\u786e\u8ba4\u6dfb\u52a0", None))
+        self.btn_add.setText(QCoreApplication.translate("add_address_book", u"\u786e\u8ba4\u6dfb\u52a0", None))
         self.labelName.setText(QCoreApplication.translate("add_address_book", u"\u59d3\u540d\uff1a", None))
         self.labelPhone.setText(QCoreApplication.translate("add_address_book", u"\u7535\u8bdd\uff1a", None))
         self.labelAddress.setText(QCoreApplication.translate("add_address_book", u"\u8be6\u7ec6\u5730\u5740\uff1a", None))

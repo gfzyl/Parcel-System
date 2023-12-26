@@ -202,7 +202,7 @@
        </property>
        <layout class="QHBoxLayout" name="horizontalLayoutActions">
         <item>
-         <widget class="QPushButton" name="btnAdd">
+         <widget class="QPushButton" name="btn_addAddress">
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -212,14 +212,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btnModify">
+         <widget class="QPushButton" name="btn_modify">
           <property name="text">
            <string>修改</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btnDelete">
+         <widget class="QPushButton" name="btn_delete">
           <property name="text">
            <string>删除</string>
           </property>
