@@ -20,7 +20,7 @@ class UserMainWindow(QWidget, Ui_user_main):
         login_window.login_signal.connect(self.receive_login_info)
 
     def receive_login_info(self, account):
-        print(f"当前登录账户ID: {account}")
+        print(f"当前登录账户ID: {account}, 身份:User")
 
 
 # 程序入口
