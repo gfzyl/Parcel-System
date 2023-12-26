@@ -35,6 +35,7 @@ class LoginWindow(QWidget,Ui_login):
     def goto_register(self):
         self.hide()
         self.register_window = RegisterWindow()
+        self.set_windowStyle(self.register_window)
         self.register_window.show()
         self.register_window.confirmSignal.connect(self.show_login_window)
 
@@ -43,6 +44,7 @@ class LoginWindow(QWidget,Ui_login):
         # 选择退出登录的时候该界面该隐藏
         self.hide()
         self.guest_main_window = GuestMainWindow()
+        self.set_windowStyle(self.guest_main_window)
         self.guest_main_window.show()
         self.guest_main_window.logout_signal.connect(self.show_login_window)
 
@@ -56,6 +58,7 @@ class LoginWindow(QWidget,Ui_login):
             if self.query_user(self.account, self.pwd):
                 self.user_main_window = UserMainWindow(login_window=self)
                 self.login_signal.emit(self.account)# 发射登录信号
+                self.set_windowStyle(self.user_main_window)
                 self.user_main_window.show()
                 self.user_main_window.logout_signal.connect(self.show_login_window)
 
@@ -64,6 +67,7 @@ class LoginWindow(QWidget,Ui_login):
             if self.query_deliveryman(self.account, self.pwd):
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
+                self.set_windowStyle(self.deliveryman_main_window)
                 self.deliveryman_main_window.show()
                 self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
 
@@ -72,6 +76,7 @@ class LoginWindow(QWidget,Ui_login):
             if self.query_postman(self.account, self.pwd):
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.postman_main_window = PostmanMainWindow(login_window=self)
+                self.set_windowStyle(self.postman_main_window)
                 self.postman_main_window.show()
                 self.postman_main_window.logout_signal.connect(self.show_login_window)
 
@@ -79,6 +84,7 @@ class LoginWindow(QWidget,Ui_login):
         elif self.account.startswith('4'):  # 管理员
             if self.query_admin(self.account, self.pwd):
                 self.admin_main_window = AdminMainWindow()
+                self.set_windowStyle(self.admin_main_window)
                 self.admin_main_window.show()
                 self.admin_main_window.logout_signal.connect(self.show_login_window)
 
@@ -119,6 +125,11 @@ class LoginWindow(QWidget,Ui_login):
         if result and account.startswith('4'):
             return result
 
+    def set_windowStyle(self, window):
+        # 设置窗口图标登样式
+        window.setWindowIcon(QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png"))
+        window.setWindowOpacity(0.95) 
+
 
 
 # 程序入口
@@ -127,9 +138,9 @@ if __name__ == "__main__":
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
     login_window = LoginWindow()
-    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
-    login_window.setWindowOpacity(0.95); 
-    login_window.setWindowIcon(appIcon);
+    appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png")
+    login_window.setWindowOpacity(0.95)
+    login_window.setWindowIcon(appIcon)
     login_window.show()
     app.exec_()
     

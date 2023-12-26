@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>786</width>
-    <height>647</height>
+    <width>909</width>
+    <height>748</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -97,8 +97,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>761</width>
-     <height>621</height>
+     <width>881</width>
+     <height>461</height>
     </rect>
    </property>
    <property name="title">
@@ -107,8 +107,8 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>40</y>
+      <x>130</x>
+      <y>110</y>
       <width>621</width>
       <height>341</height>
      </rect>
@@ -212,12 +212,174 @@
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="returnBtn">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>121</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回上一级</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>60</y>
+      <width>631</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>工号：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="workIdInput_3"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>工作点：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="workCity_2"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="searchBtn_2">
+       <property name="text">
+        <string>查询</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>881</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>选择表单中的员工信息在下方修改</string>
+   </property>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>400</y>
-      <width>711</width>
+      <x>70</x>
+      <y>200</y>
+      <width>751</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="createBtn">
+       <property name="text">
+        <string>新建员工信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="updBtn">
+       <property name="text">
+        <string>修改员工信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="delBtn">
+       <property name="text">
+        <string>删除员工信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>30</y>
+      <width>751</width>
       <height>40</height>
      </rect>
     </property>
@@ -230,7 +392,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit"/>
+      <widget class="QLineEdit" name="workIdInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_3">
@@ -240,16 +402,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit_2"/>
+      <widget class="QLineEdit" name="pwdInput"/>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_2">
+   <widget class="QWidget" name="layoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>450</y>
-      <width>711</width>
+      <x>70</x>
+      <y>80</y>
+      <width>751</width>
       <height>40</height>
      </rect>
     </property>
@@ -262,7 +424,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit_3"/>
+      <widget class="QLineEdit" name="nameInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_5">
@@ -272,7 +434,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input2_lineedit_2"/>
+      <widget class="QLineEdit" name="telInput"/>
      </item>
      <item>
       <widget class="QLabel" name="label_6">
@@ -282,15 +444,15 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit_4"/>
+      <widget class="QLineEdit" name="ageInput"/>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_3">
+   <widget class="QWidget" name="layoutWidget_5">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>500</y>
+      <x>70</x>
+      <y>140</y>
       <width>251</width>
       <height>40</height>
      </rect>
@@ -304,55 +466,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit_5"/>
+      <widget class="QLineEdit" name="workCityInput1"/>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>560</y>
-      <width>531</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="label_8">
        <property name="text">
-        <string>工作点：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBox"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="text">
-        <string>查询</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>新建</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>修改</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>删除</string>
+        <string/>
        </property>
       </widget>
      </item>

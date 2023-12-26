@@ -1,21 +1,21 @@
-# 导入sys
-import sys
-
-# 任何一个PySide界面程序都需要使用QApplication
-# 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
 from PySide6.QtGui import QIcon
-# 导入我们生成的界面
+from ...controller.sql import Sql
 from .admin_manage_postman_ui import Ui_admin_manage_postman
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
-class AdminManagePostmanWindow(QWidget):
+class AdminManagePostmanWindow(QWidget, Ui_admin_manage_postman):
     def __init__(self):
         super().__init__()
-        # 设置界面为我们生成的界面
-        self.ui = Ui_admin_manage_postman()
-        self.ui.setupUi(self)
+        self.setupUi(self)
+        
+        # 按键
+        self.returnBtn.clicked.connect(self.back)
+
+
+    def back(self):
+        self.close()
 
 # 程序入口
 if __name__ == "__main__":

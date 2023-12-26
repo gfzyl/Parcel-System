@@ -17,13 +17,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QTableWidget, QTableWidgetItem, QWidget)
+    QSizePolicy, QSpacerItem, QTableWidget, QTableWidgetItem,
+    QWidget)
 
 class Ui_admin_manage_deliveryman(object):
     def setupUi(self, admin_manage_deliveryman):
         if not admin_manage_deliveryman.objectName():
             admin_manage_deliveryman.setObjectName(u"admin_manage_deliveryman")
-        admin_manage_deliveryman.resize(881, 631)
+        admin_manage_deliveryman.resize(1014, 763)
         admin_manage_deliveryman.setStyleSheet(u"\n"
 "                QLabel {\n"
 "                    color: #333;\n"
@@ -105,7 +106,7 @@ class Ui_admin_manage_deliveryman(object):
 "            ")
         self.groupBox = QGroupBox(admin_manage_deliveryman)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 861, 611))
+        self.groupBox.setGeometry(QRect(10, 10, 991, 461))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 7):
             self.tableWidget.setColumnCount(7)
@@ -152,37 +153,111 @@ class Ui_admin_manage_deliveryman(object):
         __qtablewidgetitem19 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem19)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(80, 30, 721, 341))
+        self.tableWidget.setGeometry(QRect(130, 110, 721, 341))
         self.tableWidget.verticalHeader().setVisible(False)
-        self.layoutWidget = QWidget(self.groupBox)
+        self.returnBtn = QPushButton(self.groupBox)
+        self.returnBtn.setObjectName(u"returnBtn")
+        self.returnBtn.setGeometry(QRect(860, 10, 121, 37))
+        self.layoutWidget_4 = QWidget(self.groupBox)
+        self.layoutWidget_4.setObjectName(u"layoutWidget_4")
+        self.layoutWidget_4.setGeometry(QRect(220, 60, 631, 40))
+        self.horizontalLayout_5 = QHBoxLayout(self.layoutWidget_4)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.label_10 = QLabel(self.layoutWidget_4)
+        self.label_10.setObjectName(u"label_10")
+
+        self.horizontalLayout_5.addWidget(self.label_10)
+
+        self.workIdInput_3 = QLineEdit(self.layoutWidget_4)
+        self.workIdInput_3.setObjectName(u"workIdInput_3")
+
+        self.horizontalLayout_5.addWidget(self.workIdInput_3)
+
+        self.label_11 = QLabel(self.layoutWidget_4)
+        self.label_11.setObjectName(u"label_11")
+
+        self.horizontalLayout_5.addWidget(self.label_11)
+
+        self.workCity_2 = QComboBox(self.layoutWidget_4)
+        self.workCity_2.setObjectName(u"workCity_2")
+
+        self.horizontalLayout_5.addWidget(self.workCity_2)
+
+        self.searchBtn_2 = QPushButton(self.layoutWidget_4)
+        self.searchBtn_2.setObjectName(u"searchBtn_2")
+
+        self.horizontalLayout_5.addWidget(self.searchBtn_2)
+
+        self.groupBox_2 = QGroupBox(admin_manage_deliveryman)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.groupBox_2.setGeometry(QRect(10, 480, 991, 271))
+        self.layoutWidget = QWidget(self.groupBox_2)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 380, 821, 40))
-        self.horizontalLayout = QHBoxLayout(self.layoutWidget)
+        self.layoutWidget.setGeometry(QRect(90, 210, 821, 40))
+        self.horizontalLayout_4 = QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_3)
+
+        self.createBtn = QPushButton(self.layoutWidget)
+        self.createBtn.setObjectName(u"createBtn")
+
+        self.horizontalLayout_4.addWidget(self.createBtn)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_2)
+
+        self.updBtn = QPushButton(self.layoutWidget)
+        self.updBtn.setObjectName(u"updBtn")
+
+        self.horizontalLayout_4.addWidget(self.updBtn)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer)
+
+        self.delBtn = QPushButton(self.layoutWidget)
+        self.delBtn.setObjectName(u"delBtn")
+
+        self.horizontalLayout_4.addWidget(self.delBtn)
+
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_4)
+
+        self.layoutWidget1 = QWidget(self.groupBox_2)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(90, 40, 821, 40))
+        self.horizontalLayout = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.layoutWidget)
+        self.label = QLabel(self.layoutWidget1)
         self.label.setObjectName(u"label")
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.input1_lineedit = QLineEdit(self.layoutWidget)
-        self.input1_lineedit.setObjectName(u"input1_lineedit")
+        self.workIdInput = QLineEdit(self.layoutWidget1)
+        self.workIdInput.setObjectName(u"workIdInput")
 
-        self.horizontalLayout.addWidget(self.input1_lineedit)
+        self.horizontalLayout.addWidget(self.workIdInput)
 
-        self.label_3 = QLabel(self.layoutWidget)
+        self.label_3 = QLabel(self.layoutWidget1)
         self.label_3.setObjectName(u"label_3")
 
         self.horizontalLayout.addWidget(self.label_3)
 
-        self.input1_lineedit_2 = QLineEdit(self.layoutWidget)
-        self.input1_lineedit_2.setObjectName(u"input1_lineedit_2")
+        self.pwdInput = QLineEdit(self.layoutWidget1)
+        self.pwdInput.setObjectName(u"pwdInput")
 
-        self.horizontalLayout.addWidget(self.input1_lineedit_2)
+        self.horizontalLayout.addWidget(self.pwdInput)
 
-        self.layoutWidget_2 = QWidget(self.groupBox)
+        self.layoutWidget_2 = QWidget(self.groupBox_2)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(20, 430, 821, 40))
+        self.layoutWidget_2.setGeometry(QRect(90, 90, 821, 40))
         self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -191,34 +266,34 @@ class Ui_admin_manage_deliveryman(object):
 
         self.horizontalLayout_2.addWidget(self.label_4)
 
-        self.input1_lineedit_3 = QLineEdit(self.layoutWidget_2)
-        self.input1_lineedit_3.setObjectName(u"input1_lineedit_3")
+        self.nameInput = QLineEdit(self.layoutWidget_2)
+        self.nameInput.setObjectName(u"nameInput")
 
-        self.horizontalLayout_2.addWidget(self.input1_lineedit_3)
+        self.horizontalLayout_2.addWidget(self.nameInput)
 
         self.label_5 = QLabel(self.layoutWidget_2)
         self.label_5.setObjectName(u"label_5")
 
         self.horizontalLayout_2.addWidget(self.label_5)
 
-        self.input2_lineedit_2 = QLineEdit(self.layoutWidget_2)
-        self.input2_lineedit_2.setObjectName(u"input2_lineedit_2")
+        self.telInput = QLineEdit(self.layoutWidget_2)
+        self.telInput.setObjectName(u"telInput")
 
-        self.horizontalLayout_2.addWidget(self.input2_lineedit_2)
+        self.horizontalLayout_2.addWidget(self.telInput)
 
         self.label_6 = QLabel(self.layoutWidget_2)
         self.label_6.setObjectName(u"label_6")
 
         self.horizontalLayout_2.addWidget(self.label_6)
 
-        self.input1_lineedit_4 = QLineEdit(self.layoutWidget_2)
-        self.input1_lineedit_4.setObjectName(u"input1_lineedit_4")
+        self.ageInput = QLineEdit(self.layoutWidget_2)
+        self.ageInput.setObjectName(u"ageInput")
 
-        self.horizontalLayout_2.addWidget(self.input1_lineedit_4)
+        self.horizontalLayout_2.addWidget(self.ageInput)
 
-        self.layoutWidget_3 = QWidget(self.groupBox)
+        self.layoutWidget_3 = QWidget(self.groupBox_2)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
-        self.layoutWidget_3.setGeometry(QRect(20, 490, 581, 40))
+        self.layoutWidget_3.setGeometry(QRect(90, 150, 821, 40))
         self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -227,56 +302,20 @@ class Ui_admin_manage_deliveryman(object):
 
         self.horizontalLayout_3.addWidget(self.label_7)
 
-        self.input1_lineedit_5 = QLineEdit(self.layoutWidget_3)
-        self.input1_lineedit_5.setObjectName(u"input1_lineedit_5")
+        self.workCityInput1 = QLineEdit(self.layoutWidget_3)
+        self.workCityInput1.setObjectName(u"workCityInput1")
 
-        self.horizontalLayout_3.addWidget(self.input1_lineedit_5)
+        self.horizontalLayout_3.addWidget(self.workCityInput1)
 
         self.label_8 = QLabel(self.layoutWidget_3)
         self.label_8.setObjectName(u"label_8")
 
         self.horizontalLayout_3.addWidget(self.label_8)
 
-        self.input2_lineedit_3 = QLineEdit(self.layoutWidget_3)
-        self.input2_lineedit_3.setObjectName(u"input2_lineedit_3")
+        self.workCityInput2 = QLineEdit(self.layoutWidget_3)
+        self.workCityInput2.setObjectName(u"workCityInput2")
 
-        self.horizontalLayout_3.addWidget(self.input2_lineedit_3)
-
-        self.layoutWidget1 = QWidget(self.groupBox)
-        self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(20, 550, 581, 40))
-        self.horizontalLayout_4 = QHBoxLayout(self.layoutWidget1)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.label_9 = QLabel(self.layoutWidget1)
-        self.label_9.setObjectName(u"label_9")
-
-        self.horizontalLayout_4.addWidget(self.label_9)
-
-        self.comboBox = QComboBox(self.layoutWidget1)
-        self.comboBox.setObjectName(u"comboBox")
-
-        self.horizontalLayout_4.addWidget(self.comboBox)
-
-        self.pushButton_4 = QPushButton(self.layoutWidget1)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-
-        self.horizontalLayout_4.addWidget(self.pushButton_4)
-
-        self.pushButton = QPushButton(self.layoutWidget1)
-        self.pushButton.setObjectName(u"pushButton")
-
-        self.horizontalLayout_4.addWidget(self.pushButton)
-
-        self.pushButton_2 = QPushButton(self.layoutWidget1)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-
-        self.horizontalLayout_4.addWidget(self.pushButton_2)
-
-        self.pushButton_3 = QPushButton(self.layoutWidget1)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-
-        self.horizontalLayout_4.addWidget(self.pushButton_3)
+        self.horizontalLayout_3.addWidget(self.workCityInput2)
 
 
         self.retranslateUi(admin_manage_deliveryman)
@@ -327,6 +366,14 @@ class Ui_admin_manage_deliveryman(object):
         ___qtablewidgetitem18.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u884c", None));
+        self.returnBtn.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
+        self.label_10.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u53f7\uff1a", None))
+        self.label_11.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b9\uff1a", None))
+        self.searchBtn_2.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u67e5\u8be2", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("admin_manage_deliveryman", u"\u9009\u62e9\u8868\u5355\u4e2d\u7684\u5458\u5de5\u4fe1\u606f\u5728\u4e0b\u65b9\u4fee\u6539", None))
+        self.createBtn.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa\u5458\u5de5\u4fe1\u606f", None))
+        self.updBtn.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u4fee\u6539\u5458\u5de5\u4fe1\u606f", None))
+        self.delBtn.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5220\u9664\u5458\u5de5\u4fe1\u606f", None))
         self.label.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u53f7\uff1a", None))
         self.label_3.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5bc6\u7801\uff1a", None))
         self.label_4.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u59d3\u540d\uff1a", None))
@@ -334,10 +381,5 @@ class Ui_admin_manage_deliveryman(object):
         self.label_6.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5e74\u9f84\uff1a", None))
         self.label_7.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b91\uff1a", None))
         self.label_8.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b92\uff1a", None))
-        self.label_9.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5de5\u4f5c\u70b91\uff1a", None))
-        self.pushButton_4.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u67e5\u8be2", None))
-        self.pushButton.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u65b0\u5efa", None))
-        self.pushButton_2.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u4fee\u6539", None))
-        self.pushButton_3.setText(QCoreApplication.translate("admin_manage_deliveryman", u"\u5220\u9664", None))
     # retranslateUi
 
