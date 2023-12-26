@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
+    <width>548</width>
     <height>504</height>
    </rect>
   </property>
@@ -112,7 +112,7 @@
      <rect>
       <x>10</x>
       <y>70</y>
-      <width>421</width>
+      <width>531</width>
       <height>301</height>
      </rect>
     </property>
@@ -171,6 +171,11 @@
     </row>
     <column>
      <property name="text">
+      <string>序号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
       <string>快递单号</string>
      </property>
     </column>
@@ -181,7 +186,7 @@
     </column>
     <column>
      <property name="text">
-      <string>当前状态</string>
+      <string>当前位置</string>
      </property>
     </column>
     <column>
@@ -218,23 +223,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_place">
-       <item>
-        <property name="text">
-         <string>途经城市1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>途经城市2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>途经城市3</string>
-        </property>
-       </item>
-      </widget>
+      <widget class="QComboBox" name="comboBox_place"/>
      </item>
     </layout>
    </widget>

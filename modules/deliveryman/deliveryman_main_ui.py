@@ -23,7 +23,7 @@ class Ui_deliveryman_main(object):
     def setupUi(self, deliveryman_main):
         if not deliveryman_main.objectName():
             deliveryman_main.setObjectName(u"deliveryman_main")
-        deliveryman_main.resize(547, 504)
+        deliveryman_main.resize(548, 504)
         self.groupBox = QGroupBox(deliveryman_main)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(10, 10, 521, 481))
@@ -99,8 +99,8 @@ class Ui_deliveryman_main(object):
         self.btn_return.setObjectName(u"btn_return")
         self.btn_return.setGeometry(QRect(404, 20, 101, 31))
         self.tableWidget = QTableWidget(self.groupBox)
-        if (self.tableWidget.columnCount() < 4):
-            self.tableWidget.setColumnCount(4)
+        if (self.tableWidget.columnCount() < 5):
+            self.tableWidget.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -109,30 +109,32 @@ class Ui_deliveryman_main(object):
         self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         if (self.tableWidget.rowCount() < 10):
             self.tableWidget.setRowCount(10)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem5)
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem6)
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem7)
+        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem8)
+        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem9)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem10)
+        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem11)
+        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem12)
+        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem13)
+        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem14)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 70, 421, 301))
+        self.tableWidget.setGeometry(QRect(10, 70, 531, 301))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
@@ -156,9 +158,6 @@ class Ui_deliveryman_main(object):
         self.horizontalLayout.addWidget(self.label_2)
 
         self.comboBox_place = QComboBox(self.layoutWidget)
-        self.comboBox_place.addItem("")
-        self.comboBox_place.addItem("")
-        self.comboBox_place.addItem("")
         self.comboBox_place.setObjectName(u"comboBox_place")
 
         self.horizontalLayout.addWidget(self.comboBox_place)
@@ -177,39 +176,37 @@ class Ui_deliveryman_main(object):
         self.groupBox.setTitle(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u4fe1\u606f", None))
         self.btn_return.setText(QCoreApplication.translate("deliveryman_main", u"\u9000\u51fa\u767b\u5f55", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u5355\u53f7", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("deliveryman_main", u"\u5e8f\u53f7", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("deliveryman_main", u"\u5b8c\u6574\u7ebf\u8def", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u72b6\u6001", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("deliveryman_main", u"\u5b8c\u6574\u7ebf\u8def", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("deliveryman_main", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
-        ___qtablewidgetitem4 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u4f4d\u7f6e", None));
+        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("deliveryman_main", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
+        ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(1)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(2)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(3)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(5)
+        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(6)
+        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(5)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(7)
+        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(6)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(8)
+        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(7)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
-        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(8)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
+        ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
         self.label.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u4f4d\u7f6e\uff1a", None))
         self.label_2.setText(QCoreApplication.translate("deliveryman_main", u"\u9009\u62e9\u6700\u65b0\u5230\u8fbe\u4f4d\u7f6e\uff1a", None))
-        self.comboBox_place.setItemText(0, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e021", None))
-        self.comboBox_place.setItemText(1, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e022", None))
-        self.comboBox_place.setItemText(2, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e023", None))
-
         self.btn_confirm.setText(QCoreApplication.translate("deliveryman_main", u"\u786e\u8ba4\u66f4\u6539", None))
     # retranslateUi
 

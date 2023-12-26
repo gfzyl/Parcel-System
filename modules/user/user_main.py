@@ -12,6 +12,7 @@ from .user_modify_info_ui import Ui_user_modify_info
 from .user_search_delivery_ui import Ui_user_search_delivery
 from .user_sendout_ui import Ui_user_sendout
 from ...controller.sql import Sql
+from ...controller.routeMap import route
 
 
 
@@ -249,14 +250,20 @@ class Window3(QWidget,Ui_myReceive):
         self.tableWidget.clearContents()
         self.tableWidget.setRowCount(0)
 
+
         # 将查询结果填充到表格中
         for row_num, row_data in enumerate(result):
             print(row_data)
             self.tableWidget.insertRow(row_num)
 
+            result = route(row_data[3], row_data[8])
+            result_route = '->'.join(result)
+            result_route =result_route + '->'+row_data[9]+'->'+row_data[10]
+            print(result_route)
+
             item1 = QTableWidgetItem(str(row_data[0]))
             self.tableWidget.setItem(row_num, 0, item1)
-            item2 = QTableWidgetItem(str(row_data[0]))
+            item2 = QTableWidgetItem(str(result_route))
             self.tableWidget.setItem(row_num, 1, item2)
             item3 = QTableWidgetItem(str(row_data[14]))
             self.tableWidget.setItem(row_num, 2, item3)
@@ -313,9 +320,14 @@ class Window4(QWidget,Ui_mySend):
             print(row_data)
             self.tableWidget.insertRow(row_num)
 
+            result = route(row_data[3], row_data[8])
+            result_route = '->'.join(result)
+            result_route = result_route + '->' + row_data[9] + '->' + row_data[10]
+            print(result_route)
+
             item1 = QTableWidgetItem(str(row_data[0]))
             self.tableWidget.setItem(row_num, 0, item1)
-            item2 = QTableWidgetItem(str(row_data[0]))
+            item2 = QTableWidgetItem(str(result_route))
             self.tableWidget.setItem(row_num, 1, item2)
             item3 = QTableWidgetItem(str(row_data[14]))
             self.tableWidget.setItem(row_num, 2, item3)
@@ -338,6 +350,7 @@ class Window5(QWidget,Ui_user_modify_info):
         self.btn_changePassword.clicked.connect(self.changePassword)
         self.btn_changePhone.clicked.connect(self.changePhone)
         self.btn_viewAddressBook.clicked.connect(self.viewAddressBook)
+        self.btn_return.clicked.connect(self.back)
         self.account =loginWindow.account
 
     def changePassword(self):
@@ -369,6 +382,9 @@ class Window5(QWidget,Ui_user_modify_info):
         self.window_viewAdress = Window_viewAddress(loginWindow=self)
         self.window_viewAdress.show()
 
+    def back(self):
+        self.close()
+
 class Window_viewAddress(QWidget,Ui_address_book):
     def __init__(self,loginWindow):
         super().__init__()
@@ -381,8 +397,8 @@ class Window_viewAddress(QWidget,Ui_address_book):
 
         self.tableWidget.cellClicked.connect(self.cellClicked)
         self.btn_addAddress.clicked.connect(self.addAddress)
-        self.btn_modify.clicked.connect(self.modify)
         self.btn_delete.clicked.connect(self.delete)
+        self.btn_return.clicked.connect(self.back)
 
     def insertData(self):
 
@@ -422,19 +438,6 @@ class Window_viewAddress(QWidget,Ui_address_book):
         self.window_addAdress = Window_addAddress(loginWindow=self)
         self.window_addAdress.show()
 
-    def modify(self):        #表格数据有问题，暂时不实现
-        pass
-        # result_name = self.tableWidget.item(self.row, 1).text()
-        # result_phone = self.tableWidget.item(self.row, 2).text()
-        # result_province = self.tableWidget.item(self.row, 3).text()
-        # result_city = self.tableWidget.item(self.row, 4).text()
-        # result_address = self.tableWidget.item(self.row, 5).text()
-        #
-        # statement = f"UPDATE parcel_info SET status = 2 WHERE name= %s AND phone =%s AND province=%s AND city=%s AND address=%s"
-        # value = (result_name,result_phone,result_province,result_city,result_address)  # 单个元素加上逗号
-        # self.sql.execute_update(statement, value)
-
-
     def delete(self):
         result_name = self.tableWidget.item(self.row, 1).text()
         result_phone = self.tableWidget.item(self.row, 2).text()
@@ -445,6 +448,9 @@ class Window_viewAddress(QWidget,Ui_address_book):
         statement = f"DELETE FROM address_book WHERE name= %s AND phone =%s AND province=%s AND city=%s AND place=%s"
         value = (result_name, result_phone, result_province, result_city, result_address)  # 单个元素加上逗号
         self.sql.execute_update(statement, value)
+
+    def back(self):
+        self.close()
 
 
 class Window_addAddress(QWidget,Ui_add_address_book):
@@ -465,9 +471,7 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         self.comboBox_province.addItems(result_list)
         self.comboBox_province.currentTextChanged.connect(self.change_1)
         self.btn_add.clicked.connect(self.bind)
-
-
-
+        self.btn_return.clicked.connect(self.back)
 
     def change_1(self):
         result = self.comboBox_province.currentText()
@@ -476,6 +480,7 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         result_list = [item[0] for item in result_comboBox]
         self.comboBox_city.clear()
         self.comboBox_city.addItems(result_list)
+
 
 
     def bind(self):
@@ -488,6 +493,9 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         statement = "INSERT INTO address_book (user_id,name,phone,province,city,place) VALUES (%s,%s, %s, %s,%s,%s)"
         values = (self.account,result_name, result_phone, result_province, result_city, result_address)
         self.sql.execute_insert(statement, values)
+
+    def back(self):
+        self.close()
 
 
 # 程序入口

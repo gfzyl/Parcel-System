@@ -23,7 +23,8 @@ class Ui_add_address_book(object):
     def setupUi(self, add_address_book):
         if not add_address_book.objectName():
             add_address_book.setObjectName(u"add_address_book")
-        add_address_book.resize(626, 329)
+        add_address_book.resize(570, 375)
+        add_address_book.setMaximumSize(QSize(1000000, 16777215))
         self.verticalLayout = QVBoxLayout(add_address_book)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.groupBoxAddressBook = QGroupBox(add_address_book)
@@ -71,9 +72,17 @@ class Ui_add_address_book(object):
 "        ")
         self.gridLayout = QGridLayout(self.groupBoxAddressBook)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
+
+        self.gridLayout.addItem(self.verticalSpacer_3, 1, 1, 1, 1)
+
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
         self.gridLayout.addItem(self.horizontalSpacer, 6, 0, 1, 1)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
+
+        self.gridLayout.addItem(self.verticalSpacer, 5, 1, 1, 1)
 
         self.horizontalLayoutProvinceCity = QHBoxLayout()
         self.horizontalLayoutProvinceCity.setObjectName(u"horizontalLayoutProvinceCity")
@@ -104,18 +113,33 @@ class Ui_add_address_book(object):
 
         self.horizontalLayoutAddButton = QHBoxLayout()
         self.horizontalLayoutAddButton.setObjectName(u"horizontalLayoutAddButton")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.btn_add = QPushButton(self.groupBoxAddressBook)
         self.btn_add.setObjectName(u"btn_add")
         self.btn_add.setStyleSheet(u"")
 
-        self.horizontalLayoutAddButton.addWidget(self.btn_add)
+        self.horizontalLayout.addWidget(self.btn_add)
+
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer_3)
+
+        self.btn_return = QPushButton(self.groupBoxAddressBook)
+        self.btn_return.setObjectName(u"btn_return")
+        self.btn_return.setStyleSheet(u"")
+
+        self.horizontalLayout.addWidget(self.btn_return)
+
+
+        self.horizontalLayoutAddButton.addLayout(self.horizontalLayout)
 
 
         self.gridLayout.addLayout(self.horizontalLayoutAddButton, 6, 1, 1, 1)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
-        self.gridLayout.addItem(self.verticalSpacer_3, 1, 1, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer_2, 3, 1, 1, 1)
 
         self.horizontalLayoutAdd = QHBoxLayout()
         self.horizontalLayoutAdd.setObjectName(u"horizontalLayoutAdd")
@@ -142,13 +166,9 @@ class Ui_add_address_book(object):
 
         self.gridLayout.addLayout(self.horizontalLayoutAdd, 0, 1, 1, 1)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
-        self.gridLayout.addItem(self.verticalSpacer_2, 3, 1, 1, 1)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
-
-        self.gridLayout.addItem(self.verticalSpacer, 5, 1, 1, 1)
+        self.gridLayout.addItem(self.horizontalSpacer_2, 6, 2, 1, 1)
 
         self.horizontalLayoutAddress = QHBoxLayout()
         self.horizontalLayoutAddress.setObjectName(u"horizontalLayoutAddress")
@@ -164,10 +184,6 @@ class Ui_add_address_book(object):
 
 
         self.gridLayout.addLayout(self.horizontalLayoutAddress, 4, 1, 1, 1)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
-
-        self.gridLayout.addItem(self.horizontalSpacer_2, 6, 2, 1, 1)
 
 
         self.verticalLayout.addWidget(self.groupBoxAddressBook)
@@ -186,6 +202,7 @@ class Ui_add_address_book(object):
 
         self.labelCity.setText(QCoreApplication.translate("add_address_book", u"\u5730\u7ea7\u5e02\uff1a", None))
         self.btn_add.setText(QCoreApplication.translate("add_address_book", u"\u786e\u8ba4\u6dfb\u52a0", None))
+        self.btn_return.setText(QCoreApplication.translate("add_address_book", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
         self.labelName.setText(QCoreApplication.translate("add_address_book", u"\u59d3\u540d\uff1a", None))
         self.labelPhone.setText(QCoreApplication.translate("add_address_book", u"\u7535\u8bdd\uff1a", None))
         self.labelAddress.setText(QCoreApplication.translate("add_address_book", u"\u8be6\u7ec6\u5730\u5740\uff1a", None))

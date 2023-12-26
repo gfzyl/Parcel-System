@@ -20,7 +20,7 @@ class Sql:
         try:
             self.cursor.execute(statement)
             result = self.cursor.fetchall()
-            print("查询成功")
+            #print("查询成功")
             if result == []:
                 result   = [('',), ]
             return result
@@ -43,8 +43,6 @@ class Sql:
 
     def execute_delete(self, statement, value=None):
             self.execute_update(statement, value)
-
-
 
 
     def close(self):

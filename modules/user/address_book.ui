@@ -212,16 +212,16 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btn_modify">
+         <widget class="QPushButton" name="btn_delete">
           <property name="text">
            <string>修改</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btn_delete">
+         <widget class="QPushButton" name="btn_return">
           <property name="text">
-           <string>删除</string>
+           <string>返回上一级</string>
           </property>
          </widget>
         </item>
