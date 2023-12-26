@@ -107,9 +107,9 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>90</x>
       <y>110</y>
-      <width>721</width>
+      <width>821</width>
       <height>341</height>
      </rect>
     </property>
@@ -203,17 +203,22 @@
     </column>
     <column>
      <property name="text">
-      <string>年龄</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>工作点1</string>
      </property>
     </column>
     <column>
      <property name="text">
       <string>工作点2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>当前位置</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>年龄</string>
      </property>
     </column>
    </widget>
@@ -248,7 +253,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workIdInput_3"/>
+      <widget class="QLineEdit" name="workIdInputTop"/>
      </item>
      <item>
       <widget class="QLabel" name="label_11">
@@ -258,10 +263,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="workCity_2"/>
+      <widget class="QComboBox" name="workCityBox">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="searchBtn_2">
+      <widget class="QPushButton" name="searchBtn">
        <property name="text">
         <string>查询</string>
        </property>
@@ -397,7 +408,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="workIdInput"/>
+      <widget class="QLineEdit" name="workIdInputBotttom"/>
      </item>
      <item>
       <widget class="QLabel" name="label_3">

@@ -14,7 +14,7 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
         self.sql = Sql()
         self.sql.connect()
         
-        # 把市表查出来放进sendCityBox和reCityBox
+        # 把省表查出来放进sendCityBox和reCityBox
         statement = 'SELECT prv_name FROM province'
         province = self.sql.execute_query(statement)
         provinceList = [item[0] for item in province]
@@ -61,7 +61,7 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
         self.deliverymanId = self.deliveryIdInput.text()
         self.postmanId = self.postIdInput.text()
         # 用户可以任意输入或选择（可以叠加信息）
-        print( self.sendPrv,self.sendCity, self.receivePrv,self.receiveCity,self.parcelId, self.tel, self.deliverymanId, self.postmanId)
+        # print( self.sendPrv,self.sendCity, self.receivePrv,self.receiveCity,self.parcelId, self.tel, self.deliverymanId, self.postmanId)
         
         base_query = 'SELECT * FROM parcel_info WHERE 1=1' # 永真式，如果下面一个也没点的话就是查出所有
         # 根据用户的输入情况构建不同的 SQL 查询语句
@@ -91,10 +91,9 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
             base_query += f" AND post_id = '{self.postmanId}'"
         # 最终构建的 SQL 查询语句
         query = base_query
-        # 打印查询语句，可以根据需要调试
-        print(query)
+        # print(query)
         parcelInfo = self.sql.execute_query(query)
-        print(parcelInfo)
+        # print(parcelInfo)
         
         if parcelInfo:
             self.tableWidget.clearContents()

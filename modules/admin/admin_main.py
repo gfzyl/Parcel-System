@@ -35,24 +35,34 @@ class AdminMainWindow(QWidget,Ui_admin_main):
         self.delivery_search_window = AdminSearchDeliveryWindow()
 
     def goto_admin_search_deliveryman(self):
+        self.set_windowStyle(self.deliveryman_search_window)
         self.deliveryman_search_window.show()
 
     def goto_admin_manage_deliveryman(self):
+        self.set_windowStyle(self.deliveryman_manage_window)
         self.deliveryman_manage_window.show()
 
     def goto_admin_search_postman(self):
+        self.set_windowStyle(self.postman_search_window)
         self.postman_search_window.show()
 
     def goto_admin_manage_postman(self):
+        self.set_windowStyle(self.postman_manage_window)
         self.postman_manage_window.show()
 
     def goto_admin_search_delivery(self):
+        self.set_windowStyle(self.delivery_search_window)
         self.delivery_search_window.show()
 
     def goto_logout(self):
         # 选择退出登录的时候触发信号
         self.logout_signal.emit()
         self.close()
+
+    def set_windowStyle(self, window):
+        # 设置窗口图标登样式
+        window.setWindowIcon(QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png"))
+        window.setWindowOpacity(0.95) 
 
 
 # 程序入口
