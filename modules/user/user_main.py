@@ -17,7 +17,7 @@ from ...controller.sql import Sql
 
 class UserMainWindow(QWidget,Ui_user_main):
     logout_signal = Signal()
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         self.setupUi(self)
         self.queryBtn.clicked.connect(self.queryFun)
@@ -26,7 +26,7 @@ class UserMainWindow(QWidget,Ui_user_main):
         self.mySendBtn.clicked.connect(self.mySendFun)
         self.modifyInfoBtn.clicked.connect(self.modifyInfoFun)
         self.logoutBtn.clicked.connect(self.logoutFun)
-        loginWindow.loginin_signal.connect(self.receiveAccount)
+        login_window.login_signal.connect(self.receiveAccount)
 
     def receiveAccount(self,account):
         self.account = account
@@ -41,15 +41,15 @@ class UserMainWindow(QWidget,Ui_user_main):
         self.sendWindow.show()
 
     def myReceiveFun(self):
-        self.myReceiveWindow=Window3(loginWindow=self)
+        self.myReceiveWindow=Window3(login_window=self)
         self.myReceiveWindow.show()
 
     def mySendFun(self):
-        self.mySendWindow=Window4(loginWindow=self)
+        self.mySendWindow=Window4(login_window=self)
         self.mySendWindow.show()
 
     def modifyInfoFun(self):
-        self.modifyInfoWindow=Window5(loginWindow=self)
+        self.modifyInfoWindow=Window5(login_window=self)
         self.modifyInfoWindow.show()
 
     def logoutFun(self):
@@ -219,13 +219,13 @@ class Window2(QWidget,Ui_user_sendout):
             self.sql.execute_insert(statement, values)
 
 class Window3(QWidget,Ui_myReceive):
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         # 我收到的
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
-        self.account = loginWindow.account
+        self.account = login_window.account
         self.insertData()
 
 
@@ -236,7 +236,7 @@ class Window3(QWidget,Ui_myReceive):
 
     def insertData(self):
 
-        # temp = LoginWindow()     #调用登陆时输入的账号
+        # temp = login_window()     #调用登陆时输入的账号
         #self.account = '120'  # 后面替换
 
         statement = f"SELECT * FROM parcel_info WHERE recipient_tel = '{self.account}'"
@@ -283,19 +283,19 @@ class Window3(QWidget,Ui_myReceive):
         self.close()
 
 class Window4(QWidget,Ui_mySend):
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         # 我寄的
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
-        self.account=loginWindow.account
+        self.account=login_window.account
 
         self.insertData()
         self.returnBtn.clicked.connect(self.back)
 
     def insertData(self):
-        # temp = LoginWindow()     #调用登陆时输入的账号
+        # temp = login_window()     #调用登陆时输入的账号
         #self.account = '110'  # 后面替换
 
         statement = f"SELECT * FROM parcel_info WHERE sender_tel = '{self.account}'"
@@ -325,7 +325,7 @@ class Window4(QWidget,Ui_mySend):
         self.close()
 
 class Window5(QWidget,Ui_user_modify_info):
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
@@ -335,7 +335,7 @@ class Window5(QWidget,Ui_user_modify_info):
         self.btn_changePassword.clicked.connect(self.changePassword)
         self.btn_changePhone.clicked.connect(self.changePhone)
         self.btn_viewAddressBook.clicked.connect(self.viewAddressBook)
-        self.account =loginWindow.account
+        self.account =login_window.account
 
     def changePassword(self):
         result_oldPassword = self.lineEdit_oldPassword.text()
@@ -363,18 +363,18 @@ class Window5(QWidget,Ui_user_modify_info):
         values = (result_newPhone, self.account)
         self.sql.execute_update(statement, values)
     def viewAddressBook(self):
-        self.window_viewAdress = Window_viewAddress(loginWindow=self)
+        self.window_viewAdress = Window_viewAddress(login_window=self)
         self.window_viewAdress.show()
 
 class Window_viewAddress(QWidget,Ui_address_book):
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
         self.insertData()
-        self.account =loginWindow.account
+        self.account =login_window.account
 
         self.tableWidget.cellClicked.connect(self.cellClicked)
         self.btn_addAddress.clicked.connect(self.addAddress)
@@ -383,7 +383,7 @@ class Window_viewAddress(QWidget,Ui_address_book):
 
     def insertData(self):
 
-        # temp = LoginWindow()     #调用登陆时输入的账号
+        # temp = login_window()     #调用登陆时输入的账号
         self.account = '1'  # 后面替换
 
         statement = f"SELECT * FROM address_book WHERE user_id = '{self.account}'"
@@ -416,7 +416,7 @@ class Window_viewAddress(QWidget,Ui_address_book):
         self.column = column
 
     def addAddress(self):
-        self.window_addAdress = Window_addAddress(loginWindow=self)
+        self.window_addAdress = Window_addAddress(login_window=self)
         self.window_addAdress.show()
 
     def modify(self):        #表格数据有问题，暂时不实现
@@ -445,13 +445,13 @@ class Window_viewAddress(QWidget,Ui_address_book):
 
 
 class Window_addAddress(QWidget,Ui_add_address_book):
-    def __init__(self,loginWindow):
+    def __init__(self,login_window):
         super().__init__()
         # 修改个人信息
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
-        self.account=loginWindow.account
+        self.account=login_window.account
 
         statement = "SELECT prv_name FROM province"
         result_comboBox = self.sql.execute_query(statement)
