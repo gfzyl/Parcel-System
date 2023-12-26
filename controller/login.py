@@ -48,7 +48,7 @@ class LoginWindow(QWidget,Ui_login):
 
 
     def goto_vary_main(self):
-    # 普通用户的账户是数字1开头，派送员的账户是数字2开头，快递员的账户是数字3开头，管理员的账户是数字4开头
+        # 普通用户的账户是数字1开头，派送员的账户是数字2开头，快递员的账户是数字3开头，管理员的账户是数字4开头
         self.account = self.accountInput.text()
         self.pwd = self.pwdInput.text()
 

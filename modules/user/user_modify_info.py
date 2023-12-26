@@ -10,12 +10,10 @@ from .user_modify_info_ui import Ui_user_modify_info
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法
-class UserModifyInfoWindow(QWidget):
+class UserModifyInfoWindow(QWidget, Ui_user_modify_info):
     def __init__(self):
         super().__init__()
-        # 设置界面为我们生成的界面
-        self.ui = Ui_user_modify_info()
-        self.ui.setupUi(self)
+        self.setupUi(self)
 
 # 程序入口
 if __name__ == "__main__":
