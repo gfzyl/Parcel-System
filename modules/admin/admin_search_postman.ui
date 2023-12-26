@@ -225,7 +225,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input1_lineedit">
+      <widget class="QLineEdit" name="workIdInput">
        <property name="placeholderText">
         <string>按工号查询</string>
        </property>
@@ -239,14 +239,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="input2_lineedit">
+      <widget class="QLineEdit" name="telInput">
        <property name="placeholderText">
         <string>按电话号码查询</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_query">
+      <widget class="QPushButton" name="searchBtn">
        <property name="text">
         <string>查询</string>
        </property>

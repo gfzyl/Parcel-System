@@ -203,12 +203,12 @@
     </column>
     <column>
      <property name="text">
-      <string>新建列</string>
+      <string>地级市</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>地级市</string>
+      <string>详细地址</string>
      </property>
     </column>
     <column>

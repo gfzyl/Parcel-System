@@ -3,6 +3,7 @@ from ..modules.login.login_ui import Ui_login
 from PySide6.QtWidgets import QApplication, QWidget
 from qt_material import apply_stylesheet
 from PySide6.QtGui import QIcon
+from PySide6.QtCore import Signal # 发送给各界面信号，主要发送账号
 from .sql import Sql  # 连接数据库
 
 
@@ -16,6 +17,9 @@ from ..modules.admin.admin_main import AdminMainWindow
 
 
 class LoginWindow(QWidget,Ui_login):
+    # 专门为后续界面提供成功登录的账号
+    # 2023-12-25 02:36 其他界面已经可以接收账号,只要发给用户/快递员/配送员即可
+    login_signal = Signal(str)
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -25,16 +29,19 @@ class LoginWindow(QWidget,Ui_login):
         self.guestBtn.clicked.connect(self.goto_guest_main)
         
         # 以后就直接引入别的界面就可以
-        self.user_main_window = UserMainWindow()
+        self.user_main_window = UserMainWindow(login_window=self)
         self.admin_main_window = AdminMainWindow()
         self.guest_main_window = GuestMainWindow()
-        self.deliveryman_main_window = DeliverymanMainWindow()
-        self.postman_main_window = PostmanMainWindow()
+        self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
+        self.postman_main_window = PostmanMainWindow(login_window=self)
         self.register_window = RegisterWindow()
 
         # 连接信号,每个界面都有返回登录的操作，最终将返回至登录界面
         self.admin_main_window.logout_signal.connect(self.show_login_window)
         self.guest_main_window.logout_signal.connect(self.show_login_window)
+        self.register_window.confirmSignal.connect(self.show_login_window)
+        self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
+        self.postman_main_window.logout_signal.connect(self.show_login_window)
         # 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
 
 
@@ -58,17 +65,19 @@ class LoginWindow(QWidget,Ui_login):
         self.account = self.accountInput.text()
         self.pwd = self.pwdInput.text()
 
-        # 假设你的数据库中有不同的表用于存储每种类型的用户信息
         if self.account.startswith('1'):  # 普通用户
             if self.query_user(self.account, self.pwd):
+                self.login_signal.emit(self.account)# 发射登录信号
                 self.user_main_window.show()
 
         elif self.account.startswith('2'):  # 派送员
-            if self.query_user(self.account, self.pwd):
+            if self.query_deliveryman(self.account, self.pwd):
+                self.login_signal.emit(self.account)# 发射登录信号
                 self.deliveryman_main_window.show()
 
         elif self.account.startswith('3'):  # 快递员
-            if self.query_user(self.account, self.pwd):
+            if self.query_postman(self.account, self.pwd):
+                self.login_signal.emit(self.account)# 发射登录信号
                 self.postman_main_window.show()
 
         elif self.account.startswith('4'):  # 管理员
@@ -118,9 +127,10 @@ if __name__ == "__main__":
     # 初始化QApplication，界面展示要包含在QApplication初始化之后，结束之前
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
-    window = LoginWindow()
+    login_window = LoginWindow()
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png");
-    window.setWindowIcon(appIcon);
-    window.show()
+    login_window.setWindowOpacity(0.95); 
+    login_window.setWindowIcon(appIcon);
+    login_window.show()
     app.exec_()
     

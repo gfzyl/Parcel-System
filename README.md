@@ -11,3 +11,4 @@ python -m Parcel-System.controller.login
 
 2023-12-25 11:42 现在已经可以实现登录界面到其他页面的跳转
 
+0 1 2 分别表示未送达，已送达但未签收，已签收

@@ -196,9 +196,9 @@ class Ui_postman_search_delivery(object):
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_search_delivery", u"\u7701\u4efd", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u5217", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_search_delivery", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_search_delivery", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_search_delivery", u"\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_search_delivery", u"\u76ee\u524d\u72b6\u6001", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(0)

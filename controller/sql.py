@@ -11,7 +11,13 @@ class Sql:
 
     def connect(self):
         try:
-            self.conn = pymssql.connect(self.server, self.user, self.password, self.database)
+            self.conn = pymssql.connect(
+                self.server,
+                self.user,
+                self.password,
+                self.database,
+                charset='utf8'
+                )
             self.cursor = self.conn.cursor()
         except Exception as e:
             print(f"连接数据库错误: {e}")

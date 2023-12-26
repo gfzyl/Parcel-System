@@ -40,9 +40,9 @@ class Ui_register(object):
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
 
-        self.phoneInput = QLineEdit(register)
-        self.phoneInput.setObjectName(u"phoneInput")
-        self.phoneInput.setStyleSheet(u"\n"
+        self.accountInput = QLineEdit(register)
+        self.accountInput.setObjectName(u"accountInput")
+        self.accountInput.setStyleSheet(u"\n"
 "            QLineEdit {\n"
 "                padding: 8px;\n"
 "                font-size: 14px;\n"
@@ -51,18 +51,18 @@ class Ui_register(object):
 "            }\n"
 "    ")
 
-        self.gridLayout.addWidget(self.phoneInput, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.accountInput, 1, 1, 1, 1)
 
-        self.phtonLabel = QLabel(register)
-        self.phtonLabel.setObjectName(u"phtonLabel")
-        self.phtonLabel.setStyleSheet(u"\n"
+        self.accountLabel = QLabel(register)
+        self.accountLabel.setObjectName(u"accountLabel")
+        self.accountLabel.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                font: 12pt \"\u5e7c\u5706\";\n"
 "                font-weight: bold;\n"
 "            }\n"
 "        ")
 
-        self.gridLayout.addWidget(self.phtonLabel, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.accountLabel, 1, 0, 1, 1)
 
         self.pwdInput = QLineEdit(register)
         self.pwdInput.setObjectName(u"pwdInput")
@@ -156,7 +156,7 @@ class Ui_register(object):
     def retranslateUi(self, register):
         register.setWindowTitle(QCoreApplication.translate("register", u"\u767b\u5165\u7cfb\u7edf", None))
         self.label.setText(QCoreApplication.translate("register", u"\u5feb\u9012\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf", None))
-        self.phtonLabel.setText(QCoreApplication.translate("register", u"\u624b\u673a\u53f7", None))
+        self.accountLabel.setText(QCoreApplication.translate("register", u"\u8d26\u53f7\uff1a", None))
         self.pwdLabel.setText(QCoreApplication.translate("register", u"\u5bc6\u7801:", None))
         self.confirmPwdLabel.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u5bc6\u7801\uff1a", None))
         self.registerBtn.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u6ce8\u518c", None))

@@ -1,8 +1,6 @@
 # 导入sys
 import sys
 
-# 任何一个PySide界面程序都需要使用QApplication
-# 我们要展示一个普通的窗口，所以需要导入QWidget，用来让我们自己的类继承
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal
@@ -22,13 +20,10 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         self.sql.connect()
         statement = "SELECT prv_name FROM province"
         result_comboBox = self.sql.execute_query(statement)
-        print(result_comboBox)                         #格式不对，需要转换
         result_list = [item[0] for item in result_comboBox]
-        print(result_list)
 
         # 窗体
-        self.deliveryman_search_window = UserSearchDeliveryWindow()
-
+        self.use_search_window = UserSearchDeliveryWindow()
 
         # 按键
         self.prvComboBox1.addItems(result_list )
@@ -45,8 +40,9 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         self.logout_signal.emit()
         self.close()
 
+
     def goto_user_search_delivery(self):
-        pass
+        self.use_search_window.show()
 
     
     def change_1(self):

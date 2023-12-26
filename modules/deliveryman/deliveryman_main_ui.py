@@ -23,10 +23,10 @@ class Ui_deliveryman_main(object):
     def setupUi(self, deliveryman_main):
         if not deliveryman_main.objectName():
             deliveryman_main.setObjectName(u"deliveryman_main")
-        deliveryman_main.resize(547, 504)
+        deliveryman_main.resize(607, 543)
         self.groupBox = QGroupBox(deliveryman_main)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 521, 481))
+        self.groupBox.setGeometry(QRect(10, 10, 581, 521))
         self.groupBox.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
@@ -97,7 +97,7 @@ class Ui_deliveryman_main(object):
 "        ")
         self.quitBtn = QPushButton(self.groupBox)
         self.quitBtn.setObjectName(u"quitBtn")
-        self.quitBtn.setGeometry(QRect(404, 20, 101, 31))
+        self.quitBtn.setGeometry(QRect(460, 20, 101, 31))
         self.tableWidget = QTableWidget(self.groupBox)
         if (self.tableWidget.columnCount() < 4):
             self.tableWidget.setColumnCount(4)
@@ -132,11 +132,11 @@ class Ui_deliveryman_main(object):
         __qtablewidgetitem13 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem13)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(10, 70, 421, 301))
+        self.tableWidget.setGeometry(QRect(10, 150, 421, 301))
         self.tableWidget.verticalHeader().setVisible(False)
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 380, 421, 40))
+        self.layoutWidget.setGeometry(QRect(10, 460, 421, 40))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -145,10 +145,10 @@ class Ui_deliveryman_main(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.layoutWidget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.curPosition = QLineEdit(self.layoutWidget)
+        self.curPosition.setObjectName(u"curPosition")
 
-        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout.addWidget(self.curPosition)
 
         self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
@@ -165,7 +165,39 @@ class Ui_deliveryman_main(object):
 
         self.confirmBtn = QPushButton(self.groupBox)
         self.confirmBtn.setObjectName(u"confirmBtn")
-        self.confirmBtn.setGeometry(QRect(150, 430, 101, 31))
+        self.confirmBtn.setGeometry(QRect(450, 470, 101, 31))
+        self.layoutWidget_2 = QWidget(self.groupBox)
+        self.layoutWidget_2.setObjectName(u"layoutWidget_2")
+        self.layoutWidget_2.setGeometry(QRect(10, 100, 421, 40))
+        self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget_2)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label_4 = QLabel(self.layoutWidget_2)
+        self.label_4.setObjectName(u"label_4")
+
+        self.horizontalLayout_2.addWidget(self.label_4)
+
+        self.parcelIdInput = QLineEdit(self.layoutWidget_2)
+        self.parcelIdInput.setObjectName(u"parcelIdInput")
+        self.parcelIdInput.setStyleSheet(u"QLineEdit {\n"
+"    padding: 8px;\n"
+"    font-size: 14px;\n"
+"    border: 1px solid #ccc;\n"
+"    border-radius: 4px;\n"
+"}")
+
+        self.horizontalLayout_2.addWidget(self.parcelIdInput)
+
+        self.searchBtn = QPushButton(self.layoutWidget_2)
+        self.searchBtn.setObjectName(u"searchBtn")
+
+        self.horizontalLayout_2.addWidget(self.searchBtn)
+
+        self.label_3 = QLabel(self.layoutWidget_2)
+        self.label_3.setObjectName(u"label_3")
+
+        self.horizontalLayout_2.addWidget(self.label_3)
+
 
         self.retranslateUi(deliveryman_main)
 
@@ -211,5 +243,9 @@ class Ui_deliveryman_main(object):
         self.comboBox.setItemText(2, QCoreApplication.translate("deliveryman_main", u"\u9014\u7ecf\u57ce\u5e023", None))
 
         self.confirmBtn.setText(QCoreApplication.translate("deliveryman_main", u"\u786e\u8ba4\u66f4\u6539", None))
+        self.label_4.setText(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u5355\u53f7\uff1a", None))
+        self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("deliveryman_main", u"\u8bf7\u8f93\u5165\u5feb\u9012\u5355\u53f7", None))
+        self.searchBtn.setText(QCoreApplication.translate("deliveryman_main", u"\u67e5\u8be2", None))
+        self.label_3.setText("")
     # retranslateUi
 
