@@ -28,7 +28,7 @@ class RegisterWindow(QWidget, Ui_register):
         pwd = self.pwdInput.text()
         confirm_pwd = self.confirmPwdInput.text()
 
-        if not re.match(r'^1\d{10}$', account):
+        if not re.match(r'^1\d{7}$', account):
             QMessageBox.warning(self, "警告", "账号格式不正确，请输入以1开头的11位数字!", QMessageBox.Ok)
             return
 

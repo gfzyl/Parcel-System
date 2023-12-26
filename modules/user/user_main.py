@@ -7,7 +7,6 @@ from .user_search_delivery import UserSearchDeliveryWindow
 from .user_sendout import UserSendoutWindow
 from .myReceive import MyReceiveWindow
 from .mySend import MySendWindow    
-
 from qt_material import apply_stylesheet
 
  # 继承QWidget类，以获取其属性和方法

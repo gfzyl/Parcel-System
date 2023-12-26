@@ -80,6 +80,8 @@ class LoginWindow(QWidget,Ui_login):
             if self.query_admin(self.account, self.pwd):
                 self.admin_main_window = AdminMainWindow()
                 self.admin_main_window.show()
+                self.admin_main_window.logout_signal.connect(self.show_login_window)
+
 
         else:
             print("无效的账号格式")
