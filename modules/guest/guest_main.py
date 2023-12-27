@@ -8,7 +8,7 @@ from ...controller.sql import Sql
 # 导入我们生成的界面
 from .guest_main_ui import Ui_guest_main
 from qt_material import apply_stylesheet
-from ..user.user_search_delivery import UserSearchDeliveryWindow
+from ..user.user_main import Window1 # 用户查快递的页面
 
  # 继承QWidget类，以获取其属性和方法
 class GuestMainWindow(QWidget,Ui_guest_main):
@@ -23,7 +23,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         result_list = [item[0] for item in result_comboBox]
 
         # 窗体
-        self.use_search_window = UserSearchDeliveryWindow()
+        self.use_search_window = Window1()
         self.set_windowStyle(self.use_search_window)
 
         # 按键
