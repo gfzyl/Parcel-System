@@ -1,6 +1,6 @@
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
+from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem,QMessageBox
 from qt_material import apply_stylesheet
 
 from .deliveryman_main_ui import Ui_deliveryman_main
@@ -75,6 +75,8 @@ class DeliverymanMainWindow(QWidget,Ui_deliveryman_main):
         statement = f"UPDATE deliveryman SET cur_pos = %s WHERE delivery_id= %s"
         value = (result, self.account)  # 单个元素加上逗号
         self.sql.execute_update(statement, value)
+        QMessageBox.information(self, "成功", "你已成功修改所有订单当前位置！", QMessageBox.Ok)
+        self.insertData()
 
     def logoutFun(self):
         self.logout_signal.emit()

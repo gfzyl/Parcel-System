@@ -3,6 +3,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem,QMessageBox
 from qt_material import apply_stylesheet
 from datetime import datetime,timedelta
+import  re
 
 from .add_address_book_ui import Ui_add_address_book
 from .address_book_ui import Ui_address_book
@@ -293,13 +294,18 @@ class Window3(QWidget,Ui_myReceive):
 
     def confirmAct(self):
         result_id = self.tableWidget.item(self.row, 0).text()
-        statement = f"SELECT status FROM parcel_info WHERE parcel_id= {result_id} "
+        statement = f"SELECT status FROM parcel_info WHERE parcel_id= '{result_id}' "
         result = self.sql.execute_query(statement)
         print('值为',result[0][0])
-        if result[0][0]=='未送达':
-            statement = f"UPDATE parcel_info SET status = 已签收 WHERE parcel_id= %s "
+        if result[0][0]=='已送达':
+            statement = f"UPDATE parcel_info SET status = '已签收' WHERE parcel_id= %s "
             value = (result_id,)       #单个元素加上逗号
             self.sql.execute_update(statement,value)
+            QMessageBox.information(self, "成功", "你已签收！", QMessageBox.Ok)
+            self.insertData()
+        elif result[0][0]=='未送达':
+            QMessageBox.warning(self, "警告", "快递未送达，暂时无法修改！", QMessageBox.Ok)
+
         else:
             QMessageBox.warning(self, "警告", "状态无法再次修改！请联系客服处理", QMessageBox.Ok)
 
@@ -309,15 +315,18 @@ class Window3(QWidget,Ui_myReceive):
         self.column=column
     def refuseAct(self):
         result_id = self.tableWidget.item(self.row, 0).text()
-        statement = f"SELECT status FROM parcel_info WHERE parcel_id= {result_id} "
+        statement = f"SELECT status FROM parcel_info WHERE parcel_id= '{result_id}' "
         result = self.sql.execute_query(statement)
-        if result[0][0] == '未送达':
-            statement = f"UPDATE parcel_info SET status = 已拒收 WHERE parcel_id= %s "
+        if result[0][0] == '已送达':
+            statement = f"UPDATE parcel_info SET status = '已拒收' WHERE parcel_id= %s "
             value = (result_id,)  # 单个元素加上逗号
             self.sql.execute_update(statement, value)
+            QMessageBox.information(self, "成功", "你已拒收！", QMessageBox.Ok)
+        elif result[0][0] == '未送达':
+            QMessageBox.warning(self, "警告", "快递未送达，暂时无法修改！", QMessageBox.Ok)
+
         else:
             QMessageBox.warning(self, "警告", "状态无法再次修改！请联系客服处理", QMessageBox.Ok)
-
     def back(self):
         # 清除输入框的搜索条件，确保每次进来都是空的
         self.close()
@@ -391,26 +400,33 @@ class Window5(QWidget,Ui_user_modify_info):
         result_newPassword = self.lineEdit_newPassword.text()
         result_againPassword = self.lineEdit_againPassword.text()
 
-        self.account = '1'      #后面从登录界面导入
-        statement = f"SELECT user_pwd FROM [user] WHERE user_id = '{self.account}'"
+        statement = f"SELECT user_pwd FROM [user] WHERE user_id = {self.account}"
         result = self.sql.execute_query(statement)
+
+        print('值为',self.account)
         print(result[0][0])   #从元组中获取密码
-        if result_oldPassword==result[0][0]:
-                if  result_newPassword==result_againPassword:
+        if result_oldPassword==result[0][0]  :
+                if  result_newPassword==result_againPassword and result_newPassword :
                     statement_modifyPassword = f"UPDATE [user] SET user_pwd = %s WHERE user_id= %s"
                     values =(result_newPassword,self.account)
                     self.sql.execute_update(statement_modifyPassword, values)
+                    QMessageBox.information(self, "成功", "你已成功修改密码！", QMessageBox.Ok)
 
                 else:
-                    pass       #可以设置个弹窗
+                    QMessageBox.warning(self, "警告", "新密码不一致，请重新检查！！", QMessageBox.Ok)
         if result_oldPassword!=result[0][0]:
-            pass               #可以设置个弹窗
+            QMessageBox.warning(self, "警告", "旧密码错误！", QMessageBox.Ok)
 
     def changePhone(self):
         result_newPhone = self.lineEdit_newPhone.text()
-        statement = f"UPDATE [user] SET user_phone = %s WHERE user_id= %s"
-        values = (result_newPhone, self.account)
-        self.sql.execute_update(statement, values)
+        if re.match(r'^1\d{7}$',result_newPhone):
+            statement = f"UPDATE [user] SET user_phone = %s WHERE user_id= %s"
+            values = (result_newPhone, self.account)
+            self.sql.execute_update(statement, values)
+            QMessageBox.information(self, "成功", "你已成功修改手机号！", QMessageBox.Ok)
+        else:
+            QMessageBox.warning(self, "警告", "手机号格式错误！请输入以1开头的8位数字", QMessageBox.Ok)
+
     def viewAddressBook(self):
         self.window_viewAdress = Window_viewAddress(loginWindow=self)
         self.window_viewAdress.show()
@@ -425,9 +441,9 @@ class Window_viewAddress(QWidget,Ui_address_book):
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
-        self.insertData()
-        self.account =loginWindow.account
 
+        self.account =loginWindow.account
+        self.insertData()
         self.tableWidget.cellClicked.connect(self.cellClicked)
         self.btn_addAddress.clicked.connect(self.addAddress)
         self.btn_delete.clicked.connect(self.delete)
@@ -436,7 +452,6 @@ class Window_viewAddress(QWidget,Ui_address_book):
     def insertData(self):
 
         # temp = LoginWindow()     #调用登陆时输入的账号
-        self.account = '1'  # 后面替换
 
         statement = f"SELECT * FROM address_book WHERE user_id = '{self.account}'"
         result = self.sql.execute_query(statement)
@@ -481,6 +496,8 @@ class Window_viewAddress(QWidget,Ui_address_book):
         statement = f"DELETE FROM address_book WHERE name= %s AND phone =%s AND province=%s AND city=%s AND place=%s"
         value = (result_name, result_phone, result_province, result_city, result_address)  # 单个元素加上逗号
         self.sql.execute_update(statement, value)
+        QMessageBox.information(self, "成功", "你已成功删除一条地址簿信息！", QMessageBox.Ok)
+        self.insertData()
 
     def back(self):
         self.close()
@@ -500,10 +517,10 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         print(result_comboBox)  # 格式不对，需要转换
         result_list = [item[0] for item in result_comboBox]
         print(result_list)
-
         self.comboBox_province.addItems(result_list)
         self.comboBox_province.currentTextChanged.connect(self.change_1)
         self.btn_add.clicked.connect(self.bind)
+        self.btn_add.clicked.connect( loginWindow.insertData)
         self.btn_return.clicked.connect(self.back)
 
     def change_1(self):
@@ -514,9 +531,7 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         self.comboBox_city.clear()
         self.comboBox_city.addItems(result_list)
 
-
-
-    def bind(self):
+    def bind(self,loginWindow):
         result_name = self.lineEdit_name.text()
         result_phone = self.lineEdit_phone.text()
         result_province = self.comboBox_province.currentText()
@@ -526,10 +541,12 @@ class Window_addAddress(QWidget,Ui_add_address_book):
         statement = "INSERT INTO address_book (user_id,name,phone,province,city,place) VALUES (%s,%s, %s, %s,%s,%s)"
         values = (self.account,result_name, result_phone, result_province, result_city, result_address)
         self.sql.execute_insert(statement, values)
+        QMessageBox.information(self, "成功", "你已成功添加一条地址簿信息", QMessageBox.Ok)
+        self.close()
+        loginWindow.insertData()
 
     def back(self):
         self.close()
-
 
 # 程序入口
 if __name__ == "__main__":
