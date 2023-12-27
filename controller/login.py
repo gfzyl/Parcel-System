@@ -1,6 +1,6 @@
 # 先导入要该页面
 from ..modules.login.login_ui import Ui_login
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QMessageBox
 from qt_material import apply_stylesheet
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal # 发送给各界面信号，主要发送账号
@@ -38,6 +38,7 @@ class LoginWindow(QWidget,Ui_login):
         self.set_windowStyle(self.register_window)
         self.register_window.show()
         self.register_window.confirmSignal.connect(self.show_login_window)
+        self.register_window.cancelSignal.connect(self.show_login_window)
 
 
     def goto_guest_main(self):
@@ -59,8 +60,12 @@ class LoginWindow(QWidget,Ui_login):
                 self.user_main_window = UserMainWindow(login_window=self)
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.set_windowStyle(self.user_main_window)
+                self.hide()
                 self.user_main_window.show()
                 self.user_main_window.logout_signal.connect(self.show_login_window)
+            else:
+                QMessageBox.warning(self, "警告", "账号或密码输入错误，请重新输入！", QMessageBox.Ok)
+
 
 
         elif self.account.startswith('2'):  # 派送员
@@ -68,8 +73,11 @@ class LoginWindow(QWidget,Ui_login):
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
                 self.set_windowStyle(self.deliveryman_main_window)
+                self.hide()
                 self.deliveryman_main_window.show()
                 self.deliveryman_main_window.logout_signal.connect(self.show_login_window)
+            else:
+                QMessageBox.warning(self, "警告", "账号或密码输入错误，请重新输入！", QMessageBox.Ok)
 
 
         elif self.account.startswith('3'):  # 快递员
@@ -77,22 +85,22 @@ class LoginWindow(QWidget,Ui_login):
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.postman_main_window = PostmanMainWindow(login_window=self)
                 self.set_windowStyle(self.postman_main_window)
+                self.hide()
                 self.postman_main_window.show()
                 self.postman_main_window.logout_signal.connect(self.show_login_window)
+            else:
+                QMessageBox.warning(self, "警告", "账号或密码输入错误，请重新输入！", QMessageBox.Ok)
 
 
         elif self.account.startswith('4'):  # 管理员
             if self.query_admin(self.account, self.pwd):
                 self.admin_main_window = AdminMainWindow()
                 self.set_windowStyle(self.admin_main_window)
+                self.hide()
                 self.admin_main_window.show()
                 self.admin_main_window.logout_signal.connect(self.show_login_window)
-
-
-        else:
-            print("无效的账号格式")
-
-        self.close()
+            else:
+                QMessageBox.warning(self, "警告", "账号或密码输入错误，请重新输入！", QMessageBox.Ok)
 
 
     def query_deliveryman(self, account, pwd):
@@ -100,7 +108,7 @@ class LoginWindow(QWidget,Ui_login):
         self.sql.connect()
         statement = f"SELECT * FROM deliveryman WHERE delivery_id = {account} AND delivery_pwd = {pwd}"
         return self.sql.execute_query(statement=statement)
-
+        
 
     def query_postman(self, account, pwd):
         self.sql=Sql()
@@ -115,6 +123,7 @@ class LoginWindow(QWidget,Ui_login):
         self.sql.connect()
         statement = f"SELECT * FROM [user] WHERE user_id = {account} AND user_pwd = {pwd}"
         return self.sql.execute_query(statement=statement)
+
         
 
     def query_admin(self, account, pwd):
@@ -125,6 +134,8 @@ class LoginWindow(QWidget,Ui_login):
         if result and account.startswith('4'):
             return result
 
+
+             
     def set_windowStyle(self, window):
         # 设置窗口图标登样式
         window.setWindowIcon(QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png"))

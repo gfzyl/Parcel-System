@@ -1,7 +1,7 @@
 # 导入sys
 import sys
 
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QMessageBox
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal
 from ...controller.sql import Sql
@@ -24,6 +24,7 @@ class GuestMainWindow(QWidget,Ui_guest_main):
 
         # 窗体
         self.use_search_window = UserSearchDeliveryWindow()
+        self.set_windowStyle(self.use_search_window)
 
         # 按键
         self.prvComboBox1.addItems(result_list )
@@ -76,11 +77,25 @@ class GuestMainWindow(QWidget,Ui_guest_main):
         result_city2 = self.cityComboBox2.currentText()
         result_address2 = self.placeInput2.text()
         result_extra = self.notesInput.text()
-        print(result_name1,result_phone1 ,result_province1,result_city1,result_address1,result_name2, result_phone2, result_province2, result_city2, result_address2,result_extra)
 
-        statement= "INSERT INTO parcel_info(sender, sender_tel, sender_prv,sender_city,sender_place,recipient, recipient_tel, recipient_prv,recipient_city,recipient_place,notes) VALUES (%s, %s, %s,%s,%s,%s, %s, %s,%s,%s,%s)"
-        values = (result_name1,result_phone1 ,result_province1,result_city1,result_address1,result_name2, result_phone2, result_province2, result_city2, result_address2,result_extra)
-        self.sql.execute_insert(statement, values)
+        if result_name1 == '' or result_phone1 == '' or result_province1 == '' or result_city1 == '' or result_address1 == '' or result_name2 == '' or result_phone2 == '' or result_province2 == '' or result_city2 == ''or result_address2 == '':
+            QMessageBox.warning(self, '警告', '请输入完整信息', QMessageBox.Ok)
+            return
+        else:
+            statement= "INSERT INTO parcel_info(sender, sender_tel, sender_prv,sender_city,sender_place,recipient, recipient_tel, recipient_prv,recipient_city,recipient_place,notes) VALUES (%s, %s, %s,%s,%s,%s, %s, %s,%s,%s,%s)"
+            values = (result_name1,result_phone1 ,result_province1,result_city1,result_address1,result_name2, result_phone2, result_province2, result_city2, result_address2,result_extra)
+            if self.sql.execute_insert(statement, values):
+                QMessageBox.information(self, "提示", "添加成功！", QMessageBox.Ok)
+            else:
+                QMessageBox.warning(self, "警告", "添加失败！", QMessageBox.Ok)
+
+
+    def set_windowStyle(self, window):
+        # 设置窗口图标登样式
+        window.setWindowIcon(QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png"))
+        window.setWindowOpacity(0.95) 
+
+
 
 # 程序入口
 if __name__ == "__main__":

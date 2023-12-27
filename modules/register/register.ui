@@ -170,6 +170,32 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="quitBtn">
+     <property name="styleSheet">
+      <string notr="true">
+        QPushButton {
+            padding: 8px 16px;
+            font: 15px &quot;幼圆&quot;;
+            font-weight: bold;
+            border: 1px solid #4CAF50;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #4CAF50;
+        }
+
+        /* 鼠标悬停时按钮样式 */
+        QPushButton:hover {
+            background-color: #45a049;
+            border: 1px solid #45a049;
+        }
+        </string>
+     </property>
+     <property name="text">
+      <string>取消注册</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Vertical</enum>

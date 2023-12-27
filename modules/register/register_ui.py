@@ -143,6 +143,28 @@ class Ui_register(object):
 
         self.verticalLayout.addWidget(self.registerBtn)
 
+        self.quitBtn = QPushButton(register)
+        self.quitBtn.setObjectName(u"quitBtn")
+        self.quitBtn.setStyleSheet(u"\n"
+"        QPushButton {\n"
+"            padding: 8px 16px;\n"
+"            font: 15px \"\u5e7c\u5706\";\n"
+"            font-weight: bold;\n"
+"            border: 1px solid #4CAF50;\n"
+"            border-radius: 4px;\n"
+"            color: #fff;\n"
+"            background-color: #4CAF50;\n"
+"        }\n"
+"\n"
+"        /* \u9f20\u6807\u60ac\u505c\u65f6\u6309\u94ae\u6837\u5f0f */\n"
+"        QPushButton:hover {\n"
+"            background-color: #45a049;\n"
+"            border: 1px solid #45a049;\n"
+"        }\n"
+"        ")
+
+        self.verticalLayout.addWidget(self.quitBtn)
+
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
         self.verticalLayout.addItem(self.verticalSpacer_2)
@@ -160,5 +182,6 @@ class Ui_register(object):
         self.pwdLabel.setText(QCoreApplication.translate("register", u"\u5bc6\u7801:", None))
         self.confirmPwdLabel.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u5bc6\u7801\uff1a", None))
         self.registerBtn.setText(QCoreApplication.translate("register", u"\u786e\u8ba4\u6ce8\u518c", None))
+        self.quitBtn.setText(QCoreApplication.translate("register", u"\u53d6\u6d88\u6ce8\u518c", None))
     # retranslateUi
 

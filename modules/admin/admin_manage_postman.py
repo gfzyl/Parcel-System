@@ -89,11 +89,11 @@ class AdminManagePostmanWindow(QWidget, Ui_admin_manage_postman):
         workCity = self.workCityInput.text()
         statement = f"UPDATE postman SET post_pwd = %s, post_phone = %s, work_pos = %s WHERE post_id = %s"
         value = (pwd, tel, workCity, workId,)        
-        try:
-            self.sql.execute_update(statement,value)
-        except Exception as e:
-            QMessageBox.warning(self, "警告", "修改员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "修改成功！", QMessageBox.Ok)    
+
+        if self.sql.execute_update(statement,value):
+            QMessageBox.information(self, "提示", "修改员工记录成功！", QMessageBox.Ok)
+        else:
+            QMessageBox.warning(self, "警告", "修改员工记录失败！", QMessageBox.Ok) 
         # 更新完以后结果直接显示
         self.search()
 
@@ -107,12 +107,11 @@ class AdminManagePostmanWindow(QWidget, Ui_admin_manage_postman):
         workId = self.workIdInputBottom.text()
         statement = f"DELETE FROM postman WHERE post_id = %s"
         value = (workId,)
-        try:
-            self.sql.execute_update(statement,value)
-        except Exception as e:
+        if self.sql.execute_update(statement,value):
+            QMessageBox.information(self, "提示", "删除员工记录成功！", QMessageBox.Ok)
+        else:
             QMessageBox.warning(self, "警告", "删除员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "删除员工记录成功！", QMessageBox.Ok)
-        # 更新完以后结果直接显示
+              
         self.search()
 
     
@@ -125,12 +124,11 @@ class AdminManagePostmanWindow(QWidget, Ui_admin_manage_postman):
         tel = self.telInput.text()
         workCity = self.workCityInput.text()
         statement = "INSERT INTO postman (post_id, post_pwd,  post_name, post_phone, work_pos, post_age) VALUES (%(workId)s,%(pwd)s, %(name)s, %(tel)s, %(workCity)s,%(age)s)"
-        values = {"workId":workId,"pwd": pwd, "name": name, "tel": tel, "workCity": workCity,"age": age,}
-        try:
-            self.sql.execute_insert(statement,values)
-        except Exception as e:
+        values = {"workId":workId,"pwd": pwd, "name": name, "tel": tel, "workCity": workCity,"age": age,}        
+        if self.sql.execute_insert(statement,values):
+            QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
+        else:
             QMessageBox.warning(self, "警告", "新增员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
         # 更新完以后结果直接显示
         self.search()      
 

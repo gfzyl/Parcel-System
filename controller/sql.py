@@ -21,13 +21,13 @@ class Sql:
             self.cursor = self.conn.cursor()
         except Exception as e:
             print(f"连接数据库错误: {e}")
+            return None
 
     def execute_query(self, statement):
         try:
             self.cursor.execute(statement)
             result = self.cursor.fetchall()
             return result
-            print("查询成功")
         except Exception as e:
             print(f"查询操作错误: {e}")
             return None
@@ -36,16 +36,17 @@ class Sql:
         try:
             self.cursor.execute(statement,values)
             self.conn.commit()
-            print("更新成功")
+            print("操作成功")
+            return True
         except Exception as e:
-            print(f"更新操作错误: {e}")
+            return False
 
     def execute_insert(self, statement, value=None):
-            self.execute_update(statement, value)
+            return self.execute_update(statement, value)
 
 
     def execute_delete(self, statement, value=None):
-            self.execute_update(statement, value)
+            return self.execute_update(statement, value)
 
 
     def close(self):

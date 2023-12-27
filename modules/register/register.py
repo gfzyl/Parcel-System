@@ -13,6 +13,7 @@ from qt_material import apply_stylesheet
 
 class RegisterWindow(QWidget, Ui_register):
     confirmSignal = Signal()  # 表示确认注册
+    cancelSignal = Signal()  # 表示取消注册
 
     def __init__(self):
         super().__init__()
@@ -20,6 +21,12 @@ class RegisterWindow(QWidget, Ui_register):
 
         # 按键
         self.registerBtn.clicked.connect(self.userRegister)
+        self.quitBtn.clicked.connect(self.back)
+
+
+    def back(self):
+        self.cancelSignal.emit()  # 发出取消信号
+        self.close()
 
 
     def userRegister(self):
@@ -61,13 +68,10 @@ if __name__ == "__main__":
     # 初始化QApplication，界面展示要包含在QApplication初始化之后，结束之前
     app = QApplication([])
     apply_stylesheet(app, theme="light_blue.xml")
-
-    # 初始化并展示我们的界面组件
     window = RegisterWindow()
     # 设置窗口图标
     appIcon = QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png")
     window.setWindowIcon(appIcon)
-
     window.setWindowOpacity(0.95)
     window.show()
 
