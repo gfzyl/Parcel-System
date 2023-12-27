@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>607</width>
-    <height>543</height>
+    <width>548</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>581</width>
-     <height>521</height>
+     <width>521</width>
+     <height>481</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -94,10 +94,10 @@
    <property name="title">
     <string>快递信息</string>
    </property>
-   <widget class="QPushButton" name="quitBtn">
+   <widget class="QPushButton" name="btn_return">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>404</x>
       <y>20</y>
       <width>101</width>
       <height>31</height>
@@ -111,8 +111,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
-      <width>421</width>
+      <y>70</y>
+      <width>531</width>
       <height>301</height>
      </rect>
     </property>
@@ -171,6 +171,11 @@
     </row>
     <column>
      <property name="text">
+      <string>序号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
       <string>快递单号</string>
      </property>
     </column>
@@ -181,7 +186,7 @@
     </column>
     <column>
      <property name="text">
-      <string>当前状态</string>
+      <string>当前位置</string>
      </property>
     </column>
     <column>
@@ -194,7 +199,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>380</y>
       <width>421</width>
       <height>40</height>
      </rect>
@@ -208,7 +213,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="curPosition"/>
+      <widget class="QLineEdit" name="lineEdit_place"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -218,31 +223,15 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
-       <item>
-        <property name="text">
-         <string>途经城市1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>途经城市2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>途经城市3</string>
-        </property>
-       </item>
-      </widget>
+      <widget class="QComboBox" name="comboBox_place"/>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="confirmBtn">
+   <widget class="QPushButton" name="btn_confirm">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>470</y>
+      <x>150</x>
+      <y>430</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -250,54 +239,6 @@
     <property name="text">
      <string>确认更改</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>421</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>快递单号：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="parcelIdInput">
-       <property name="styleSheet">
-        <string notr="true">QLineEdit {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}</string>
-       </property>
-       <property name="placeholderText">
-        <string>请输入快递单号</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="searchBtn">
-       <property name="text">
-        <string>查询</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
   </widget>
  </widget>

@@ -210,7 +210,7 @@ class Ui_user_search_delivery(object):
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u5e02", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u51fa\u5730\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("user_search_delivery", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
@@ -220,7 +220,7 @@ class Ui_user_search_delivery(object):
         ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u5e02", None));
         ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u5730\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(9)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("user_search_delivery", u"\u6536\u4ef6\u4eba\u59d3\u540d", None));
         ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(10)

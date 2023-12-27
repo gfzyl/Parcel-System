@@ -165,19 +165,19 @@ class Ui_postman_search_delivery(object):
 
         self.horizontalLayout.addWidget(self.parcelIdLabel)
 
-        self.parcelIdInput = QLineEdit(self.layoutWidget)
-        self.parcelIdInput.setObjectName(u"parcelIdInput")
+        self.lineEdit_parcel = QLineEdit(self.layoutWidget)
+        self.lineEdit_parcel.setObjectName(u"lineEdit_parcel")
 
-        self.horizontalLayout.addWidget(self.parcelIdInput)
+        self.horizontalLayout.addWidget(self.lineEdit_parcel)
 
-        self.queryBtn = QPushButton(self.layoutWidget)
-        self.queryBtn.setObjectName(u"queryBtn")
+        self.btn_search = QPushButton(self.layoutWidget)
+        self.btn_search.setObjectName(u"btn_search")
 
-        self.horizontalLayout.addWidget(self.queryBtn)
+        self.horizontalLayout.addWidget(self.btn_search)
 
-        self.returnBtn = QPushButton(self.groupBox)
-        self.returnBtn.setObjectName(u"returnBtn")
-        self.returnBtn.setGeometry(QRect(630, 20, 111, 37))
+        self.btn_return = QPushButton(self.groupBox)
+        self.btn_return.setObjectName(u"btn_return")
+        self.btn_return.setGeometry(QRect(630, 20, 111, 37))
 
         self.retranslateUi(postman_search_delivery)
 
@@ -192,15 +192,15 @@ class Ui_postman_search_delivery(object):
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("postman_search_delivery", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_search_delivery", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_search_delivery", u"\u7701\u4efd", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_search_delivery", u"\u7701\u4efd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_search_delivery", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_search_delivery", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_search_delivery", u"\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_search_delivery", u"\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_search_delivery", u"\u76ee\u524d\u72b6\u6001", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_search_delivery", u"\u76ee\u524d\u72b6\u6001", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_search_delivery", u"\u53d6\u4ef6\u7801", None));
         ___qtablewidgetitem7 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(1)
@@ -228,8 +228,8 @@ class Ui_postman_search_delivery(object):
         ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("postman_search_delivery", u"\u65b0\u5efa\u884c", None));
         self.parcelIdLabel.setText(QCoreApplication.translate("postman_search_delivery", u"\u5feb\u9012\u5355\u53f7", None))
-        self.parcelIdInput.setPlaceholderText(QCoreApplication.translate("postman_search_delivery", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
-        self.queryBtn.setText(QCoreApplication.translate("postman_search_delivery", u"\u67e5\u8be2", None))
-        self.returnBtn.setText(QCoreApplication.translate("postman_search_delivery", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
+        self.lineEdit_parcel.setPlaceholderText(QCoreApplication.translate("postman_search_delivery", u"\u5728\u6b64\u8f93\u5165\u6709\u6548\u5feb\u9012\u5355\u53f7", None))
+        self.btn_search.setText(QCoreApplication.translate("postman_search_delivery", u"\u67e5\u8be2", None))
+        self.btn_return.setText(QCoreApplication.translate("postman_search_delivery", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
     # retranslateUi
 

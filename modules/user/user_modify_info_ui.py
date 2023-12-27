@@ -71,8 +71,15 @@ class Ui_user_modify_info(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.btn_viewAddressBook = QPushButton(self.tabWidget)
         self.btn_viewAddressBook.setObjectName(u"btn_viewAddressBook")
+        self.btn_viewAddressBook.setMaximumSize(QSize(200, 16777215))
 
         self.horizontalLayout.addWidget(self.btn_viewAddressBook)
+
+        self.btn_return = QPushButton(self.tabWidget)
+        self.btn_return.setObjectName(u"btn_return")
+        self.btn_return.setMaximumSize(QSize(200, 16777215))
+
+        self.horizontalLayout.addWidget(self.btn_return)
 
 
         self.gridLayout_2.addLayout(self.horizontalLayout, 4, 1, 1, 1)
@@ -171,6 +178,7 @@ class Ui_user_modify_info(object):
         user_modify_info.setWindowTitle(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u4e2a\u4eba\u4fe1\u606f", None))
         self.tabWidget.setTitle(QCoreApplication.translate("user_modify_info", u"\u4e2a\u4eba\u4fe1\u606f", None))
         self.btn_viewAddressBook.setText(QCoreApplication.translate("user_modify_info", u"\u70b9\u51fb\u67e5\u770b\u5730\u5740\u7c3f\u4fe1\u606f", None))
+        self.btn_return.setText(QCoreApplication.translate("user_modify_info", u"\u8fd4\u56de\u4e0a\u4e00\u7ea7", None))
         self.label_new_password.setText(QCoreApplication.translate("user_modify_info", u"\u65b0\u5bc6\u7801:", None))
         self.label_old_password.setText(QCoreApplication.translate("user_modify_info", u"\u65e7\u5bc6\u7801:", None))
         self.btn_changePhone.setText(QCoreApplication.translate("user_modify_info", u"\u4fee\u6539\u624b\u673a\u53f7", None))

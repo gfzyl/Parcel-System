@@ -24,6 +24,7 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
         self.rePrvBox.currentTextChanged.connect(self.change_2)
 
         # 按键
+        self.search() # 先把记录显示
         self.returnBtn.clicked.connect(self.back)
         self.searchBtn.clicked.connect(self.search)
 

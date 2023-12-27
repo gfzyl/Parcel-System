@@ -46,16 +46,16 @@ class Ui_postman_code(object):
 
         self.horizontalLayout_2.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(postman_code)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setStyleSheet(u"\n"
+        self.lineEdit_code = QLineEdit(postman_code)
+        self.lineEdit_code.setObjectName(u"lineEdit_code")
+        self.lineEdit_code.setStyleSheet(u"\n"
 "                                    padding: 8px;\n"
 "                                    font-size: 14px;\n"
 "                                    border: 1px solid #ccc;\n"
 "                                    border-radius: 4px;\n"
 "                                ")
 
-        self.horizontalLayout_2.addWidget(self.lineEdit)
+        self.horizontalLayout_2.addWidget(self.lineEdit_code)
 
         self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
@@ -78,9 +78,9 @@ class Ui_postman_code(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer_4)
 
-        self.buttonConfirm = QPushButton(postman_code)
-        self.buttonConfirm.setObjectName(u"buttonConfirm")
-        self.buttonConfirm.setStyleSheet(u"\n"
+        self.btn_confirm = QPushButton(postman_code)
+        self.btn_confirm.setObjectName(u"btn_confirm")
+        self.btn_confirm.setStyleSheet(u"\n"
 "           QPushButton {\n"
 "                padding: 8px 16px;\n"
 "                font-size: 15px;\n"
@@ -98,15 +98,15 @@ class Ui_postman_code(object):
 "\n"
 "        ")
 
-        self.horizontalLayout.addWidget(self.buttonConfirm)
+        self.horizontalLayout.addWidget(self.btn_confirm)
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.buttonCancle = QPushButton(postman_code)
-        self.buttonCancle.setObjectName(u"buttonCancle")
-        self.buttonCancle.setStyleSheet(u"\n"
+        self.btn_cancel = QPushButton(postman_code)
+        self.btn_cancel.setObjectName(u"btn_cancel")
+        self.btn_cancel.setStyleSheet(u"\n"
 "           QPushButton {\n"
 "                padding: 8px 16px;\n"
 "                font-size: 15px;\n"
@@ -124,7 +124,7 @@ class Ui_postman_code(object):
 "\n"
 "        ")
 
-        self.horizontalLayout.addWidget(self.buttonCancle)
+        self.horizontalLayout.addWidget(self.btn_cancel)
 
         self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
 
@@ -146,8 +146,8 @@ class Ui_postman_code(object):
     def retranslateUi(self, postman_code):
         postman_code.setWindowTitle(QCoreApplication.translate("postman_code", u"\u5f55\u5165\u53d6\u4ef6\u7801", None))
         self.label.setText(QCoreApplication.translate("postman_code", u"\u53d6\u4ef6\u7801\uff1a", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("postman_code", u"\u8bf7\u8f93\u5165\u53d6\u4ef6\u7801 ", None))
-        self.buttonConfirm.setText(QCoreApplication.translate("postman_code", u"\u786e\u8ba4\u6dfb\u52a0", None))
-        self.buttonCancle.setText(QCoreApplication.translate("postman_code", u"\u53d6\u6d88\u6dfb\u52a0", None))
+        self.lineEdit_code.setPlaceholderText(QCoreApplication.translate("postman_code", u"\u8bf7\u8f93\u5165\u53d6\u4ef6\u7801 ", None))
+        self.btn_confirm.setText(QCoreApplication.translate("postman_code", u"\u786e\u8ba4\u6dfb\u52a0", None))
+        self.btn_cancel.setText(QCoreApplication.translate("postman_code", u"\u53d6\u6d88\u6dfb\u52a0", None))
     # retranslateUi
 

@@ -23,10 +23,10 @@ class Ui_user_sendout(object):
     def setupUi(self, user_sendout):
         if not user_sendout.objectName():
             user_sendout.setObjectName(u"user_sendout")
-        user_sendout.resize(545, 619)
+        user_sendout.resize(527, 600)
         self.groupBox = QGroupBox(user_sendout)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 521, 241))
+        self.groupBox.setGeometry(QRect(10, 10, 501, 221))
         self.groupBox.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
@@ -45,7 +45,7 @@ class Ui_user_sendout(object):
 "        ")
         self.layoutWidget = QWidget(self.groupBox)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 20, 501, 201))
+        self.layoutWidget.setGeometry(QRect(20, 30, 454, 178))
         self.verticalLayout = QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -130,7 +130,7 @@ class Ui_user_sendout(object):
 
         self.groupBox_2 = QGroupBox(user_sendout)
         self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setGeometry(QRect(10, 250, 521, 241))
+        self.groupBox_2.setGeometry(QRect(10, 230, 501, 231))
         self.groupBox_2.setStyleSheet(u"\n"
 "            QLabel {\n"
 "                color: #333;\n"
@@ -148,7 +148,7 @@ class Ui_user_sendout(object):
 "        ")
         self.layoutWidget_2 = QWidget(self.groupBox_2)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(10, 20, 501, 201))
+        self.layoutWidget_2.setGeometry(QRect(20, 40, 454, 178))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -233,7 +233,7 @@ class Ui_user_sendout(object):
 
         self.layoutWidget_3 = QWidget(user_sendout)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
-        self.layoutWidget_3.setGeometry(QRect(20, 500, 501, 41))
+        self.layoutWidget_3.setGeometry(QRect(30, 470, 431, 41))
         self.horizontalLayout_7 = QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -261,7 +261,7 @@ class Ui_user_sendout(object):
 
         self.layoutWidget1 = QWidget(user_sendout)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(20, 560, 501, 40))
+        self.layoutWidget1.setGeometry(QRect(10, 540, 495, 40))
         self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -328,24 +328,24 @@ class Ui_user_sendout(object):
     def retranslateUi(self, user_sendout):
         user_sendout.setWindowTitle(QCoreApplication.translate("user_sendout", u"\u7528\u6237\u5bc4\u4ef6", None))
         self.groupBox.setTitle(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u59d3\u540d:", None))
-        self.label_2.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd:", None))
-        self.label_4.setText(QCoreApplication.translate("user_sendout", u"\u7701:", None))
+        self.label.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_2.setText(QCoreApplication.translate("user_sendout", u"\u5bc4\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_4.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
         self.comboBox_province1.setItemText(0, "")
 
-        self.label_5.setText(QCoreApplication.translate("user_sendout", u"\u5e02:", None))
-        self.label_6.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740:", None))
+        self.label_5.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
+        self.label_6.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
         self.comboBox_addressBook1.setItemText(0, "")
 
         self.groupBox_2.setTitle(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u5730\u5740\u4fe1\u606f", None))
-        self.label_3.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u59d3\u540d:", None))
-        self.label_7.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u7535\u8bdd:", None))
-        self.label_8.setText(QCoreApplication.translate("user_sendout", u"\u7701:", None))
+        self.label_3.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u59d3\u540d", None))
+        self.label_7.setText(QCoreApplication.translate("user_sendout", u"\u6536\u4ef6\u4eba\u7535\u8bdd", None))
+        self.label_8.setText(QCoreApplication.translate("user_sendout", u"\u7701", None))
         self.comboBox_province2.setItemText(0, "")
 
-        self.label_9.setText(QCoreApplication.translate("user_sendout", u"\u5e02:", None))
-        self.label_10.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740:", None))
+        self.label_9.setText(QCoreApplication.translate("user_sendout", u"\u5e02", None))
+        self.label_10.setText(QCoreApplication.translate("user_sendout", u"\u8be6\u7ec6\u5730\u5740", None))
         self.label_in_address_book1.setText(QCoreApplication.translate("user_sendout", u"\u5728\u5730\u5740\u7c3f\u4e2d\u9009\u62e9", None))
         self.comboBox_addressBook2.setItemText(0, "")
 

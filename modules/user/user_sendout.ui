@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>545</width>
-    <height>619</height>
+    <width>527</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>521</width>
-     <height>241</height>
+     <width>501</width>
+     <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -46,10 +46,10 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>501</width>
-      <height>201</height>
+      <x>20</x>
+      <y>30</y>
+      <width>454</width>
+      <height>178</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -58,7 +58,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>寄件人姓名:</string>
+          <string>寄件人姓名</string>
          </property>
         </widget>
        </item>
@@ -68,7 +68,7 @@
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>寄件人电话:</string>
+          <string>寄件人电话</string>
          </property>
         </widget>
        </item>
@@ -88,7 +88,7 @@
           </size>
          </property>
          <property name="text">
-          <string>省:</string>
+          <string>省</string>
          </property>
         </widget>
        </item>
@@ -110,7 +110,7 @@
           </size>
          </property>
          <property name="text">
-          <string>市:</string>
+          <string>市</string>
          </property>
         </widget>
        </item>
@@ -124,7 +124,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>详细地址:</string>
+          <string>详细地址</string>
          </property>
         </widget>
        </item>
@@ -156,9 +156,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>250</y>
-     <width>521</width>
-     <height>241</height>
+     <y>230</y>
+     <width>501</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -184,10 +184,10 @@
    <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>501</width>
-      <height>201</height>
+      <x>20</x>
+      <y>40</y>
+      <width>454</width>
+      <height>178</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -196,7 +196,7 @@
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>收件人姓名:</string>
+          <string>收件人姓名</string>
          </property>
         </widget>
        </item>
@@ -206,7 +206,7 @@
        <item>
         <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>收件人电话:</string>
+          <string>收件人电话</string>
          </property>
         </widget>
        </item>
@@ -226,7 +226,7 @@
           </size>
          </property>
          <property name="text">
-          <string>省:</string>
+          <string>省</string>
          </property>
         </widget>
        </item>
@@ -248,7 +248,7 @@
           </size>
          </property>
          <property name="text">
-          <string>市:</string>
+          <string>市</string>
          </property>
         </widget>
        </item>
@@ -265,7 +265,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label_10">
          <property name="text">
-          <string>详细地址:</string>
+          <string>详细地址</string>
          </property>
         </widget>
        </item>
@@ -293,9 +293,9 @@
   <widget class="QWidget" name="layoutWidget_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>500</y>
-     <width>501</width>
+     <x>30</x>
+     <y>470</y>
+     <width>431</width>
      <height>41</height>
     </rect>
    </property>
@@ -332,9 +332,9 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>560</y>
-     <width>501</width>
+     <x>10</x>
+     <y>540</y>
+     <width>495</width>
      <height>40</height>
     </rect>
    </property>

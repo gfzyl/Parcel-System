@@ -59,3 +59,9 @@ def route(startCity, endCity):  # 函数功能是输入2省 计算出最优路�
 
         list_city = [item[0][0] for item in result_city]
         return list_city
+
+
+
+
+# city = route('河南', '丽丽')
+# print(city)

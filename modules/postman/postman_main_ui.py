@@ -116,6 +116,7 @@ class Ui_postman_main(object):
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.horizontalHeader().setVisible(True)
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(100)
         self.tableWidget.verticalHeader().setVisible(False)
 
         self.horizontalLayoutAddressBook.addWidget(self.tableWidget)
@@ -153,21 +154,21 @@ class Ui_postman_main(object):
 "        ")
         self.horizontalLayoutActions = QHBoxLayout(self.groupBoxActions)
         self.horizontalLayoutActions.setObjectName(u"horizontalLayoutActions")
-        self.searchBtn = QPushButton(self.groupBoxActions)
-        self.searchBtn.setObjectName(u"searchBtn")
-        self.searchBtn.setStyleSheet(u"")
+        self.btn_search = QPushButton(self.groupBoxActions)
+        self.btn_search.setObjectName(u"btn_search")
+        self.btn_search.setStyleSheet(u"")
 
-        self.horizontalLayoutActions.addWidget(self.searchBtn)
+        self.horizontalLayoutActions.addWidget(self.btn_search)
 
-        self.addCodeBtn = QPushButton(self.groupBoxActions)
-        self.addCodeBtn.setObjectName(u"addCodeBtn")
+        self.btn_addCode = QPushButton(self.groupBoxActions)
+        self.btn_addCode.setObjectName(u"btn_addCode")
 
-        self.horizontalLayoutActions.addWidget(self.addCodeBtn)
+        self.horizontalLayoutActions.addWidget(self.btn_addCode)
 
-        self.quitBtn = QPushButton(self.groupBoxActions)
-        self.quitBtn.setObjectName(u"quitBtn")
+        self.btn_return = QPushButton(self.groupBoxActions)
+        self.btn_return.setObjectName(u"btn_return")
 
-        self.horizontalLayoutActions.addWidget(self.quitBtn)
+        self.horizontalLayoutActions.addWidget(self.btn_return)
 
 
         self.verticalLayoutButtons.addWidget(self.groupBoxActions)
@@ -198,18 +199,18 @@ class Ui_postman_main(object):
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("postman_main", u"\u8ba2\u5355\u7f16\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_main", u"\u5b8c\u6574\u8def\u7ebf", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("postman_main", u"\u7701\u4efd", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_main", u"\u7701\u4efd", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("postman_main", u"\u5730\u7ea7\u5e02", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_main", u"\u5730\u7ea7\u5e02", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("postman_main", u"\u8be6\u7ec6\u5730\u5740", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_main", u"\u8be6\u7ec6\u5730\u5740", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("postman_main", u"\u76ee\u524d\u72b6\u6001", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_main", u"\u76ee\u524d\u72b6\u6001", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("postman_main", u"\u53d6\u4ef6\u7801", None));
         self.groupBoxActions.setTitle(QCoreApplication.translate("postman_main", u"\u7528\u6237\u64cd\u4f5c", None))
-        self.searchBtn.setText(QCoreApplication.translate("postman_main", u"\u67e5\u8be2\u8ba2\u5355", None))
-        self.addCodeBtn.setText(QCoreApplication.translate("postman_main", u"\u6dfb\u52a0\u53d6\u4ef6\u7801", None))
-        self.quitBtn.setText(QCoreApplication.translate("postman_main", u"\u9000\u51fa\u767b\u5f55", None))
+        self.btn_search.setText(QCoreApplication.translate("postman_main", u"\u67e5\u8be2\u8ba2\u5355", None))
+        self.btn_addCode.setText(QCoreApplication.translate("postman_main", u"\u6dfb\u52a0\u53d6\u4ef6\u7801", None))
+        self.btn_return.setText(QCoreApplication.translate("postman_main", u"\u9000\u51fa\u767b\u5f55", None))
     # retranslateUi
 

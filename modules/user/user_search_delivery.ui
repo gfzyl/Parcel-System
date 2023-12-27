@@ -198,7 +198,7 @@
     </column>
     <column>
      <property name="text">
-      <string>寄出详细地址</string>
+      <string>寄出地详细地址</string>
      </property>
     </column>
     <column>
@@ -223,7 +223,7 @@
     </column>
     <column>
      <property name="text">
-      <string>收件详细地址</string>
+      <string>收件地详细地址</string>
      </property>
     </column>
     <column>

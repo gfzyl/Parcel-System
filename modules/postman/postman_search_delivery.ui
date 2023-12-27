@@ -193,11 +193,6 @@
     </column>
     <column>
      <property name="text">
-      <string>完整路线</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>省份</string>
      </property>
     </column>
@@ -214,6 +209,11 @@
     <column>
      <property name="text">
       <string>目前状态</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>取件码</string>
      </property>
     </column>
    </widget>
@@ -235,14 +235,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="parcelIdInput">
+      <widget class="QLineEdit" name="lineEdit_parcel">
        <property name="placeholderText">
         <string>在此输入有效快递单号</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="queryBtn">
+      <widget class="QPushButton" name="btn_search">
        <property name="text">
         <string>查询</string>
        </property>
@@ -250,7 +250,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="returnBtn">
+   <widget class="QPushButton" name="btn_return">
     <property name="geometry">
      <rect>
       <x>630</x>

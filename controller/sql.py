@@ -36,9 +36,10 @@ class Sql:
         try:
             self.cursor.execute(statement,values)
             self.conn.commit()
-            print("操作成功")
+            print("更新操作成功")
             return True
         except Exception as e:
+            print(f"更新操作错误: {e}")
             return False
 
     def execute_insert(self, statement, value=None):

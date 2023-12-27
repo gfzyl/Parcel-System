@@ -58,7 +58,7 @@ class LoginWindow(QWidget,Ui_login):
 
         if self.account.startswith('1'):  # 普通用户
             if self.query_user(self.account, self.pwd):
-                self.user_main_window = UserMainWindow(login_window=self)
+                self.user_main_window = UserMainWindow(loginWindow=self)
                 self.login_signal.emit(self.account)# 发射登录信号
                 self.set_windowStyle(self.user_main_window)
                 self.hide()
@@ -71,8 +71,8 @@ class LoginWindow(QWidget,Ui_login):
 
         elif self.account.startswith('2'):  # 派送员
             if self.query_deliveryman(self.account, self.pwd):
+                self.deliveryman_main_window = DeliverymanMainWindow(loginWindow=self)
                 self.login_signal.emit(self.account)# 发射登录信号
-                self.deliveryman_main_window = DeliverymanMainWindow(login_window=self)
                 self.set_windowStyle(self.deliveryman_main_window)
                 self.hide()
                 self.deliveryman_main_window.show()
@@ -83,8 +83,8 @@ class LoginWindow(QWidget,Ui_login):
 
         elif self.account.startswith('3'):  # 快递员
             if self.query_postman(self.account, self.pwd):
+                self.postman_main_window = PostmanMainWindow(loginWindow=self)
                 self.login_signal.emit(self.account)# 发射登录信号
-                self.postman_main_window = PostmanMainWindow(login_window=self)
                 self.set_windowStyle(self.postman_main_window)
                 self.hide()
                 self.postman_main_window.show()
