@@ -21,8 +21,8 @@ class Sql:
             self.cursor.execute(statement)
             result = self.cursor.fetchall()
             #print("查询成功")
-            if result == []:
-                result   = [('',), ]
+            # if result == []:
+            #     result   = [('',), ]
             return result
 
         except Exception as e:

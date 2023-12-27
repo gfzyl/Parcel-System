@@ -40,7 +40,7 @@ def route2(startCity, endCity, city):  # 输入出发与到达市,通过递归  
 
 def route(startCity, endCity):  # 函数功能是输入2省 计算出最优路径
     if startCity == endCity:  # 如果是本省快递,返回0
-        return ('0',)
+        return [startCity]
     else:  # 不是本省快递,调用route2计算最优路径
         statement = f"select capital_city from province where prv_name='{startCity}'"
         shcs = sql.execute_query(statement) # shcs 省会城市
@@ -51,17 +51,17 @@ def route(startCity, endCity):  # 函数功能是输入2省 计算出最优路�
         city = shcs[0][0],  # 将出发城市添加到路径表的第一位
         city = route2(shcs[0][0], shcs2[0][0], city)  # 调用函数 计算最短路径列表
 
-        result_city=[]
+        result_city = []
         for item in city:
             statement = f"SELECT prv_name FROM province WHERE capital_city = '{item}'"
             result = sql.execute_query(statement)
             result_city.append(result)
 
         list_city = [item[0][0] for item in result_city]
-
-
         return list_city
 
 
-#city = route('北京', '重庆')
-#print(city)
+
+
+# city = route('河南', '丽丽')
+# print(city)

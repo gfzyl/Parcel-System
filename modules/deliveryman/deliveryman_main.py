@@ -72,6 +72,10 @@ class DeliverymanMainWindow(QWidget,Ui_deliveryman_main):
         value = (result,self.account)  # 单个元素加上逗号
         self.sql.execute_update(statement, value)
 
+        statement = f"UPDATE deliveryman SET cur_pos = %s WHERE delivery_id= %s"
+        value = (result, self.account)  # 单个元素加上逗号
+        self.sql.execute_update(statement, value)
+
     def logoutFun(self):
         self.logout_signal.emit()
         self.close()

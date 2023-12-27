@@ -1,7 +1,8 @@
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem
+from PySide6.QtWidgets import QApplication, QWidget, QTableWidgetItem,QMessageBox
 from qt_material import apply_stylesheet
+from datetime import datetime,timedelta
 
 from .add_address_book_ui import Ui_add_address_book
 from .address_book_ui import Ui_address_book
@@ -13,8 +14,6 @@ from .user_search_delivery_ui import Ui_user_search_delivery
 from .user_sendout_ui import Ui_user_sendout
 from ...controller.sql import Sql
 from ...controller.routeMap import route
-
-
 
 class UserMainWindow(QWidget,Ui_user_main):
     logout_signal = Signal()
@@ -39,7 +38,7 @@ class UserMainWindow(QWidget,Ui_user_main):
 
 
     def sendFun(self):
-        self.sendWindow=Window2()
+        self.sendWindow=Window2(loginWindow=self)
         self.sendWindow.show()
 
     def myReceiveFun(self):
@@ -68,6 +67,11 @@ class Window1(QWidget,Ui_user_search_delivery):
         self.sql.connect()
 
         # 按键
+        self.tableWidget.setRowCount(0)
+        #self.tableWidget.setColumnWidth(0, 50)      #设置列宽
+        self.tableWidget.setColumnWidth(3, 300)
+        self.tableWidget.setColumnWidth(8, 300)
+
         self.returnBtn.clicked.connect(self.back)
         self.searchBtn.clicked.connect(self.searchDelivery)
 
@@ -83,6 +87,7 @@ class Window1(QWidget,Ui_user_search_delivery):
         statement = f"SELECT * FROM parcel_info WHERE parcel_id = '{parcel_id}'"
         result = self.sql.execute_query(statement=statement)
         if result:
+
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
 
@@ -122,19 +127,18 @@ class Window1(QWidget,Ui_user_search_delivery):
                 item15 = QTableWidgetItem(str(row_data[17]))
                 self.tableWidget.setItem(row_num, 14, item15)
 
-
-
         else:
             # 处理没有查询结果的情况
             self.tableWidget.clearContents()
             self.tableWidget.setRowCount(0)
 
 class Window2(QWidget,Ui_user_sendout):
-    def __init__(self):
+    def __init__(self,loginWindow):
         super().__init__()
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
+        self.account = loginWindow.account
         statement1 = "SELECT prv_name FROM province"
         result_comboBox1 = self.sql.execute_query(statement1)
         result_list1 = [item[0] for item in result_comboBox1]     # 格式不对，需要转换
@@ -144,13 +148,14 @@ class Window2(QWidget,Ui_user_sendout):
         self.comboBox_province2.currentTextChanged.connect(self.change_2)
         # 寄快递
 
-
-        statement2 = "SELECT * FROM address_book"
+        print('值为',self.account)
+        statement2 = f"SELECT * FROM address_book WHERE user_id ={self.account}"
         result_comboBox2 = self.sql.execute_query(statement2)
         print(result_comboBox2)  # 格式不对，需要转换
         result_list2=[]
-        for items in  result_comboBox2:
-            result_list2.append('-'.join(items[1:]))    #去除地址簿id,把其他元组元素链接为字符串，然后添加入列表
+        if result_comboBox2:
+            for items in  result_comboBox2:
+                result_list2.append('-'.join(items[1:]))    #去除地址簿id,把其他元组元素链接为字符串，然后添加入列表
 
         print(result_list2)
         self.comboBox_addressBook1.addItems(result_list2)
@@ -212,13 +217,26 @@ class Window2(QWidget,Ui_user_sendout):
             result_address2 = self.lineEdit_address2.text()
             result_extra = self.lineEdit_extra.text()
 
-            statement = "INSERT INTO parcel_info(sender, sender_tel, sender_prv,sender_city,sender_place,recipient, recipient_tel, recipient_prv,recipient_city,recipient_place,notes) VALUES (%s, %s, %s,%s,%s,%s, %s, %s,%s,%s,%s)"
+            flag_1 =result_name1 and result_phone1 and result_province1 and result_city1 and result_address1
+            flag_2 =result_name2 and result_phone2 and result_province2 and result_city2 and result_address2
+            if flag_1 and flag_2:
+                result_route = route(result_province1, result_province2)
+                result_estiDay = int((len(result_route)+1)/2)
+                result_status = '未送达'
+                cur_date = datetime.now()
+                reach_date = cur_date + timedelta(days=result_estiDay)   #预计送达日期
+                result_date = str(reach_date.year) +'-'+str(reach_date.month) + '-' +str(reach_date.day)
 
-            values = (
-            result_name1, result_phone1, result_province1, result_city1, result_address1, result_name2, result_phone2,
-            result_province2, result_city2, result_address2, result_extra)
-
-            self.sql.execute_insert(statement, values)
+                statement = "INSERT INTO parcel_info(sender, sender_tel, sender_prv,sender_city,sender_place,recipient, recipient_tel, recipient_prv,recipient_city,recipient_place,notes,cur_place,status,estimated_time) VALUES (%s,%s, %s,%s,%s, %s,%s,%s,%s, %s, %s,%s,%s,%s)"
+                values = (
+                    result_name1, result_phone1, result_province1, result_city1, result_address1, result_name2,
+                    result_phone2,
+                    result_province2, result_city2, result_address2, result_extra,result_province1,result_status,result_date)
+                self.sql.execute_insert(statement, values)
+                QMessageBox.information(self, "恭喜", "提交订单成功！点击确认后将自动跳转到主界面", QMessageBox.Ok)
+                self.close()
+            else:
+                QMessageBox.warning(self, "警告", "请填写完整新信息！", QMessageBox.Ok)
 
 class Window3(QWidget,Ui_myReceive):
     def __init__(self,loginWindow):
@@ -232,6 +250,7 @@ class Window3(QWidget,Ui_myReceive):
         self.account = loginWindow.account
         self.insertData()
 
+        self.tableWidget.setColumnWidth(4, 400)
 
         self.tableWidget.cellClicked.connect(self.cellClicked)
         self.confirmBtn.clicked.connect(self.confirmAct)
@@ -263,19 +282,26 @@ class Window3(QWidget,Ui_myReceive):
 
             item1 = QTableWidgetItem(str(row_data[0]))
             self.tableWidget.setItem(row_num, 0, item1)
-            item2 = QTableWidgetItem(str(result_route))
+            item2 = QTableWidgetItem(str(row_data[14]))
             self.tableWidget.setItem(row_num, 1, item2)
-            item3 = QTableWidgetItem(str(row_data[14]))
+            item3 = QTableWidgetItem(str(row_data[15]))
             self.tableWidget.setItem(row_num, 2, item3)
-            item4 = QTableWidgetItem(str(row_data[15]))
+            item4 = QTableWidgetItem(str(row_data[17]))
             self.tableWidget.setItem(row_num, 3, item4)
+            item5 = QTableWidgetItem(str(result_route))
+            self.tableWidget.setItem(row_num, 4, item5)
 
     def confirmAct(self):
-
-        result_id = self.tableWidget.item(self.row,0).text()
-        statement = f"UPDATE parcel_info SET status = 2 WHERE parcel_id= %s"
-        value = (result_id,)       #单个元素加上逗号
-        self.sql.execute_update(statement,value)
+        result_id = self.tableWidget.item(self.row, 0).text()
+        statement = f"SELECT status FROM parcel_info WHERE parcel_id= {result_id} "
+        result = self.sql.execute_query(statement)
+        print('值为',result[0][0])
+        if result[0][0]=='未送达':
+            statement = f"UPDATE parcel_info SET status = 已签收 WHERE parcel_id= %s "
+            value = (result_id,)       #单个元素加上逗号
+            self.sql.execute_update(statement,value)
+        else:
+            QMessageBox.warning(self, "警告", "状态无法再次修改！请联系客服处理", QMessageBox.Ok)
 
 
     def cellClicked(self,row,column):
@@ -283,10 +309,14 @@ class Window3(QWidget,Ui_myReceive):
         self.column=column
     def refuseAct(self):
         result_id = self.tableWidget.item(self.row, 0).text()
-        statement = f"UPDATE parcel_info SET status = 3 WHERE parcel_id= %s"
-        value = (result_id,)  # 单个元素加上逗号
-        self.sql.execute_update(statement, value)
-
+        statement = f"SELECT status FROM parcel_info WHERE parcel_id= {result_id} "
+        result = self.sql.execute_query(statement)
+        if result[0][0] == '未送达':
+            statement = f"UPDATE parcel_info SET status = 已拒收 WHERE parcel_id= %s "
+            value = (result_id,)  # 单个元素加上逗号
+            self.sql.execute_update(statement, value)
+        else:
+            QMessageBox.warning(self, "警告", "状态无法再次修改！请联系客服处理", QMessageBox.Ok)
 
     def back(self):
         # 清除输入框的搜索条件，确保每次进来都是空的
@@ -301,6 +331,7 @@ class Window4(QWidget,Ui_mySend):
         self.sql.connect()
         self.account=loginWindow.account
 
+        self.tableWidget.setColumnWidth(4, 400)
         self.insertData()
         self.returnBtn.clicked.connect(self.back)
 
@@ -327,12 +358,14 @@ class Window4(QWidget,Ui_mySend):
 
             item1 = QTableWidgetItem(str(row_data[0]))
             self.tableWidget.setItem(row_num, 0, item1)
-            item2 = QTableWidgetItem(str(result_route))
+            item2 = QTableWidgetItem(str(row_data[14]))
             self.tableWidget.setItem(row_num, 1, item2)
-            item3 = QTableWidgetItem(str(row_data[14]))
+            item3 = QTableWidgetItem(str(row_data[15]))
             self.tableWidget.setItem(row_num, 2, item3)
-            item4 = QTableWidgetItem(str(row_data[15]))
+            item4 = QTableWidgetItem(str(row_data[17]))
             self.tableWidget.setItem(row_num, 3, item4)
+            item5 = QTableWidgetItem(str(result_route))
+            self.tableWidget.setItem(row_num, 4, item5)
 
 
 

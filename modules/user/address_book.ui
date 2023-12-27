@@ -214,7 +214,7 @@
         <item>
          <widget class="QPushButton" name="btn_delete">
           <property name="text">
-           <string>修改</string>
+           <string>删除</string>
           </property>
          </widget>
         </item>
