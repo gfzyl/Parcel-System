@@ -16,6 +16,7 @@ class DeliverymanMainWindow(QWidget,Ui_deliveryman_main):
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
+        self.tableWidget.setColumnWidth(4,400)
         loginWindow.login_signal.connect(self.receiveAccount)
 
         self.comboBox_place.currentTextChanged.connect(self.displayText)
@@ -57,16 +58,21 @@ class DeliverymanMainWindow(QWidget,Ui_deliveryman_main):
             item2 = QTableWidgetItem(str(row_data[0]))
             self.tableWidget.setItem(row_num, 1, item2)
             item3 = QTableWidgetItem(str(result_route))
-            self.tableWidget.setItem(row_num, 2, item3)
+            self.tableWidget.setItem(row_num, 4, item3)
             item4 = QTableWidgetItem(str(row_data[14]))
-            self.tableWidget.setItem(row_num, 3, item4)
+            self.tableWidget.setItem(row_num, 2, item4)
             item5 = QTableWidgetItem(str(row_data[17]))
-            self.tableWidget.setItem(row_num, 4, item5)
+            self.tableWidget.setItem(row_num, 3, item5)
 
 
     def confirm(self):
 
-        result=self.lineEdit_place.text()
+        result_text=self.lineEdit_place.text()
+        statement = f"SELECT capital_city FROM province WHERE prv_name = '{result_text}'"
+        result = self.sql.execute_query(statement)
+
+        result = result[0][0]
+        print(result)
 
         statement = f"UPDATE parcel_info SET cur_place = %s WHERE delivery_id= %s"
         value = (result,self.account)  # 单个元素加上逗号

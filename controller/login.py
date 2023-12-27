@@ -108,6 +108,7 @@ class LoginWindow(QWidget,Ui_login):
         self.sql=Sql()
         self.sql.connect()
         statement = f"SELECT * FROM deliveryman WHERE delivery_id = {account} AND delivery_pwd = {pwd}"
+        print("登录成！")
         return self.sql.execute_query(statement=statement)
         
 
@@ -155,6 +156,7 @@ def scheduled_code():
         result_delivery = sql.execute_query(statement)
         print('result的值',result_delivery)
         result_delivery=result_delivery[0][0]
+
         print('修改后result的值', result_delivery)
         if result_delivery:
 
@@ -173,9 +175,27 @@ def scheduled_code():
 
             except Exception as e:
                 print(f"暂时没有分配的快递: {e}")
+
         # 分配快递员
-        statement = f"SELECT parcel_id FROM parcel_info WHERE delivery_id IS NULL"
+        statement = f"SELECT parcel_id FROM parcel_info WHERE cur_place = recipient_city"
         result_parcel = sql.execute_query(statement)
+        print('result_parcel的值',result_parcel)
+        result_parcel=result_parcel[0][0]
+        print('result_parcel的值',result_parcel)
+        if result_parcel:
+            try:
+                statement = f"SELECT postman.post_id,parcel_id FROM parcel_info,postman WHERE cur_place = work_pos AND cur_place = recipient_city"
+                result_1 = sql.execute_query(statement)
+                # print(result_1)
+                for item in result_1:
+                    statement = f"UPDATE parcel_info SET post_id = %s WHERE parcel_id= %s"
+                    values = (item[0], item[1])
+                    sql.execute_update(statement, values)
+
+            except Exception as e:
+                print(f"暂时没有分配的快递: {e}")
+                pass
+
 
 
 # 程序入口

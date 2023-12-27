@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QApplication, QWidget,QTableWidgetItem
 from PySide6.QtGui import QIcon
 from ...controller.sql import Sql
+from ...controller.routeMap import route
 
 from .admin_search_delivery_ui import Ui_admin_search_delivery
 from qt_material import apply_stylesheet
@@ -13,6 +14,8 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
         self.setupUi(self)
         self.sql = Sql()
         self.sql.connect()
+        self.tableWidget.setColumnWidth(18, 400)  # 完整路线列
+
         
         # 把省表查出来放进sendCityBox和reCityBox
         statement = 'SELECT prv_name FROM province'
@@ -106,8 +109,13 @@ class AdminSearchDeliveryWindow(QWidget, Ui_admin_search_delivery):
                     item = QTableWidgetItem(str(row_data[col_num]))
                     self.tableWidget.setItem(row_num, col_num, item)
 
-                default_value = 0
-                item = QTableWidgetItem(str(default_value))
+                
+                # 路线
+                result = route(row_data[3], row_data[8])
+                result_route = '->'.join(result)
+                result_route = result_route + '->' + row_data[9] + '->' + row_data[10]
+
+                item = QTableWidgetItem(str(result_route))
                 self.tableWidget.setItem(row_num, 18, item)
 
         else:
@@ -133,3 +141,4 @@ if __name__ == "__main__":
     
     # 结束QApplication
     app.exec_()
+    

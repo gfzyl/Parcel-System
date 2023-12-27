@@ -181,17 +181,17 @@
     </column>
     <column>
      <property name="text">
-      <string>完整线路</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>当前位置</string>
      </property>
     </column>
     <column>
      <property name="text">
       <string>预计送达时间</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>完整线路</string>
      </property>
     </column>
    </widget>

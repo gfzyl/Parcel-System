@@ -30,28 +30,39 @@ class UserMainWindow(QWidget,Ui_user_main):
         loginWindow.login_signal.connect(self.receiveAccount)
 
 
+    def set_windowStyle(self, window):
+        # 设置窗口图标登样式
+        window.setWindowIcon(QIcon(r"D:\Project\ParcelSystem\Parcel-System\images\快递.png"))
+        window.setWindowOpacity(0.95) 
+
+
     def receiveAccount(self,account):
         self.account = account
 
     def queryFun(self):
         self.queryWindow=Window1()
+        self.set_windowStyle(self.queryWindow)
         self.queryWindow.show()
 
 
     def sendFun(self):
         self.sendWindow=Window2(loginWindow=self)
+        self.set_windowStyle(self.sendWindow)
         self.sendWindow.show()
 
     def myReceiveFun(self):
         self.myReceiveWindow=Window3(loginWindow=self)
+        self.set_windowStyle(self.myReceiveWindow)
         self.myReceiveWindow.show()
 
     def mySendFun(self):
         self.mySendWindow=Window4(loginWindow=self)
+        self.set_windowStyle(self.mySendWindow)
         self.mySendWindow.show()
 
     def modifyInfoFun(self):
         self.modifyInfoWindow=Window5(loginWindow=self)
+        self.set_windowStyle(self.modifyInfoWindow)
         self.modifyInfoWindow.show()
 
     def logoutFun(self):

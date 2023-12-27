@@ -180,11 +180,11 @@ class Ui_deliveryman_main(object):
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("deliveryman_main", u"\u5feb\u9012\u5355\u53f7", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("deliveryman_main", u"\u5b8c\u6574\u7ebf\u8def", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u4f4d\u7f6e", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("deliveryman_main", u"\u5f53\u524d\u4f4d\u7f6e", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("deliveryman_main", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("deliveryman_main", u"\u9884\u8ba1\u9001\u8fbe\u65f6\u95f4", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("deliveryman_main", u"\u5b8c\u6574\u7ebf\u8def", None));
         ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("deliveryman_main", u"\u65b0\u5efa\u884c", None));
         ___qtablewidgetitem6 = self.tableWidget.verticalHeaderItem(1)
