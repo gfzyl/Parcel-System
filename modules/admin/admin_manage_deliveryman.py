@@ -98,11 +98,10 @@ class AdminManageDeliverymanWindow(QWidget, Ui_admin_manage_deliveryman):
         workCity2 = self.workCityInput2.text()
         statement = f"UPDATE deliveryman SET delivery_pwd = %s, delivery_phone = %s, work_pos1 = %s, work_pos2 = %s WHERE delivery_id = %s"
         value = (pwd, tel, workCity1, workCity2, workId,)        
-        try:
-            self.sql.execute_update(statement,value)
-        except Exception as e:
+        if self.sql.execute_update(statement,value):
+            QMessageBox.information(self, "提示", "修改成功！", QMessageBox.Ok)    
+        else:
             QMessageBox.warning(self, "警告", "修改员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "修改成功！", QMessageBox.Ok)    
         # 更新完以后结果直接显示
         self.search()
 
@@ -116,11 +115,10 @@ class AdminManageDeliverymanWindow(QWidget, Ui_admin_manage_deliveryman):
         workId = self.workIdInputBottom.text()
         statement = f"DELETE FROM deliveryman WHERE delivery_id = %s"
         value = (workId,)
-        try:
-            self.sql.execute_update(statement,value)
-        except Exception as e:
+        if self.sql.execute_update(statement,value):
+            QMessageBox.information(self, "提示", "删除员工记录成功！", QMessageBox.Ok)
+        else:
             QMessageBox.warning(self, "警告", "删除员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "删除员工记录成功！", QMessageBox.Ok)
         # 更新完以后结果直接显示
         self.search()
 
@@ -136,10 +134,15 @@ class AdminManageDeliverymanWindow(QWidget, Ui_admin_manage_deliveryman):
         workCity2 = self.workCityInput2.text()
         statement = "INSERT INTO deliveryman (delivery_id, delivery_pwd,  delivery_name, delivery_phone, work_pos1, work_pos2,  delivery_age) VALUES (%(workId)s,%(pwd)s, %(name)s, %(tel)s, %(workCity1)s, %(workCity2)s, %(age)s)"
         values = {"workId":workId,"pwd": pwd, "name": name, "tel": tel, "workCity1": workCity1, "workCity2": workCity2 ,"age": age,}
-        try:
-            self.sql.execute_insert(statement,values)
-        except Exception as e:
-            QMessageBox.warning(self, "警告", "新增员工记录失败！", QMessageBox.Ok)
-        QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
+        # 判重
+        requirement = f"SELECT * FROM deliveryman WHERE delivery_id = {workId}"
+        if self.sql.execute_query(requirement):
+            QMessageBox.warning(self, "警告", "该员工已存在！", QMessageBox.Ok)
+            return
+        else:
+            if self.sql.execute_insert(statement,values):
+                QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
+            else:
+                QMessageBox.warning(self, "警告", "新增员工记录失败！", QMessageBox.Ok)
         # 更新完以后结果直接显示
         self.search()      

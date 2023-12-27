@@ -125,10 +125,16 @@ class AdminManagePostmanWindow(QWidget, Ui_admin_manage_postman):
         workCity = self.workCityInput.text()
         statement = "INSERT INTO postman (post_id, post_pwd,  post_name, post_phone, work_pos, post_age) VALUES (%(workId)s,%(pwd)s, %(name)s, %(tel)s, %(workCity)s,%(age)s)"
         values = {"workId":workId,"pwd": pwd, "name": name, "tel": tel, "workCity": workCity,"age": age,}        
-        if self.sql.execute_insert(statement,values):
-            QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
+        # 判重
+        requirement = f"SELECT * FROM postman WHERE post_id = {workId}"
+        if self.sql.execute_query(requirement):
+            QMessageBox.warning(self, "警告", "该员工已存在！", QMessageBox.Ok)
+            return
         else:
-            QMessageBox.warning(self, "警告", "新增员工记录失败！", QMessageBox.Ok)
+            if self.sql.execute_insert(statement,values):
+                QMessageBox.information(self, "提示", "新增员工记录成功！", QMessageBox.Ok)
+            else:
+                QMessageBox.warning(self, "警告", "新增员工记录失败！", QMessageBox.Ok)
         # 更新完以后结果直接显示
         self.search()      
 

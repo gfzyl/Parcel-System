@@ -5,7 +5,8 @@ from qt_material import apply_stylesheet
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Signal # 发送给各界面信号，主要发送账号
 from .sql import Sql  # 连接数据库
-
+import threading
+import time
 
 # 导入我们生成的界面
 from ..modules.guest.guest_main import GuestMainWindow
@@ -142,6 +143,40 @@ class LoginWindow(QWidget,Ui_login):
         window.setWindowOpacity(0.95) 
 
 
+def scheduled_code():
+    # 处理线程问题
+    while True:
+        time.sleep(10)  # 暂停 1 秒
+        sql = Sql()
+        sql.connect()
+        ############################分配配送员############################
+
+        statement = f"SELECT delivery_id FROM deliveryman WHERE cur_pos = work_pos1 OR cur_pos = work_pos2"
+        result_delivery = sql.execute_query(statement)
+        print('result的值',result_delivery)
+        result_delivery=result_delivery[0][0]
+        print('修改后result的值', result_delivery)
+        if result_delivery:
+
+            try:
+                statement = f"SELECT deliveryman.delivery_id,parcel_id FROM deliveryman,parcel_info WHERE cur_pos = sender_city"
+                result_1 = sql.execute_query(statement)
+                print(result_1)
+                for item in result_1:
+                    statement = f"UPDATE parcel_info SET delivery_id = %s WHERE parcel_id= %s"
+                    values = (item[0], item[1])
+                    sql.execute_update(statement, values)
+
+                    statement = f"SELECT delivery_id FROM parcel_info WHERE parcel_id ='{item[1]}'"
+                    result_parcel = sql.execute_query(statement)
+                    print(item[1], '的派送员id:', result_parcel)
+
+            except Exception as e:
+                print(f"暂时没有分配的快递: {e}")
+        # 分配快递员
+        statement = f"SELECT parcel_id FROM parcel_info WHERE delivery_id IS NULL"
+        result_parcel = sql.execute_query(statement)
+
 
 # 程序入口
 if __name__ == "__main__":
@@ -153,5 +188,10 @@ if __name__ == "__main__":
     login_window.setWindowOpacity(0.95)
     login_window.setWindowIcon(appIcon)
     login_window.show()
+    
+    scheduled_thread = threading.Thread(target=scheduled_code)
+    scheduled_thread.daemon = True  # 设置为守护线程，使程序退出时线程也会被终止
+    scheduled_thread.start()
+    
     app.exec_()
     
